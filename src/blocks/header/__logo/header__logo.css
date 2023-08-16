@@ -1,0 +1,22 @@
+.header__logo {
+  margin: 0;
+  padding: 0;
+  color: var(--color-system-white);
+  font-size: 26px;
+  line-height: 22px;
+  font-weight: 600;
+  border: none;
+  background-color: transparent;
+  text-decoration: none;
+  text-transform: lowercase;
+  font-variant: all-small-caps;
+  letter-spacing: 3.3px;
+}
+
+@media screen and (min-width: 1024px) {
+  .header__logo {
+    max-width: 110px;
+    font-size: 28px;
+    line-height: 24px;
+  }
+}
