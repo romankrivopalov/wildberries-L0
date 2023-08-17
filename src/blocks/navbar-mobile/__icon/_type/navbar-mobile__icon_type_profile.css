@@ -1,0 +1,5 @@
+.navbar-mobile__icon_type_profile {
+  margin-right: 1px;
+  -webkit-mask-image: url('../../../../images/icons/icon-mobile-profile.svg');
+  mask-image: url('../../../../images/icons/icon-mobile-profile.svg');
+}

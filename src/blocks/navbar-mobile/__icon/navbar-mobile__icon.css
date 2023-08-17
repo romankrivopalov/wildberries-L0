@@ -1,0 +1,10 @@
+.navbar-mobile__icon {
+  display: block;
+  margin: 0;
+  width: 28px;
+  height: 28px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #CCC;
+  background-size: contain;
+}

@@ -1,0 +1,4 @@
+.navbar-mobile__icon_type_cart {
+  -webkit-mask-image: url('../../../../images/icons/icon-cart.svg');
+  mask-image: url('../../../../images/icons/icon-cart.svg');
+}

@@ -1,0 +1,4 @@
+.navbar-mobile__icon_type_home {
+  -webkit-mask-image: url('../../../../images/icons/icon-mobile-home.svg');
+  mask-image: url('../../../../images/icons/icon-mobile-home.svg');
+}

@@ -1,0 +1,17 @@
+.navbar-mobile {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  padding: 14px 13px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color-system-white)
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar-mobile {
+    display: none;
+  }
+}

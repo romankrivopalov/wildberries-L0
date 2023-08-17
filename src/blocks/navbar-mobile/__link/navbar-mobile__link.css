@@ -1,0 +1,8 @@
+.navbar-mobile__link {
+  padding: 0;
+  color: var(--color-system-white);
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 22px;
+  text-align: center;
+}
