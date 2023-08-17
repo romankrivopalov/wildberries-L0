@@ -1,0 +1,6 @@
+.basket-order__oferta-link {
+  padding-bottom: 1px;
+  color: var(--color-text-black);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}

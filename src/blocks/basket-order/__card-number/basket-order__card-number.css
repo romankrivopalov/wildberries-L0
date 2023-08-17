@@ -1,0 +1,26 @@
+.basket-order__card-number {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .basket-order__card-number {
+    display: block;
+    position: relative;
+    margin: 0 0 16px 0;
+    padding: 4px 0 4px 40px;
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  .basket-order__card-number::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 24px;
+    background-image: url('../../../images/icons/icon-card-mir.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}

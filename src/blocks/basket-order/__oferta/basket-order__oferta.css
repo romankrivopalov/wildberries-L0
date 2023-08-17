@@ -1,0 +1,19 @@
+.basket-order__oferta {
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 21px;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.basket-order__oferta::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 13px;
+  height: 11px;
+  background-image: url('../../../images/icons/icon-check.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}

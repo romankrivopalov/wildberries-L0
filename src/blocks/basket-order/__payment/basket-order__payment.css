@@ -1,0 +1,13 @@
+.basket-order__payment {
+  padding: 11px 8px 12px 8px;
+  font-size: 13px;
+  line-height: 16px;
+  background-color: var(--color-system-smoky-dark);
+  border-radius: 8px;
+}
+
+@media screen and (min-width: 1024px) {
+  .basket-order__payment {
+    background-color: var(--color-system-smoky);
+  }
+}

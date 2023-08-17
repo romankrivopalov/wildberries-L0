@@ -5,6 +5,7 @@
 @import url('../blocks/page/page.css');
 @import url('../blocks/wrapper/wrapper.css');
 @import url('../blocks/container/container.css');
+@import url('../blocks/container/_type/container_type_header.css');
 
 @import url('../blocks/header/header.css');
 @import url('../blocks/header/__row/header__row.css');
@@ -24,7 +25,31 @@
 @import url('../blocks/header/__search-mobile/header__search-mobile.css');
 @import url('../blocks/header/__icon/_type/header__icon_type_search.css');
 
-@import url('../blocks/main/main.css');
+@import url('../blocks/basket/basket.css');
+@import url('../blocks/basket/__form/basket__form.css');
+@import url('../blocks/basket/__content/basket__content.css');
+@import url('../blocks/basket/__sidebar/basket__sidebar.css');
+
+@import url('../blocks/basket-order/basket-order.css');
+@import url('../blocks/basket-order/__total/basket-order__total.css');
+@import url('../blocks/basket-order/__total-row/basket-order__total-row.css');
+@import url('../blocks/basket-order/__delivery/basket-order__delivery.css');
+@import url('../blocks/basket-order/__title/basket-order__title.css');
+@import url('../blocks/basket-order/__btn-edit/basket-order__btn-edit.css');
+@import url('../blocks/basket-order/__address/basket-order__address.css');
+@import url('../blocks/basket-order/__date/basket-order__date.css');
+@import url('../blocks/basket-order/__devivery-info/basket-order__devivery-info.css');
+@import url('../blocks/basket-order/__card/basket-order-card.css');
+@import url('../blocks/basket-order/__card-number/basket-order__card-number.css');
+@import url('../blocks/basket-order/__payment/basket-order__payment.css');
+@import url('../blocks/basket-order/__payment-wrapper/basket-order__payment-wrapper.css');
+@import url('../blocks/basket-order/__checkbox/basket-order__checkbox.css');
+@import url('../blocks/basket-order/__checkbox-decor/basket-order__checkbox-decor.css');
+@import url('../blocks/basket-order/__payment-info/basket-order__payment-info.css');
+@import url('../blocks/basket-order/__btn/basket-order__btn.css');
+@import url('../blocks/basket-order/__oferta/basket-order__oferta.css');
+@import url('../blocks/basket-order/__oferta-link/basket-order__oferta-link.css');
+@import url('../blocks/basket-order/__accent/basket-order__accent.css');
 
 @import url('../blocks/footer/footer.css');
 @import url('../blocks/footer/__copyright/footer__copyright.css');

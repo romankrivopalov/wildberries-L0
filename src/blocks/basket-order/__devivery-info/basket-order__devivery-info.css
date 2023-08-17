@@ -1,0 +1,28 @@
+.basket-order__devivery-info {
+  box-sizing: border-box;
+  position: relative;
+  padding: 8px 8px 8px 38px;
+  min-height: 49px;
+  font-size: 13px;
+  line-height: 16px;
+  background-color: var(--color-system-smoky-dark);
+  border-radius: 8px;
+  vertical-align: middle;
+}
+
+.basket-order__devivery-info::after {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: 8px;
+  width: 22px;
+  height: 22px;
+  background-image: url('../../../images/icons/icon-success.svg');
+  background-size: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .basket-order__devivery-info {
+    background-color: var(--color-system-smoky);
+  }
+}

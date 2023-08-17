@@ -1,0 +1,9 @@
+.basket-order__btn-edit {
+  margin: 4px 2px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-system-magenta);
+  -webkit-mask-image: url('../../../images/icons/icon-edit.svg');
+  mask-image: url('../../../images/icons/icon-edit.svg');
+  cursor: pointer;
+}
