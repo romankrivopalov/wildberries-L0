@@ -1,7 +1,6 @@
 .page {
   box-sizing: border-box;
   width: 100%;
-  height: 100%;
   color: var(--color-text-black);
   font-family: 'SegoeUI', Arial, sans-serif;
   font-weight: 400;
