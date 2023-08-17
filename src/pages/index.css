@@ -11,3 +11,14 @@
 @import url('../blocks/header/__burger/header__burger.css');
 @import url('../blocks/header/__burger-line/header__burger-line.css');
 @import url('../blocks/header/__logo/header__logo.css');
+@import url('../blocks/header/__search/header__search.css');
+@import url('../blocks/header/__search-wrapper/header__search-wrapper.css');
+@import url('../blocks/header/__search-input/header__search-input.css');
+@import url('../blocks/header/__search-btn/header__search-btn.css');
+@import url('../blocks/header/__nav-bar/header__nav-bar.css');
+@import url('../blocks/header/__link/header__link.css');
+@import url('../blocks/header/__icon/header__icon.css');
+@import url('../blocks/header/__icon/_type/header__icon_type_profile.css');
+@import url('../blocks/header/__icon/_type/header__icon_type_cart.css');
+@import url('../blocks/header/__search-mobile/header__search-mobile.css');
+@import url('../blocks/header/__icon/_type/header__icon_type_search.css');

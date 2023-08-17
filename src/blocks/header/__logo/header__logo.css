@@ -1,9 +1,9 @@
 .header__logo {
   margin: 0;
-  padding: 0;
+  padding: 0 0 8px 0;
   color: var(--color-system-white);
   font-size: 26px;
-  line-height: 22px;
+  line-height: 20px;
   font-weight: 600;
   border: none;
   background-color: transparent;
@@ -15,7 +15,7 @@
 
 @media screen and (min-width: 1024px) {
   .header__logo {
-    max-width: 110px;
+    width: 109px;
     font-size: 28px;
     line-height: 24px;
   }

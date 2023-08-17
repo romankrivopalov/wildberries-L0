@@ -1,0 +1,9 @@
+.header__link {
+  padding: 0;
+  width: 56px;
+  color: var(--color-system-white);
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 22px;
+  text-align: center;
+}
