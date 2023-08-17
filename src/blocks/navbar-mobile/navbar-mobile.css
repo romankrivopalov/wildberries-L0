@@ -7,7 +7,9 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: var(--color-system-white)
+  background-color: var(--color-system-white);
+  box-shadow: 0px -0.5px 0px 0px rgba(0, 0, 0, 0.30);
+  backdrop-filter: blur(2.5px);
 }
 
 @media screen and (min-width: 1024px) {
