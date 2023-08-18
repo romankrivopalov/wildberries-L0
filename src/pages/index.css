@@ -33,9 +33,11 @@
 @import url('../blocks/basket/__section-title/basket__section-title.css');
 @import url('../blocks/basket/__content-header/basket__content-header.css');
 @import url('../blocks/basket/__content-header-btn/basket__content-header-btn.css');
-@import url('../blocks/basket/__card-number/basket__card-number.css');
-@import url('../blocks/basket/__card-date/basket__card-date.css');
-@import url('../blocks/basket/__payment-info/basket__payment-info.css');
+
+@import url('../blocks/pay/pay.css');
+@import url('../blocks/pay/__card-number/pay__card-number.css');
+@import url('../blocks/pay/__card-date/pay__card-date.css');
+@import url('../blocks/pay/__payment-info/pay__payment-info.css');
 
 @import url('../blocks/recipient/recipient.css');
 @import url('../blocks/recipient/__wrapper/recipient__recipient.css');
