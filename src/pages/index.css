@@ -29,6 +29,19 @@
 @import url('../blocks/basket/__form/basket__form.css');
 @import url('../blocks/basket/__content/basket__content.css');
 @import url('../blocks/basket/__sidebar/basket__sidebar.css');
+@import url('../blocks/basket/__content-section/basket__content-section.css');
+@import url('../blocks/basket/__section-title/basket__section-title.css');
+@import url('../blocks/basket/__recipient/basket__recipient.css');
+@import url('../blocks/basket/__input-wrapper/basket__input-wrapper.css');
+@import url('../blocks/basket/__input-wrapper/_type/basket__input-wrapper_type_first-name.css');
+@import url('../blocks/basket/__input-wrapper/_type/basket__input-wrapper_type_last-name.css');
+@import url('../blocks/basket/__input-wrapper/_type/basket__input-wrapper_type_email.css');
+@import url('../blocks/basket/__input-wrapper/_type/basket__input-wrapper_type_phone.css');
+@import url('../blocks/basket/__input-wrapper/_type/basket__input-wrapper_type_payer-number.css');
+@import url('../blocks/basket/__input-label/basket__input-label.css');
+@import url('../blocks/basket/__input/basket__input.css');
+@import url('../blocks/basket/__input-error/basket__input-error.css');
+@import url('../blocks/basket/__payer-number-info/basket__payer-number-info.css');
 
 @import url('../blocks/basket-order/basket-order.css');
 @import url('../blocks/basket-order/__total/basket-order__total.css');

@@ -44,7 +44,52 @@
       <div class="container">
         <form class="basket__form">
           <div class="basket__content">
+            <h1 class="basket__title">
+              Корзина
+            </h1>
 
+            <div class="basket__content-section">
+              <h2 class="basket__section-title">Получатель</h2>
+              <div class="basket__recipient">
+                <div class="basket__input-wrapper basket__input-wrapper_type_first-name">
+                  <input class="basket__input" type="text" placeholder=" " required>
+                  <span class="basket__input-label">Имя</span>
+                  <span class="basket__input-error"></span>
+                </div>
+                <div class="basket__input-wrapper basket__input-wrapper_type_last-name">
+                  <input class="basket__input" type="text" placeholder=" " required>
+                  <span class="basket__input-label">Фамилия</span>
+                  <span class="basket__input-error"></span>
+                </div>
+                <div class="basket__input-wrapper basket__input-wrapper_type_email">
+                  <input
+                    class="basket__input"
+                    type="email"
+                    pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                    placeholder=" "
+                    required>
+                  <span class="basket__input-label">Электронная почта</span>
+                  <span class="basket__input-error"></span>
+                </div>
+                <div class="basket__input-wrapper basket__input-wrapper_type_phone">
+                  <input class="basket__input" type="tel" placeholder="" required>
+                  <span class="basket__input-label">Телефон</span>
+                  <span class="basket__input-error"></span>
+                </div>
+                <div class="basket__input-wrapper basket__input-wrapper_type_payer-number">
+                  <input
+                    class="basket__input"
+                    type="text"
+                    minlength="14"
+                    maxlength="14"
+                    pattern="^[0-9]+$"
+                    placeholder=""
+                    required>
+                  <span class="basket__input-label">ИНН</span>
+                  <span class="basket__payer-number-info">Для таможенного оформления</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="basket__sidebar basket-order">

@@ -1,0 +1,21 @@
+.basket__content-section {
+  margin: 0 -16px 12px;
+  padding: 16px 16px 19px;
+  background-color: var(--color-system-white);
+  border-radius: 16px;
+}
+
+.basket__content-section:last-child {
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 1024px) {
+  .basket__content-section {
+    margin: 0;
+    padding: 16px 24px 24px;
+  }
+
+  .basket__content-section:last-child {
+    margin-bottom: 26px;
+  }
+}
