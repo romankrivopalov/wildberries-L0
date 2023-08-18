@@ -1,0 +1,25 @@
+.data-delivery__item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.data-delivery__item:not(:last-child) {
+  margin: 0 0 24px;
+}
+
+.data-delivery__item:last-child {
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 1024px) {
+  .data-delivery__item {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .data-delivery__item:not(:last-child) {
+    margin-bottom: 17px;
+  }
+}

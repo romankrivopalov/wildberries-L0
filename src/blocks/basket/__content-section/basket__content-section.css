@@ -1,4 +1,6 @@
 .basket__content-section {
+  display: flex;
+  flex-direction: column;
   margin: 0 -16px 12px;
   padding: 16px 16px 19px;
   background-color: var(--color-system-white);
@@ -13,6 +15,7 @@
   .basket__content-section {
     margin: 0 0 16px 0;
     padding: 16px 24px 24px;
+    gap: 16px;
   }
 
   .basket__content-section:last-child {

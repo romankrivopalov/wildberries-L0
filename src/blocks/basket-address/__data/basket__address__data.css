@@ -1,0 +1,4 @@
+.basket-address__data {
+  display: flex;
+  gap: 8px;
+}

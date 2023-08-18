@@ -50,8 +50,60 @@
 
             <div class="basket__content-section">
               <div class="basket__content-header">
+                <h2 class="basket__section-title">Способ доставки</h2>
+                <button class="basket__content-header-btn" type="button">Изменить</button>
+              </div>
+
+              <div class="basket-address">
+                <span class="basket-address__label">Пункт выдачи</span>
+                <div>
+                  <p class="basket-address__address">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                  <div class="basket-address__data">
+                    <div class="basket-address__rate">4.99</div>
+                    <p class="basket-address__office-hours">Ежедневно с 10 до 21 </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="basket-delivery">
+                <span class="basket-delivery__label">Стоимость доставки</span>
+                <p class="basket-delivery__data">Бесплатно</p>
+              </div>
+
+              <ul class="data-delivery">
+                <li class="data-delivery__item">
+                  <span class="data-delivery__label">5—6 февраля</span>
+                  <ul class="data-delivery__list">
+                    <li>
+                      <img class="data-delivery__img" src="<%=require('./images/item-01.jpg')%>" alt="">
+                    </li>
+                    <li>
+                      <img class="data-delivery__img" src="<%=require('./images/item-02.jpg')%>" alt="">
+                    </li>
+                    <li>
+                      <img class="data-delivery__img" src="<%=require('./images/item-03.jpg')%>" alt="">
+                    </li>
+                  </ul>
+                </li>
+                <li class="data-delivery__item">
+                  <span class="data-delivery__label">7—8 февраля</span>
+                  <ul class="data-delivery__list">
+                    <li>
+                      <img class="data-delivery__img" src="<%=require('./images/item-02.jpg')%>" alt="">
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+              <div class="devivery-info">
+                Обратная доставка товаров на&nbsp;склад при отказе &mdash; <a class="basket-order__accent" href="#">бесплатно</a>
+              </div>
+            </div>
+
+            <div class="basket__content-section">
+              <div class="basket__content-header">
                 <h2 class="basket__section-title">Способ оплаты</h2>
-                <button class="basket__content-header-btn">Изменить</button>
+                <button class="basket__content-header-btn" type="button">Изменить</button>
               </div>
               <div class="basket__card-number">1234 12&bull;&bull; &bull;&bull;&bull;&bull; 1234 <span class="basket__card-date">01/30</span></div>
               <p class="basket__payment-info">Спишем оплату с&nbsp;карты при получении</p>
@@ -124,11 +176,11 @@
             <div>
               <div class="basket-order__delivery">
                 <h3 class="basket-order__title">Доставка в&nbsp;пункт выдачи</h3>
-                <button class="basket-order__btn-edit" type="button" aria-label="Изменить способ доставки." />
+                <button class="basket-order__btn-edit" type="button" aria-label="Изменить способ доставки."></button>
               </div>
               <p class="basket-order__address">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
               <button class="basket-order__date" type="button">5&ndash;8 фев</button>
-              <div class="basket-order__devivery-info">
+              <div class="devivery-info devivery-info_sidebar">
                 Обратная доставка товаров на&nbsp;склад при отказе &mdash; <a class="basket-order__accent" href="#">бесплатно</a>
               </div>
             </div>
@@ -136,7 +188,7 @@
             <div>
               <div class="basket-order__card">
                 <h3 class="basket-order__title">Оплата картой</h3>
-                <button class="basket-order__btn-edit" type="button" aria-label="Изменить способ оплаты." />
+                <button class="basket-order__btn-edit" type="button" aria-label="Изменить способ оплаты."></button>
               </div>
               <div class="basket-order__card-number">1234 12&bull;&bull; &bull;&bull;&bull;&bull; 1234</div>
               <div class="basket-order__payment">
@@ -162,7 +214,7 @@
 
     <footer class="footer">
       <div class="container">
-        <p class="footer__copyright">&copy&nbsp;2022&nbsp;&nbsp;ООО «Товары и точка»</p>
+        <p class="footer__copyright">&copy;&nbsp;2022&nbsp;&nbsp;ООО «Товары и точка»</p>
       </div>
     </footer>
   </div>

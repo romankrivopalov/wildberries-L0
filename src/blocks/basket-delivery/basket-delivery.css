@@ -1,0 +1,15 @@
+.basket-delivery {
+  margin: 0;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .basket-delivery {
+    padding: 0;
+    flex-direction: row;
+    gap: 30px;
+  }
+}

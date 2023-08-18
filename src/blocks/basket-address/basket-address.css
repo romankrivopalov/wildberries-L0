@@ -1,0 +1,16 @@
+.basket-address {
+  margin: 0;
+  padding: 5px 0 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .basket-address {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+}
