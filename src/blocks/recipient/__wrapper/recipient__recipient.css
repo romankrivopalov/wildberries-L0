@@ -1,5 +1,5 @@
-.basket__recipient {
-  margin: 8px 0 0 0;
+.recipient__wrapper {
+  margin: 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
@@ -12,8 +12,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .basket__recipient {
-    margin-top: 16px;
+  .recipient__wrapper {
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas:
       'first-name first-name first-name last-name last-name last-name'

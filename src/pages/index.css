@@ -31,22 +31,24 @@
 @import url('../blocks/basket/__sidebar/basket__sidebar.css');
 @import url('../blocks/basket/__content-section/basket__content-section.css');
 @import url('../blocks/basket/__section-title/basket__section-title.css');
-@import url('../blocks/basket/__recipient/basket__recipient.css');
-@import url('../blocks/basket/__input-wrapper/basket__input-wrapper.css');
-@import url('../blocks/basket/__input-wrapper/_type/basket__input-wrapper_type_first-name.css');
-@import url('../blocks/basket/__input-wrapper/_type/basket__input-wrapper_type_last-name.css');
-@import url('../blocks/basket/__input-wrapper/_type/basket__input-wrapper_type_email.css');
-@import url('../blocks/basket/__input-wrapper/_type/basket__input-wrapper_type_phone.css');
-@import url('../blocks/basket/__input-wrapper/_type/basket__input-wrapper_type_payer-number.css');
-@import url('../blocks/basket/__input-label/basket__input-label.css');
-@import url('../blocks/basket/__input/basket__input.css');
-@import url('../blocks/basket/__input-error/basket__input-error.css');
-@import url('../blocks/basket/__payer-number-info/basket__payer-number-info.css');
 @import url('../blocks/basket/__content-header/basket__content-header.css');
 @import url('../blocks/basket/__content-header-btn/basket__content-header-btn.css');
 @import url('../blocks/basket/__card-number/basket__card-number.css');
 @import url('../blocks/basket/__card-date/basket__card-date.css');
 @import url('../blocks/basket/__payment-info/basket__payment-info.css');
+
+@import url('../blocks/recipient/recipient.css');
+@import url('../blocks/recipient/__wrapper/recipient__recipient.css');
+@import url('../blocks/recipient/__input-wrapper/recipient__input-wrapper.css');
+@import url('../blocks/recipient/__input-wrapper/_type/recipient__input-wrapper_type_first-name.css');
+@import url('../blocks/recipient/__input-wrapper/_type/recipient__input-wrapper_type_last-name.css');
+@import url('../blocks/recipient/__input-wrapper/_type/recipient__input-wrapper_type_email.css');
+@import url('../blocks/recipient/__input-wrapper/_type/recipient__input-wrapper_type_phone.css');
+@import url('../blocks/recipient/__input-wrapper/_type/recipient__input-wrapper_type_payer-number.css');
+@import url('../blocks/recipient/__input/recipient__input.css');
+@import url('../blocks/recipient/__input-label/recipient__input-label.css');
+@import url('../blocks/recipient/__input-error/recipient__input-error.css');
+@import url('../blocks/recipient/__payer-number-info/recipient__payer-number-info.css');
 
 @import url('../blocks/devilery-info/devivery-info.css');
 @import url('../blocks/devilery-info/_sidebar/delivery-info_sidebar.css');

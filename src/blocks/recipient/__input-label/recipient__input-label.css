@@ -1,4 +1,4 @@
-.basket__input-label {
+.recipient__input-label {
   margin: 0;
   position: absolute;
   top: 14px;
@@ -11,7 +11,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .basket__input-label {
+  .recipient__input-label {
     top: 18px;
   }
 }

@@ -109,45 +109,45 @@
               <p class="basket__payment-info">Спишем оплату с&nbsp;карты при получении</p>
             </div>
 
-            <div class="basket__content-section">
+            <div class="basket__content-section recipient">
               <h2 class="basket__section-title">Получатель</h2>
-              <div class="basket__recipient">
-                <div class="basket__input-wrapper basket__input-wrapper_type_first-name">
-                  <input class="basket__input" type="text" placeholder=" " required>
-                  <span class="basket__input-label">Имя</span>
-                  <span class="basket__input-error"></span>
+              <div class="recipient__wrapper">
+                <div class="recipient__input-wrapper recipient__input-wrapper_type_first-name">
+                  <input class="recipient__input" type="text" placeholder=" " required>
+                  <span class="recipient__input-label">Имя</span>
+                  <span class="recipient__input-error"></span>
                 </div>
-                <div class="basket__input-wrapper basket__input-wrapper_type_last-name">
-                  <input class="basket__input" type="text" placeholder=" " required>
-                  <span class="basket__input-label">Фамилия</span>
-                  <span class="basket__input-error"></span>
+                <div class="recipient__input-wrapper recipient__input-wrapper_type_last-name">
+                  <input class="recipient__input" type="text" placeholder=" " required>
+                  <span class="recipient__input-label">Фамилия</span>
+                  <span class="recipient__input-error"></span>
                 </div>
-                <div class="basket__input-wrapper basket__input-wrapper_type_email">
+                <div class="recipient__input-wrapper recipient__input-wrapper_type_email">
                   <input
-                    class="basket__input"
+                    class="recipient__input"
                     type="email"
                     pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
                     placeholder=" "
                     required>
-                  <span class="basket__input-label">Электронная почта</span>
-                  <span class="basket__input-error"></span>
+                  <span class="recipient__input-label">Электронная почта</span>
+                  <span class="recipient__input-error"></span>
                 </div>
-                <div class="basket__input-wrapper basket__input-wrapper_type_phone">
-                  <input class="basket__input" type="tel" placeholder="" required>
-                  <span class="basket__input-label">Телефон</span>
-                  <span class="basket__input-error"></span>
+                <div class="recipient__input-wrapper recipient__input-wrapper_type_phone">
+                  <input class="recipient__input" type="tel" placeholder="" required>
+                  <span class="recipient__input-label">Телефон</span>
+                  <span class="recipient__input-error"></span>
                 </div>
-                <div class="basket__input-wrapper basket__input-wrapper_type_payer-number">
+                <div class="recipient__input-wrapper recipient__input-wrapper_type_payer-number">
                   <input
-                    class="basket__input"
+                    class="recipient__input"
                     type="text"
                     minlength="14"
                     maxlength="14"
                     pattern="^[0-9]+$"
                     placeholder=""
                     required>
-                  <span class="basket__input-label">ИНН</span>
-                  <span class="basket__payer-number-info">Для таможенного оформления</span>
+                  <span class="recipient__input-label">ИНН</span>
+                  <span class="recipient__payer-number-info">Для таможенного оформления</span>
                 </div>
               </div>
             </div>
