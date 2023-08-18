@@ -1,11 +1,11 @@
-.data-delivery {
+.delivery__items {
   margin: 0;
   padding: 8px 0 14px;
   list-style: none;
 }
 
 @media screen and (min-width: 1024px) {
-  .data-delivery {
+  .delivery__items {
     padding: 0;
   }
 }

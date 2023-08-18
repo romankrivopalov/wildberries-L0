@@ -1,11 +1,11 @@
-.basket-address__rate {
+.delivery__rate {
   position: relative;
   padding: 0 0 0 16px;
   font-size: 13px;
   line-height: 16px;
 }
 
-.basket-address__rate::after {
+.delivery__rate::after {
   content: '';
   position: absolute;
   top: 2px;

@@ -34,6 +34,20 @@
 @import url('../blocks/basket/__content-header/basket__content-header.css');
 @import url('../blocks/basket/__content-header-btn/basket__content-header-btn.css');
 
+@import url('../blocks/delivery/delivery.css');
+@import url('../blocks/delivery/__address-wrapper/delivery__address-wrapper.css');
+@import url('../blocks/delivery/__label/delivery__label.css');
+@import url('../blocks/delivery/__address/delivery__address.css');
+@import url('../blocks/delivery/__data/delivery__data.css');
+@import url('../blocks/delivery/__rate/delivery__rate.css');
+@import url('../blocks/delivery/__office-hours/delivery__office-hours.css');
+@import url('../blocks/delivery/__delivery-price/delivery__delivery-price.css');
+@import url('../blocks/delivery/__price/delivery__price.css');
+@import url('../blocks/delivery/__items/delivery__items.css');
+@import url('../blocks/delivery/__item/delivery__item.css');
+@import url('../blocks/delivery/__product-list/delivery__product-list.css');
+@import url('../blocks/delivery/__product-img/delivery__product-img.css');
+
 @import url('../blocks/pay/pay.css');
 @import url('../blocks/pay/__card-number/pay__card-number.css');
 @import url('../blocks/pay/__card-date/pay__card-date.css');
@@ -74,23 +88,6 @@
 @import url('../blocks/basket-order/__oferta/basket-order__oferta.css');
 @import url('../blocks/basket-order/__oferta-link/basket-order__oferta-link.css');
 @import url('../blocks/basket-order/__accent/basket-order__accent.css');
-
-@import url('../blocks/basket-address/basket-address.css');
-@import url('../blocks/basket-address/__label/basket-address__label.css');
-@import url('../blocks/basket-address/__address/basket-address__address.css');
-@import url('../blocks/basket-address/__data/basket__address__data.css');
-@import url('../blocks/basket-address/__rate/basket-address__rate.css');
-@import url('../blocks/basket-address/__office-hours/basket-address__office-hours.css');
-
-@import url('../blocks/basket-delivery/basket-delivery.css');
-@import url('../blocks/basket-delivery/__label/basket-delivery__label.css');
-@import url('../blocks/basket-delivery/__data/basket-delivery__data.css');
-
-@import url('../blocks/data-delivery/data-delivery.css');
-@import url('../blocks/data-delivery/__item/data-delivery__item.css');
-@import url('../blocks/data-delivery/__label/data-delivery__label.css');
-@import url('../blocks/data-delivery/__list/data-delivery__list.css');
-@import url('../blocks/data-delivery/__img/data-delivery__img.css');
 
 @import url('../blocks/footer/footer.css');
 @import url('../blocks/footer/__copyright/footer__copyright.css');
