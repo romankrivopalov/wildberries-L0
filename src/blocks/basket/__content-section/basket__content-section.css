@@ -11,7 +11,7 @@
 
 @media screen and (min-width: 1024px) {
   .basket__content-section {
-    margin: 0;
+    margin: 0 0 16px 0;
     padding: 16px 24px 24px;
   }
 
