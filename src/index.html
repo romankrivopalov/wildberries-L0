@@ -51,7 +51,12 @@
             <div class="basket__content-section delivery">
               <div class="basket__content-header">
                 <h2 class="basket__section-title">Способ доставки</h2>
-                <button class="basket__content-header-btn" type="button">Изменить</button>
+                <button
+                  class="basket__content-header-btn"
+                  type="button"
+                  data-type="btn-choose-address">
+                  Изменить
+                </button>
               </div>
 
               <div class="delivery__address-wrapper">
@@ -103,7 +108,12 @@
             <div class="basket__content-section pay">
               <div class="basket__content-header">
                 <h2 class="basket__section-title">Способ оплаты</h2>
-                <button class="basket__content-header-btn" type="button">Изменить</button>
+                <button
+                  class="basket__content-header-btn"
+                  type="button"
+                  data-type="btn-choose-pay">
+                  Изменить
+                </button>
               </div>
               <div class="pay__card-number">1234 12&bull;&bull; &bull;&bull;&bull;&bull; 1234 <span class="pay__card-date">01/30</span></div>
               <p class="pay__payment-info">Спишем оплату с&nbsp;карты при получении</p>
@@ -176,7 +186,12 @@
             <div>
               <div class="basket-order__delivery">
                 <h3 class="basket-order__title">Доставка в&nbsp;пункт выдачи</h3>
-                <button class="basket-order__btn-edit" type="button" aria-label="Изменить способ доставки."></button>
+                <button
+                  class="basket-order__btn-edit"
+                  type="button"
+                  data-type="btn-sidebar-choose-address"
+                  aria-label="Изменить способ доставки.">
+                </button>
               </div>
               <p class="basket-order__address">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
               <button class="basket-order__date" type="button">5&ndash;8 фев</button>
@@ -188,7 +203,12 @@
             <div>
               <div class="basket-order__card">
                 <h3 class="basket-order__title">Оплата картой</h3>
-                <button class="basket-order__btn-edit" type="button" aria-label="Изменить способ оплаты."></button>
+                <button
+                  class="basket-order__btn-edit"
+                  type="button"
+                  data-type="btn-sidebar-choose-pay"
+                  aria-label="Изменить способ оплаты.">
+                </button>
               </div>
               <div class="basket-order__card-number">1234 12&bull;&bull; &bull;&bull;&bull;&bull; 1234</div>
               <div class="basket-order__payment">
@@ -218,6 +238,32 @@
       </div>
     </footer>
   </div>
+
+  <section class="popup" data-type="popup-choose-pay">
+    <div class="popup__container popup-choose-pay">
+      <div class="popup__header">
+        <h2 class="popup__title">Способ оплаты</h2>
+        <button class="popup__close" type="button"></button>
+      </div>
+      <ul class="popup-choose-pay__list">
+        <li class="popup-choose-pay__item">
+          <input type="radio">
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="popup" data-type="popup-choose-address">
+    <div class="popup__container popup-choose-address">
+      <div class="popup__header">
+        <h2 class="popup__title">Способ доставки</h2>
+        <button class="popup__close" type="button"></button>
+      </div>
+      <div class="popup-choose-address__tabs">
+
+      </div>
+    </div>
+  </section>
 
   <div class="navbar-mobile">
     <a href="" class="navbar-mobile__link">
