@@ -12,6 +12,10 @@
   cursor: pointer;
 }
 
+.basket-order__btn:hover {
+  background-color: var(--color-btn-hover);
+}
+
 @media screen and (min-width: 1024px) {
   .basket-order__btn {
     margin-top: 0;

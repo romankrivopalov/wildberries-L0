@@ -10,6 +10,10 @@
   cursor: pointer;
 }
 
+.basket__content-header-btn:hover {
+  color: var(--color-btn-hover);
+}
+
 @media screen and (min-width: 1024px) {
   .basket__content-header-btn {
     margin-top: 8px;

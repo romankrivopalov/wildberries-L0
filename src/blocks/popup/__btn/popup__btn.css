@@ -8,11 +8,10 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  opacity: 1;
 }
 
 .popup__btn:hover {
-  opacity: .9;
+  background-color: var(--color-btn-hover);
 }
 
 @media screen and (min-width: 1024px) {
