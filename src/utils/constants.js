@@ -1,3 +1,8 @@
+import cardIconMir from '../images/icons/icon-card-mir.svg'
+import cardIconVisa from '../images/icons/icon-card-visa.svg'
+import cardIconMasterCard from '../images/icons/icon-card-mastercard.svg'
+import cardIconMaetro from '../images/icons/icon-card-maetro.svg'
+
 export
 const userDataExample = {
   delevery: {
@@ -34,22 +39,22 @@ const userDataExample = {
     {
       cardNumber: '1234 56•• •••• 1234',
       cardDate: '07/30',
-      cardUrlIcon: 'images/icons/icon-card-mir.svg',
+      cardUrlIcon: cardIconMir,
     },
     {
       cardNumber: '1234 56•• •••• 1234',
       cardDate: '02/28',
-      cardUrlIcon: 'images/icons/icon-card-visa.svg',
+      cardUrlIcon: cardIconVisa,
     },
     {
       cardNumber: '1234 56•• •••• 1234',
       cardDate: '05/29',
-      cardUrlIcon: 'images/icons/icon-card-mastercard.svg',
+      cardUrlIcon: cardIconMasterCard,
     },
     {
       cardNumber: '1234 56•• •••• 1234',
       cardDate: '12/24',
-      cardUrlIcon: 'images/icons/icon-card-maetro.svg',
+      cardUrlIcon: cardIconMaetro,
     }
   ]
 }
