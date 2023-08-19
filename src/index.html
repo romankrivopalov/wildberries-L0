@@ -240,26 +240,27 @@
   </div>
 
   <section class="popup" data-type="popup-choose-pay">
-    <div class="popup__container popup-choose-pay">
-      <div class="popup__header">
-        <h2 class="popup__title">Способ оплаты</h2>
-        <button class="popup__close" type="button"></button>
+    <div class="popup__container">
+      <div class="popup__content">
+        <div class="popup__header">
+          <h2 class="popup__title">Способ оплаты</h2>
+          <button class="popup__close" type="button"></button>
+        </div>
+        <ul class="popup__list" id="popup-choose-pay">
+        </ul>
       </div>
-      <ul class="popup-choose-pay__list">
-        <li class="popup-choose-pay__item">
-          <input type="radio">
-        </li>
-      </ul>
+
+      <button class="popup__btn">Выбрать</button>
     </div>
   </section>
 
   <section class="popup" data-type="popup-choose-address">
-    <div class="popup__container popup-choose-address">
+    <div class="popup__container">
       <div class="popup__header">
         <h2 class="popup__title">Способ доставки</h2>
         <button class="popup__close" type="button"></button>
       </div>
-      <div class="popup-choose-address__tabs">
+      <div class="popup__tabs">
 
       </div>
     </div>
@@ -282,5 +283,14 @@
       <span class="navbar-mobile__icon navbar-mobile__icon_type_profile"></span>
     </a>
   </div>
+
+  <template id="card">
+    <li class="card">
+      <input class="card__radio" type="radio">
+      <span class="card__radio-decor"></span>
+      <span class="card__icon"></span>
+      <span class="card__number"></span>
+    </li>
+  </template>
 </body>
 </html>

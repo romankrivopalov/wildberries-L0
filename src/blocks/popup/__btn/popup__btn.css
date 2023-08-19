@@ -1,0 +1,22 @@
+.popup__btn {
+  padding: 8px 24px 12px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--color-system-white);
+  background-color: var(--color-system-magenta);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.popup__btn:hover {
+  opacity: .9;
+}
+
+@media screen and (min-width: 1024px) {
+  .popup__btn {
+    width: 164px;
+  }
+}
