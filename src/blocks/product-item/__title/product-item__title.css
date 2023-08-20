@@ -1,0 +1,6 @@
+.product-item__title {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-text-black);
+  text-decoration: none;
+}

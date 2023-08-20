@@ -1,0 +1,4 @@
+.product-item__good {
+  grid-area: property;
+  flex-grow: 1;
+}

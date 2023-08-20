@@ -1,0 +1,7 @@
+.organization__name {
+  margin: 0;
+  padding: 4px 0 0 0;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--color-system-gray);
+}

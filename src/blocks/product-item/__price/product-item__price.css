@@ -1,0 +1,16 @@
+.product-item__price {
+  grid-area: price;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  text-align: left;
+}
+
+@media screen and (min-width: 1024px) {
+  .product-item__price {
+    text-align: right;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}

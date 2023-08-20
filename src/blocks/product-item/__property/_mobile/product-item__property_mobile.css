@@ -1,0 +1,27 @@
+.product-item__property_mobile {
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  padding: 2px;
+  width: 22px;
+  height: 22px;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  background-color: var(--color-system-white);
+  border-radius: 6px;
+}
+
+@media screen and (min-width: 1024px) {
+  .product-item__property_mobile {
+    position: relative;
+    bottom: auto;
+    padding: 0;
+    width: auto;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: left;
+    background-color: inherit;
+    border-radius: 0;
+  }
+}

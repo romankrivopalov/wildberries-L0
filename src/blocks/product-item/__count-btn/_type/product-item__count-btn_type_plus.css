@@ -1,0 +1,24 @@
+.product-item__count-btn_type_plus {
+  top: 0;
+  right: 0;
+}
+
+.product-item__count-btn_type_plus::after {
+  content: '';
+  position: absolute;
+  right: 6px;
+  top: 16px;
+  width: 10px;
+  height: 2px;
+  background-color: var(--color-text-black);
+}
+
+.product-item__count-btn_type_plus::before {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  width: 2px;
+  height: 10px;
+  background-color: var(--color-text-black);
+}

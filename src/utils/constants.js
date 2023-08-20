@@ -1,3 +1,6 @@
+import productIconShort from '../images/item-01.jpg'
+import productIconCase from '../images/item-02.jpg'
+import productIconPencils from '../images/item-03.jpg'
 import cardIconMir from '../images/icons/icon-card-mir.svg'
 import cardIconVisa from '../images/icons/icon-card-visa.svg'
 import cardIconMasterCard from '../images/icons/icon-card-mastercard.svg'
@@ -58,6 +61,61 @@ const userDataExample = {
     }
   ]
 }
+
+export
+const userOrderExample = [
+  {
+    name: 'Футболка UZcotton мужская',
+    image: productIconShort,
+    color: 'белый',
+    size: 56,
+    seller: 'Коледино WB',
+    organization: 'OOO Вайлдберриз',
+    organizationInfo: {
+      orgName: 'OOO «Вайлдберриз»',
+      requisites: 'ОГРН: 5167746233210',
+      orgAddress: '129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 5',
+    },
+    quantity: 1,
+    available: 2,
+    price: 522,
+    oldPrice: 1051,
+  },
+  {
+    name: 'Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe',
+    image: productIconCase,
+    color: 'прозрачный',
+    size: null,
+    seller: 'Коледино WB',
+    organization: 'OOO Мегапрофстиль',
+    organizationInfo: {
+      orgName: 'OOO «МЕГАПРОФСТИЛЬ»',
+      requisites: 'ОГРН: 5167746237148',
+      orgAddress: '120477, Москва, улица Зеленая Сосна, 2, корпус 1, стр. 1, помещение 2, офис 47',
+    },
+    quantity: 200,
+    available: 1000,
+    price: 10122,
+    oldPrice: 12208,
+  },
+  {
+    name: 'Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell',
+    image: productIconPencils,
+    color: null,
+    size: null,
+    seller: 'Коледино WB',
+    organization: 'OOO Вайлдберриз',
+    organizationInfo: {
+      orgName: 'OOO «Вайлдберриз»',
+      requisites: 'ОГРН: 5167746235487',
+      orgAddress: '129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 19',
+    },
+    quantity: 2,
+    available: 2,
+    price: 247,
+    oldPrice: 475,
+  },
+]
 
 export
 const popupSelectors = {

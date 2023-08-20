@@ -25,6 +25,44 @@
 @import url('../blocks/header/__search-mobile/header__search-mobile.css');
 @import url('../blocks/header/__icon/_type/header__icon_type_search.css');
 
+@import url('../blocks/product/product.css');
+@import url('../blocks/product/__accordion-header/product__accordion-header.css');
+@import url('../blocks/product/__checkbox/product__checkbox.css');
+@import url('../blocks/product/__checkbox-decor/product__checkbox-decor.css');
+@import url('../blocks/product/__checkbox-with-text/product__checkbox-with-text.css');
+@import url('../blocks/product/__divider/product__divider.css');
+@import url('../blocks/product/__list/product__list.css');
+
+@import url('../blocks/product-item/product-item.css');
+@import url('../blocks/product-item/__wrapper/product-item__wrapper.css');
+@import url('../blocks/product-item/__img/product-item__img.css');
+@import url('../blocks/product-item/__good/product-item__good.css');
+@import url('../blocks/product-item/__title/product-item__title.css');
+@import url('../blocks/product-item/__properties/product-item__properties.css');
+@import url('../blocks/product-item/__property-wrapper/product-item__property-wrapper.css');
+@import url('../blocks/product-item/__label/product-item__label.css');
+@import url('../blocks/product-item/__label/_mobile/product-item__label_mobile.css');
+@import url('../blocks/product-item/__property/product-item__property.css');
+@import url('../blocks/product-item/__property/_mobile/product-item__property_mobile.css');
+@import url('../blocks/product-item/__seller/product-item__seller.css');
+
+@import url('../blocks/product-item/__count/product-item__count.css');
+@import url('../blocks/product-item/__count-num/product-item__count-num.css');
+@import url('../blocks/product-item/__count-btn/product-item__count-btn.css');
+@import url('../blocks/product-item/__count-btn/_type/product-item__count-btn_type_minus.css');
+@import url('../blocks/product-item/__count-btn/_type/product-item__count-btn_type_plus.css');
+
+@import url('../blocks/product-item/__price/product-item__price.css');
+@import url('../blocks/product-item/__new-price/product-item__new-price.css');
+@import url('../blocks/product-item/__old-price/product-item__old-price.css');
+
+
+@import url('../blocks/organization/organization.css');
+@import url('../blocks/organization/__name/organization__name.css');
+
+@import url('../blocks/organization/__info/organization__info.css');
+
+
 @import url('../blocks/basket/basket.css');
 @import url('../blocks/basket/__form/basket__form.css');
 @import url('../blocks/basket/__content/basket__content.css');

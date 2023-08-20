@@ -1,0 +1,14 @@
+.product-item__count-btn_type_minus {
+  top: 0;
+  left: 0;
+}
+
+.product-item__count-btn_type_minus::after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 10px;
+  width: 10px;
+  height: 2px;
+  background-color: var(--color-text-black);
+}

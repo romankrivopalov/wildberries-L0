@@ -1,0 +1,9 @@
+.organization {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .organization {
+    display: block;
+  }
+}

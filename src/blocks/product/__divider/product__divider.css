@@ -1,0 +1,9 @@
+.product__divider {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  display: block;
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px solid #DEDEE1;
+}
