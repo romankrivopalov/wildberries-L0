@@ -18,8 +18,6 @@ export default class Card {
     this._card = this._getTemplate();
     this._card.querySelector(this._cardSetting.cardNumberSelector).textContent = this._data.cardNumber;
     this._card.querySelector(this._cardSetting.cardIconSelector).src = this._data.cardUrlIcon;
-    console.log(this._card.querySelector(this._cardSetting.cardIconSelector))
-
 
     return this._card;
   }
