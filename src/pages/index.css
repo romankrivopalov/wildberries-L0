@@ -25,12 +25,6 @@
 @import url('../blocks/header/__search-mobile/header__search-mobile.css');
 @import url('../blocks/header/__icon/_type/header__icon_type_search.css');
 
-@import url('../blocks/card/card.css');
-@import url('../blocks/card/__icon/card__icon.css');
-@import url('../blocks/card/__radio/card__radio.css');
-@import url('../blocks/card/__radio-decor/card__radio-decor.css');
-@import url('../blocks/card/__number/card__number.css');
-
 @import url('../blocks/basket/basket.css');
 @import url('../blocks/basket/__form/basket__form.css');
 @import url('../blocks/basket/__content/basket__content.css');
@@ -104,7 +98,13 @@
 @import url('../blocks/popup/__content/popup__content.css');
 @import url('../blocks/popup/__header/popup__header.css');
 @import url('../blocks/popup/__title/popup__title.css');
+@import url('../blocks/popup/__subtitle/popup__subtitle.css');
 @import url('../blocks/popup/__list/popup__list.css');
+@import url('../blocks/popup/__tabs/popup__tabs.css');
+@import url('../blocks/popup/__tabs-items/popup__tabs-items.css');
+@import url('../blocks/popup/__tabs-item/popup__tabs-item.css');
+@import url('../blocks/popup/__tabs-item/_active/popup__tabs-item_active.css');
+@import url('../blocks/popup/__tabs-block/popup__tabs-block.css');
 @import url('../blocks/popup/__close/popup__close.css');
 @import url('../blocks/popup/__btn/popup__btn.css');
 
@@ -116,3 +116,20 @@
 @import url('../blocks/navbar-mobile/__icon/_type/navbar-mobile__icon_type_cart.css');
 @import url('../blocks/navbar-mobile/__icon/_type/navbar-mobile__icon_type_favorite.css');
 @import url('../blocks/navbar-mobile/__icon/_type/navbar-mobile__icon_type_profile.css');
+
+/* templates */
+@import url('../blocks/card/card.css');
+@import url('../blocks/card/__icon/card__icon.css');
+@import url('../blocks/card/__radio/card__radio.css');
+@import url('../blocks/card/__radio-decor/card__radio-decor.css');
+@import url('../blocks/card/__number/card__number.css');
+
+@import url('../blocks/pickup/pickup.css');
+@import url('../blocks/pickup/__radio/pickup__radio.css');
+@import url('../blocks/pickup/__radio-decor/pickup__radio-decor.css');
+@import url('../blocks/pickup/__wrapper/pickup__wrapper.css');
+@import url('../blocks/pickup/__address/pickup__address.css');
+@import url('../blocks/pickup/__info/pickup__info.css');
+@import url('../blocks/pickup/__rate/pickup__rate.css');
+@import url('../blocks/pickup/__label/pickup__label.css');
+@import url('../blocks/pickup/__delete/pickup__delete.css');

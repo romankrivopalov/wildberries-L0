@@ -256,13 +256,54 @@
 
   <section class="popup" data-type="popup-choose-address">
     <div class="popup__container">
-      <div class="popup__header">
-        <h2 class="popup__title">Способ доставки</h2>
-        <button class="popup__close" type="button"></button>
-      </div>
-      <div class="popup__tabs">
+      <div class="popup__content">
+        <div class="popup__header">
+          <h2 class="popup__title">Способ доставки</h2>
+          <button class="popup__close" type="button"></button>
+        </div>
+        <div class="popup__tabs">
+          <div class="popup__tabs-items">
+            <a href="#tab_01" class="popup__tabs-item">В пункт выдачи</a>
+            <a href="#tab_02" class="popup__tabs-item">Курьером</a>
+          </div>
+          <div class="popup__items">
+            <div id="tab_01" class="popup__tabs-block">
+              <span class="popup__subtitle">Мои адреса</span>
+              <ul class="popup__list" id="popup-choose-pickup-point">
 
+                <li class="pickup">
+                  <input class="pickup__radio" type="radio">
+                  <span class="pickup__radio-decor"></span>
+                  <div class="pickup__wrapper">
+                    <span class="pickup__address">г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</span>
+                    <div class="pickup__info">
+                      <span class="pickup__rate">4.99</span>
+                      <span class="pickup__label">Пункт выдачи</span>
+                    </div>
+                  </div>
+                  <button class="pickup__delete" aria-label="Удалить адрес"></button>
+                </li>
+
+              </ul>
+            </div>
+            <div id="tab_02" class="popup__tabs-block">
+              <span class="popup__subtitle">Мои адреса</span>
+              <ul class="popup__list" id="popup-choose-pickup">
+
+                <li class="pickup">
+                  <input class="pickup__radio" type="radio">
+                  <span class="pickup__radio-decor"></span>
+                  <span class="pickup__address">Бишкек, улица Табышалиева, 57</span>
+                  <button class="pickup__delete"></button>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <button class="popup__btn">Выбрать</button>
     </div>
   </section>
 
@@ -286,6 +327,24 @@
 
   <template id="card">
     <li class="card">
+      <input class="card__radio" type="radio">
+      <span class="card__radio-decor"></span>
+      <img class="card__icon" src=""></img>
+      <span class="card__number"></span>
+    </li>
+  </template>
+
+  <template id="pickup-point">
+    <li class="pickup-point">
+      <input class="card__radio" type="radio">
+      <span class="card__radio-decor"></span>
+      <img class="card__icon" src=""></img>
+      <span class="card__number"></span>
+    </li>
+  </template>
+
+  <template id="pickup">
+    <li class="pickup">
       <input class="card__radio" type="radio">
       <span class="card__radio-decor"></span>
       <img class="card__icon" src=""></img>

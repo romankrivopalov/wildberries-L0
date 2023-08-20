@@ -1,0 +1,7 @@
+.pickup {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0;
+  padding: 12px 0 14px;
+}
