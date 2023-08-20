@@ -68,6 +68,8 @@ const popupSelectors = {
 export
 const popupChoosePayContainerSelector = '#popup-choose-pay',
       popupChooseAddressContainerSelector = '#popup-choose-address',
+      popupChoosePickupContainerSelector = '#popup-choose-pickup',
+      popupChoosePickupPointContainerSelector = '#popup-choose-pickup-point',
       btnChoosePay = document.querySelector('.basket__content-header-btn[data-type="btn-choose-pay"]'),
       btnChooseAddress = document.querySelector('.basket__content-header-btn[data-type="btn-choose-address"]'),
       btnSidebarChoosePay = document.querySelector('.basket-order__btn-edit[data-type="btn-sidebar-choose-pay"]'),
@@ -79,4 +81,11 @@ const cardSetting = {
   cardSelector: '.card',
   cardIconSelector: '.card__icon',
   cardNumberSelector: '.card__number',
+}
+
+export
+const pickupSetting = {
+  pickupTemplateSelector: '#pickup',
+  pickupPointTemplateSelector: '#pickup-point',
+  pickupSelector: '.pickup',
 }

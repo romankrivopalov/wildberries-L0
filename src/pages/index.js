@@ -5,6 +5,9 @@ import Section from '../components/Section.js';
 import PopupWithChoosePay from '../components/PopupWithChoosePay.js';
 import PopupWithChooseAddress from '../components/PopupWithChooseAddress.js';
 import Card from '../components/Card.js';
+import Pickup from '../components/Pickup.js';
+
+// create slices
 
 const popupCardList = new Section({
     data: all.userDataExample.cards,
@@ -17,8 +20,31 @@ const popupCardList = new Section({
   all.popupChoosePayContainerSelector,
 );
 
-popupCardList.renderItems();
+const popupPickupList = new Section({
+    data: all.userDataExample.delevery.pickup,
+    renderer: (item) => {
+      const pickup = new Pickup(item, all.pickupSetting.pickupTemplateSelector, all.pickupSetting.pickupSelector);
+      const pickupElement = pickup.generatePickupElement();
+      popupPickupList.setItem(pickupElement);
+    }
+  },
+  all.popupChoosePickupContainerSelector,
+);
 
+const popupPickupPointList = new Section({
+    data: all.userDataExample.delevery.pickupPoint,
+    renderer: (item) => {
+      const pickupPoint = new Pickup(item, all.pickupSetting.pickupPointTemplateSelector, all.pickupSetting.pickupSelector);
+      const pickupPointElement = pickupPoint.generatePickupPointElement();
+      popupPickupPointList.setItem(pickupPointElement);
+    }
+  },
+  all.popupChoosePickupPointContainerSelector,
+);
+
+popupCardList.renderItems();
+popupPickupList.renderItems();
+popupPickupPointList.renderItems();
 
 
 
@@ -33,7 +59,7 @@ const popupWithChooseAddress = new PopupWithChooseAddress(
 
 
 
-
+// set listeners
 
 all.btnChoosePay.addEventListener('click', () => {
   popupWithChoosePay.open();
