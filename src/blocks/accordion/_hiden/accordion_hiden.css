@@ -1,0 +1,11 @@
+.accordion_hiden {
+ transition: transform .1s;
+}
+
+.accordion_hiden::after {
+  transform: rotate(45deg);
+}
+
+.accordion_hiden::before {
+  transform: rotate(45deg);
+}

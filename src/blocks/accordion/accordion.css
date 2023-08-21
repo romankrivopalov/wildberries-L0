@@ -1,11 +1,11 @@
-.product__accordion-header {
+.accordion {
   margin: 0 0 20px;
   padding: 0;
   position: relative;
   cursor: pointer;
 }
 
-.product__accordion-header::after {
+.accordion::after {
   content: '';
   position: absolute;
   top: 2px;
@@ -16,7 +16,7 @@
   transform: rotate(-45deg);
 }
 
-.product__accordion-header::before {
+.accordion::before {
   content: '';
   position: absolute;
   top: 2px;
@@ -26,5 +26,3 @@
   border-left: 2px solid var(--color-system-gray);
   transform: rotate(-45deg);
 }
-
-
