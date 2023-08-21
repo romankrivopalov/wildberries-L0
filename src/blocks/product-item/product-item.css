@@ -2,20 +2,24 @@
   position: relative;
   display: grid;
   grid-template-columns: 80px 1Fr;
-  grid-template-rows: 26px 1Fr;
+  grid-template-rows: 27px 1Fr;
   grid-template-areas:
     "image price"
     "image property"
     "count count";
   column-gap: 16px;
-  row-gap: 12px;
   padding: 12px 0 16px;
+}
+
+.product-item:not(:first-child) {
+  border-top: 1px solid #DEDEE1;
+  padding-top: 11px;
 }
 
 @media screen and (min-width: 1024px) {
   .product-item {
     grid-template-columns: 106px 1Fr 100px 110px;
-    grid-template-rows: 99px;
+    grid-template-rows: minmax(96px, auto);
     grid-template-areas:
     "image property count price";
     padding-bottom: 20px;

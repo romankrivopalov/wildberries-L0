@@ -12,3 +12,11 @@
   height: 2px;
   background-color: var(--color-text-black);
 }
+
+@media screen and (min-width: 1024px) {
+  .product-item__count-btn_type_minus::after {
+    top: 22px;
+    left: 11px;
+    width: 9px;
+  }
+}

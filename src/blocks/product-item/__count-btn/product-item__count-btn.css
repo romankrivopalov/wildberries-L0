@@ -6,3 +6,9 @@
   background-color: inherit;
   cursor: pointer;
 }
+
+@media screen and (min-width: 1024px) {
+  .product-item__count-btn {
+    width: 30px;
+  }
+}

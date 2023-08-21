@@ -1,5 +1,5 @@
 .product__accordion-header {
-  margin: 0 0 16px;
+  margin: 0 0 20px;
   padding: 0;
   position: relative;
   cursor: pointer;
@@ -8,8 +8,8 @@
 .product__accordion-header::after {
   content: '';
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 2px;
+  right: 8px;
   width: 12px;
   height: 10px;
   border-bottom: 2px solid var(--color-system-gray);
@@ -19,8 +19,8 @@
 .product__accordion-header::before {
   content: '';
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 2px;
+  right: 8px;
   width: 10px;
   height: 12px;
   border-left: 2px solid var(--color-system-gray);

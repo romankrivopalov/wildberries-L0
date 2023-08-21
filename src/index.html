@@ -94,18 +94,90 @@
 
                     <div class="product-item__count">
                       <button class="product-item__count-btn product-item__count-btn_type_minus" type="button"></button>
-                      <input class="product-item__count-num" min="1" max="99" type="number">
+                      <input class="product-item__count-num" min="1" type="number">
                       <button class="product-item__count-btn product-item__count-btn_type_plus" type="button"></button>
                       <span class="product-item__available">Осталось</span>
                       <div class="product-item__icons">
-                        <button class="product-item__icon product-item__icon_type_favorite"></button>
-                        <button class="product-item__icon product-item__icon_type_delete"></button>
+                        <button
+                          class="product-item__icon product-item__icon_type_favorite"
+                          type="button">
+                        </button>
+                        <button
+                          class="product-item__icon product-item__icon_type_delete"
+                          type="button">
+                        </button>
                       </div>
                     </div>
 
                     <div class="product-item__price">
-                      <span class="product-item__new-price">441</span>
-                      <span class="product-item__old-price">1260</span>
+                      <span class="product-item__new-price">
+                        441
+                        <span class="product-item__currency">
+                          сом
+                        </span>
+                      </span>
+                      <span class="product-item__old-price">1260 сом</span>
+                    </div>
+                  </li>
+
+                  <li class="product-item">
+                    <div class="product-item__wrapper">
+                      <input type="checkbox" class="product__checkbox">
+                      <span class="product__checkbox-decor product__checkbox-decor_type_item"></span>
+                      <img class="product-item__img" src="<%=require('./images/item-02.jpg')%>" alt="">
+                    </div>
+
+                    <div class="product-item__good">
+                      <a href="#" class="product-item__title">Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe</a>
+                      <div class="product-item__properties">
+                        <div class="product__property-wrapper">
+                          <span class="product-item__label">Цвет:</span>
+                          <span class="product-item__property">белый</span>
+                        </div>
+                        <div class="product__property-wrapper">
+                          <span class="product-item__label product-item__label_mobile">Размер:</span>
+                          <span class="product-item__property product-item__property_mobile">56</span>
+                        </div>
+                      </div>
+                      <div class="product-item__seller">Коледино WB</div>
+
+                      <div class="organization">
+                        <p class="organization__name">OOO Вайлдберриз</p>
+                        <span class="organization__icon-info">
+                          <div class="organization__info">
+                            <p class="organization__org-name">OOO «МЕГАПРОФСТИЛЬ»</p>
+                            <p class="organization__requisites">ОГРН: 5167746233210</p>
+                            <p class="organization__org-address">129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 5</p>
+                          </div>
+                        </span>
+                      </div>
+                    </div>
+
+                    <div class="product-item__count">
+                      <button class="product-item__count-btn product-item__count-btn_type_minus" type="button"></button>
+                      <input class="product-item__count-num" min="1" type="number">
+                      <button class="product-item__count-btn product-item__count-btn_type_plus" type="button"></button>
+                      <span class="product-item__available">Осталось</span>
+                      <div class="product-item__icons">
+                        <button
+                          class="product-item__icon product-item__icon_type_favorite"
+                          type="button">
+                        </button>
+                        <button
+                          class="product-item__icon product-item__icon_type_delete"
+                          type="button">
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="product-item__price">
+                      <span class="product-item__new-price">
+                        441
+                        <span class="product-item__currency">
+                          сом
+                        </span>
+                      </span>
+                      <span class="product-item__old-price">1260 сом</span>
                     </div>
                   </li>
 

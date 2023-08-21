@@ -29,6 +29,7 @@
 @import url('../blocks/product/__accordion-header/product__accordion-header.css');
 @import url('../blocks/product/__checkbox/product__checkbox.css');
 @import url('../blocks/product/__checkbox-decor/product__checkbox-decor.css');
+@import url('../blocks/product/__checkbox-decor/_type/product__checkbox-decor_type_accordion.css');
 @import url('../blocks/product/__checkbox-decor/_type/product__checkbox-decor_type_item.css');
 @import url('../blocks/product/__checkbox-with-text/product__checkbox-with-text.css');
 @import url('../blocks/product/__divider/product__divider.css');
@@ -46,7 +47,6 @@
 @import url('../blocks/product-item/__property/product-item__property.css');
 @import url('../blocks/product-item/__property/_mobile/product-item__property_mobile.css');
 @import url('../blocks/product-item/__seller/product-item__seller.css');
-
 @import url('../blocks/product-item/__count/product-item__count.css');
 @import url('../blocks/product-item/__count-num/product-item__count-num.css');
 @import url('../blocks/product-item/__count-btn/product-item__count-btn.css');
@@ -59,8 +59,8 @@
 @import url('../blocks/product-item/__icon/_type/product-item__icon_type_delete.css');
 @import url('../blocks/product-item/__price/product-item__price.css');
 @import url('../blocks/product-item/__new-price/product-item__new-price.css');
+@import url('../blocks/product-item/__currency/product-item__currency.css');
 @import url('../blocks/product-item/__old-price/product-item__old-price.css');
-
 
 @import url('../blocks/organization/organization.css');
 @import url('../blocks/organization/__name/organization__name.css');
@@ -71,6 +71,7 @@
 @import url('../blocks/organization/__org-address/organization__org-address.css');
 
 @import url('../blocks/basket/basket.css');
+@import url('../blocks/basket/__title/basket__title.css');
 @import url('../blocks/basket/__form/basket__form.css');
 @import url('../blocks/basket/__content/basket__content.css');
 @import url('../blocks/basket/__sidebar/basket__sidebar.css');

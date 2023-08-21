@@ -4,6 +4,5 @@
   height: 56px;
   border-radius: 8px;
   object-fit: cover;
-  background-color: #000;
-  opacity: .9;
+  filter: brightness(93%);
 }
