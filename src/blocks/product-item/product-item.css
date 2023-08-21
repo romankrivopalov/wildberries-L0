@@ -31,7 +31,6 @@
 
   .product-item:hover .product-item__icons {
     display: flex;
-    justify-content: flex-end;
   }
 
   .product-item:last-child {

@@ -1,4 +1,4 @@
-.product-item__property_mobile {
+.product-item__property_type_mobile {
   box-sizing: border-box;
   position: absolute;
   top: 92px;
@@ -14,7 +14,7 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .product-item__property_mobile {
+  .product-item__property_type_mobile {
     position: relative;
     top: 0;
     left: 0;
