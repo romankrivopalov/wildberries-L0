@@ -1,5 +1,6 @@
 .product-item__property_mobile {
   position: absolute;
+  top: 88px;
   left: 4px;
   bottom: 4px;
   padding: 2px;
@@ -15,9 +16,9 @@
 @media screen and (min-width: 1024px) {
   .product-item__property_mobile {
     position: relative;
-    bottom: auto;
+    top: 0;
     padding: 0;
-    width: auto;
+    width: max-content;
     font-size: 13px;
     line-height: 16px;
     text-align: left;

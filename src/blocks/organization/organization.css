@@ -4,6 +4,9 @@
 
 @media screen and (min-width: 1024px) {
   .organization {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 0 0 0;
   }
 }

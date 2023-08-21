@@ -62,7 +62,7 @@
                   <li class="product-item">
                     <div class="product-item__wrapper">
                       <input type="checkbox" class="product__checkbox">
-                      <span class="product__checkbox-decor"></span>
+                      <span class="product__checkbox-decor product__checkbox-decor_type_item"></span>
                       <img class="product-item__img" src="<%=require('./images/item-01.jpg')%>" alt="">
                     </div>
 
@@ -84,9 +84,9 @@
                         <p class="organization__name">OOO Вайлдберриз</p>
                         <span class="organization__icon-info">
                           <div class="organization__info">
-                            <p class="organization__orgName">OOO «МЕГАПРОФСТИЛЬ»</p>
+                            <p class="organization__org-name">OOO «МЕГАПРОФСТИЛЬ»</p>
                             <p class="organization__requisites">ОГРН: 5167746233210</p>
-                            <p class="organization__orgAddress">129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 5</p>
+                            <p class="organization__org-address">129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 5</p>
                           </div>
                         </span>
                       </div>
@@ -96,6 +96,11 @@
                       <button class="product-item__count-btn product-item__count-btn_type_minus" type="button"></button>
                       <input class="product-item__count-num" min="1" max="99" type="number">
                       <button class="product-item__count-btn product-item__count-btn_type_plus" type="button"></button>
+                      <span class="product-item__available">Осталось</span>
+                      <div class="product-item__icons">
+                        <button class="product-item__icon product-item__icon_type_favorite"></button>
+                        <button class="product-item__icon product-item__icon_type_delete"></button>
+                      </div>
                     </div>
 
                     <div class="product-item__price">

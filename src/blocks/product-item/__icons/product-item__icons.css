@@ -1,0 +1,10 @@
+.product-item__icons {
+  display: flex;
+  gap: 22px;
+}
+
+@media screen and (min-width: 1024px) {
+  .product-item__icons {
+    display: none;
+  }
+}

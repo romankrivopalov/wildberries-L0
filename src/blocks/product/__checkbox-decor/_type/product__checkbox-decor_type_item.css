@@ -1,0 +1,9 @@
+.product__checkbox-decor_type_item {
+  background-color: var(--color-system-white);
+}
+
+@media screen and (min-width: 1024px) {
+  .product__checkbox-decor_type_item {
+    background-color: inherit;
+  }
+}

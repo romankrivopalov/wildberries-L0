@@ -1,8 +1,18 @@
 .product-item__count {
   grid-area: count;
   position: relative;
-  width: 100px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  width: 100%;
   font-size: 16px;
   line-height: 24px;
 }
 
+@media screen and (min-width: 1024px) {
+  .product-item__count {
+    flex-direction: column;
+    gap: 8px;
+    width: 100px;
+  }
+}

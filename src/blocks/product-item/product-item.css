@@ -9,6 +9,7 @@
     "count count";
   column-gap: 16px;
   row-gap: 12px;
+  padding: 12px 0 16px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -17,5 +18,11 @@
     grid-template-rows: 99px;
     grid-template-areas:
     "image property count price";
+    padding-bottom: 20px;
+  }
+
+  .product-item:hover .product-item__icons {
+    display: flex;
+    justify-content: flex-end;
   }
 }

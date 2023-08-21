@@ -1,5 +1,5 @@
 .product-item__count-num {
-  width: 100%;
+  width: 80px;
   height: 32px;
   background-color: var(--color-system-white);
   border: none;
@@ -14,4 +14,10 @@
 .product-item__count-num::-webkit-outer-spin-button,
 .product-item__count-num::-webkit-inner-spin-button {
 	display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .product-item__count-num {
+    width: 100%;
+  }
 }
