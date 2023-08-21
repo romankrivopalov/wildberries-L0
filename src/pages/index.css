@@ -36,7 +36,7 @@
 @import url('../blocks/product/__checkbox-with-text/product__checkbox-with-text.css');
 @import url('../blocks/product/__divider/product__divider.css');
 @import url('../blocks/product/__list/product__list.css');
-@import url('../blocks/product/__missing-title/product__missing-title.css');
+@import url('../blocks/product/__title-missing/product__title-missing.css');
 
 @import url('../blocks/product-item/product-item.css');
 @import url('../blocks/product-item/_type/product-item_type_missing.css');

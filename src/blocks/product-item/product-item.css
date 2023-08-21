@@ -29,6 +29,10 @@
     padding-bottom: 20px;
   }
 
+  .product-item:not(:first-child) {
+    border-top: none;
+  }
+
   .product-item:hover .product-item__icons {
     display: flex;
   }
