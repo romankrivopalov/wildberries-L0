@@ -16,6 +16,10 @@
   padding-top: 11px;
 }
 
+.product-item:last-child {
+  padding-bottom: 48px;
+}
+
 @media screen and (min-width: 1024px) {
   .product-item {
     grid-template-columns: 106px 1Fr 100px 110px;
@@ -28,5 +32,9 @@
   .product-item:hover .product-item__icons {
     display: flex;
     justify-content: flex-end;
+  }
+
+  .product-item:last-child {
+    padding-bottom: 40px;
   }
 }
