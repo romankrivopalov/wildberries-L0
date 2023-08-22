@@ -17,7 +17,7 @@
 }
 
 .product-item:last-child {
-  padding-bottom: 48px;
+  padding-bottom: 0;
 }
 
 @media screen and (min-width: 1024px) {
@@ -26,7 +26,7 @@
     grid-template-rows: minmax(96px, auto);
     grid-template-areas:
     "image property count price";
-    padding-bottom: 20px;
+    padding-bottom: 21px;
   }
 
   .product-item:not(:first-child) {
@@ -38,6 +38,6 @@
   }
 
   .product-item:last-child {
-    padding-bottom: 40px;
+    padding-bottom: 0;
   }
 }
