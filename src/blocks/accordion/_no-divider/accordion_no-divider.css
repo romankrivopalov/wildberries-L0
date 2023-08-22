@@ -1,0 +1,7 @@
+.accordion_no-divider {
+ transition: transform .1s;
+}
+
+.accordion_no-divider:has(.accordion__checkbox:checked)::after {
+  display: none;
+ }

@@ -26,11 +26,12 @@
 @import url('../blocks/header/__icon/_type/header__icon_type_search.css');
 
 @import url('../blocks/accordion/accordion.css');
-@import url('../blocks/accordion/_hiden/accordion_hiden.css');
+@import url('../blocks/accordion/_no-divider/accordion_no-divider.css');
 @import url('../blocks/accordion/__checkbox/accordion__checkbox.css');
 @import url('../blocks/accordion/__label/accordion__label.css');
 @import url('../blocks/accordion/__hide-info/accordion__hide-info.css');
 @import url('../blocks/accordion/__inner/accordion__inner.css');
+@import url('../blocks/accordion/__title/accordion__title.css');
 
 @import url('../blocks/product/product.css');
 @import url('../blocks/product/__checkbox/product__checkbox.css');

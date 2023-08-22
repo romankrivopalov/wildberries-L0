@@ -8,7 +8,7 @@
     "image property"
     "count count";
   column-gap: 16px;
-  padding: 12px 0 16px;
+  padding: 13px 0 16px;
 }
 
 .product-item:not(:first-child) {

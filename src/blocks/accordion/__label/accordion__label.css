@@ -1,6 +1,6 @@
 .accordion__label {
   position: absolute;
-  top: 4px;
+  top: -11px;
   right: -7px;
   width: 44px;
   height: 44px;
@@ -11,7 +11,7 @@
 .accordion__label::after {
   content: '';
   position: absolute;
-  top: 18px;
+  top: 20px;
   right: 15px;
   width: 12px;
   height: 10px;
@@ -20,10 +20,14 @@
   transition: all .2s ease-out;
 }
 
+.accordion__label:hover::after {
+  border-color: #000;
+}
+
 .accordion__label::before {
   content: '';
   position: absolute;
-  top: 18px;
+  top: 20px;
   right: 15px;
   width: 10px;
   height: 12px;
@@ -32,9 +36,13 @@
   transition: all .2s ease-out;
 }
 
+.accordion__label:hover::before {
+  border-color: #000;
+}
+
 @media screen and (min-width: 1024px) {
   .accordion__label {
-    top: 7px;
+    top: -10px;
     right: -10px;
   }
 }

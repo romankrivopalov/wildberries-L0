@@ -21,13 +21,13 @@
 }
 
 .accordion__checkbox:checked + .accordion__label::after {
-  top: 11px;
+  top: 12px;
   right: 15px;
   transform: rotate(-45deg);
 }
 
 .accordion__checkbox:checked + .accordion__label::before {
-  top: 11px;
+  top: 12px;
   right: 15px;
   transform: rotate(-45deg);
 }

@@ -48,155 +48,148 @@
               Корзина
             </h1>
 
-            <div class="product">
-              <div class="accordion">
-                <input type="checkbox" class="accordion__checkbox" id="checkbox-accordion-product-missing">
-                <label for="checkbox-accordion-product-missing" class="accordion__label"></label>
-                <span class="accordion__hide-info">266 товаров · 2 100 569 сом</span>
-                <div class="accordion__inner">
-                  <input type="checkbox" class="product__checkbox">
-                  <span class="product__checkbox-decor"></span>
-                  <span class="product__checkbox-with-text">Выбрать все</span>
+            <div class="accordion product">
+              <input type="checkbox" class="accordion__checkbox" id="checkbox-accordion-product-missing">
+              <label for="checkbox-accordion-product-missing" class="accordion__label"></label>
+              <span class="accordion__hide-info">266 товаров · 2 100 569 сом</span>
+              <div class="accordion__inner">
+                <input type="checkbox" class="product__checkbox">
+                <span class="product__checkbox-decor"></span>
+                <span class="product__checkbox-with-text">Выбрать все</span>
 
-                  <ul class="product__list">
+                <ul class="product__list">
 
-                    <li class="product-item">
-                      <div class="product-item__wrapper">
-                        <input type="checkbox" class="product__checkbox">
-                        <span class="product__checkbox-decor product__checkbox-decor_type_item"></span>
-                        <img class="product-item__img" src="<%=require('./images/item-01.jpg')%>" alt="">
-                      </div>
+                  <li class="product-item">
+                    <div class="product-item__wrapper">
+                      <input type="checkbox" class="product__checkbox">
+                      <span class="product__checkbox-decor product__checkbox-decor_type_item"></span>
+                      <img class="product-item__img" src="<%=require('./images/item-01.jpg')%>" alt="">
+                    </div>
 
-                      <div class="product-item__good">
-                        <a href="#" class="product-item__title">Футболка UZcotton мужская</a>
-                        <div class="product-item__properties">
-                          <div class="product__property-wrapper">
-                            <span class="product-item__label">Цвет:</span>
-                            <span class="product-item__property">белый</span>
-                          </div>
-                          <div class="product__property-wrapper">
-                            <span class="product-item__label product-item__label_type_mobile">Размер:</span>
-                            <span class="product-item__property product-item__property_type_mobile">56</span>
-                          </div>
+                    <div class="product-item__good">
+                      <a href="#" class="product-item__title">Футболка UZcotton мужская</a>
+                      <div class="product-item__properties">
+                        <div class="product__property-wrapper">
+                          <span class="product-item__label">Цвет:</span>
+                          <span class="product-item__property">белый</span>
                         </div>
-                        <div class="product-item__seller">Коледино WB</div>
+                        <div class="product__property-wrapper">
+                          <span class="product-item__label product-item__label_type_mobile">Размер:</span>
+                          <span class="product-item__property product-item__property_type_mobile">56</span>
+                        </div>
+                      </div>
+                      <div class="product-item__seller">Коледино WB</div>
 
-                        <div class="organization">
-                          <p class="organization__name">OOO Вайлдберриз</p>
-                          <div class="organization__icon-info">
-                            <div class="organization__info">
-                              <p class="organization__org-name">OOO «МЕГАПРОФСТИЛЬ»</p>
-                              <p class="organization__requisites">ОГРН: 5167746233210</p>
-                              <p class="organization__org-address">129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 5</p>
-                            </div>
+                      <div class="organization">
+                        <p class="organization__name">OOO Вайлдберриз</p>
+                        <div class="organization__icon-info">
+                          <div class="organization__info">
+                            <p class="organization__org-name">OOO «МЕГАПРОФСТИЛЬ»</p>
+                            <p class="organization__requisites">ОГРН: 5167746233210</p>
+                            <p class="organization__org-address">129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 5</p>
                           </div>
                         </div>
                       </div>
+                    </div>
 
-                      <div class="product-item__count">
-                        <button class="product-item__count-btn product-item__count-btn_type_minus" type="button"></button>
-                        <input class="product-item__count-num" min="1" type="number">
-                        <button class="product-item__count-btn product-item__count-btn_type_plus" type="button"></button>
-                        <span class="product-item__available">Осталось</span>
-                        <div class="product-item__icons">
-                          <button
-                            class="product-item__icon product-item__icon_type_favorite"
-                            type="button">
-                          </button>
-                          <button
-                            class="product-item__icon product-item__icon_type_delete"
-                            type="button">
-                          </button>
-                        </div>
+                    <div class="product-item__count">
+                      <button class="product-item__count-btn product-item__count-btn_type_minus" type="button"></button>
+                      <input class="product-item__count-num" min="1" type="number">
+                      <button class="product-item__count-btn product-item__count-btn_type_plus" type="button"></button>
+                      <span class="product-item__available">Осталось</span>
+                      <div class="product-item__icons">
+                        <button
+                          class="product-item__icon product-item__icon_type_favorite"
+                          type="button">
+                        </button>
+                        <button
+                          class="product-item__icon product-item__icon_type_delete"
+                          type="button">
+                        </button>
                       </div>
+                    </div>
 
-                      <div class="product-item__price">
-                        <span class="product-item__new-price">
-                          441
-                          <span class="product-item__currency">
-                            сом
-                          </span>
+                    <div class="product-item__price">
+                      <span class="product-item__new-price">
+                        441
+                        <span class="product-item__currency">
+                          сом
                         </span>
-                        <span class="product-item__old-price">1260 сом</span>
-                      </div>
-                    </li>
+                      </span>
+                      <span class="product-item__old-price">1260 сом</span>
+                    </div>
+                  </li>
 
-                    <li class="product-item">
-                      <div class="product-item__wrapper">
-                        <input type="checkbox" class="product__checkbox">
-                        <span class="product__checkbox-decor product__checkbox-decor_type_item"></span>
-                        <img class="product-item__img" src="<%=require('./images/item-02.jpg')%>" alt="">
-                      </div>
+                  <li class="product-item">
+                    <div class="product-item__wrapper">
+                      <input type="checkbox" class="product__checkbox">
+                      <span class="product__checkbox-decor product__checkbox-decor_type_item"></span>
+                      <img class="product-item__img" src="<%=require('./images/item-02.jpg')%>" alt="">
+                    </div>
 
-                      <div class="product-item__good">
-                        <a href="#" class="product-item__title">Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe</a>
-                        <div class="product-item__properties">
-                          <div class="product__property-wrapper">
-                            <span class="product-item__label">Цвет:</span>
-                            <span class="product-item__property">белый</span>
-                          </div>
-                          <div class="product__property-wrapper">
-                            <span class="product-item__label product-item__label_type_mobile">Размер:</span>
-                            <span class="product-item__property product-item__property_type_mobile">56</span>
-                          </div>
+                    <div class="product-item__good">
+                      <a href="#" class="product-item__title">Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe</a>
+                      <div class="product-item__properties">
+                        <div class="product__property-wrapper">
+                          <span class="product-item__label">Цвет:</span>
+                          <span class="product-item__property">белый</span>
                         </div>
-                        <div class="product-item__seller">Коледино WB</div>
-
-                        <div class="organization">
-                          <p class="organization__name">OOO Вайлдберриз</p>
-                          <div class="organization__icon-info">
-                            <div class="organization__info">
-                              <p class="organization__org-name">OOO «МЕГАПРОФСТИЛЬ»</p>
-                              <p class="organization__requisites">ОГРН: 5167746233210</p>
-                              <p class="organization__org-address">129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 5</p>
-                            </div>
-                          </div>
+                        <div class="product__property-wrapper">
+                          <span class="product-item__label product-item__label_type_mobile">Размер:</span>
+                          <span class="product-item__property product-item__property_type_mobile">56</span>
                         </div>
                       </div>
+                      <div class="product-item__seller">Коледино WB</div>
 
-                      <div class="product-item__count">
-                        <button class="product-item__count-btn product-item__count-btn_type_minus" type="button"></button>
-                        <input class="product-item__count-num" min="1" type="number">
-                        <button class="product-item__count-btn product-item__count-btn_type_plus" type="button"></button>
-                        <span class="product-item__available">Осталось</span>
-                        <div class="product-item__icons">
-                          <button
-                            class="product-item__icon product-item__icon_type_favorite"
-                            type="button">
-                          </button>
-                          <button
-                            class="product-item__icon product-item__icon_type_delete"
-                            type="button">
-                          </button>
+                      <div class="organization">
+                        <p class="organization__name">OOO Вайлдберриз</p>
+                        <div class="organization__icon-info">
+                          <div class="organization__info">
+                            <p class="organization__org-name">OOO «МЕГАПРОФСТИЛЬ»</p>
+                            <p class="organization__requisites">ОГРН: 5167746233210</p>
+                            <p class="organization__org-address">129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 5</p>
+                          </div>
                         </div>
                       </div>
+                    </div>
 
-                      <div class="product-item__price">
-                        <span class="product-item__new-price">
-                          441
-                          <span class="product-item__currency">
-                            сом
-                          </span>
+                    <div class="product-item__count">
+                      <button class="product-item__count-btn product-item__count-btn_type_minus" type="button"></button>
+                      <input class="product-item__count-num" min="1" type="number">
+                      <button class="product-item__count-btn product-item__count-btn_type_plus" type="button"></button>
+                      <span class="product-item__available">Осталось</span>
+                      <div class="product-item__icons">
+                        <button
+                          class="product-item__icon product-item__icon_type_favorite"
+                          type="button">
+                        </button>
+                        <button
+                          class="product-item__icon product-item__icon_type_delete"
+                          type="button">
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="product-item__price">
+                      <span class="product-item__new-price">
+                        441
+                        <span class="product-item__currency">
+                          сом
                         </span>
-                        <span class="product-item__old-price">1260 сом</span>
-                      </div>
-                    </li>
+                      </span>
+                      <span class="product-item__old-price">1260 сом</span>
+                    </div>
+                  </li>
 
-                  </ul>
-                </div>
+                </ul>
               </div>
             </div>
 
-            <div class="product">
-              <div class="accordion">
-                <input type="checkbox" class="accordion__checkbox" id="checkbox-accordion-product">
+            <div class="accordion accordion_no-divider product">
+              <input type="checkbox" class="accordion__checkbox" id="checkbox-accordion-product">
                 <label for="checkbox-accordion-product" class="accordion__label"></label>
-                <span class="accordion__hide-info">Отсутствуют · 3 товара</span>
+                <span class="accordion__title">Отсутствуют · 3 товара</span>
                 <div class="accordion__inner">
-                  <input type="checkbox" class="product__checkbox">
-                  <span class="product__checkbox-decor"></span>
-                  <span class="product__checkbox-with-text">Выбрать все</span>
-
                   <ul class="product__list">
 
                     <li class="product-item product-item_type_missing">
@@ -259,7 +252,6 @@
 
                   </ul>
                 </div>
-              </div>
             </div>
 
             <div class="basket__content-section delivery">
