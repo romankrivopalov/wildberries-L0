@@ -80,8 +80,8 @@ const userOrderExample = [
     available: 2,
     price: 522,
     priceInfo: {
-      discount: '55%',
-      discountUser: '10%',
+      discount: 40,
+      discountUser: 10,
     },
     oldPrice: 1051,
   },
@@ -101,8 +101,8 @@ const userOrderExample = [
     available: 1000,
     price: 10122,
     priceInfo: {
-      discount: '55%',
-      discountUser: '10%',
+      discount: 32,
+      discountUser: 10,
     },
     oldPrice: 12208,
   },
@@ -122,8 +122,8 @@ const userOrderExample = [
     available: 2,
     price: 247,
     priceInfo: {
-      discount: '55%',
-      discountUser: '10%',
+      discount: null,
+      discountUser: 10,
     },
     oldPrice: 475,
   },
@@ -136,7 +136,8 @@ const popupSelectors = {
 };
 
 export
-const popupChoosePayContainerSelector = '#popup-choose-pay',
+const productContainerSelector = '#product-list',
+      popupChoosePayContainerSelector = '#popup-choose-pay',
       popupChooseAddressContainerSelector = '#popup-choose-address',
       popupChoosePickupContainerSelector = '#popup-choose-pickup',
       popupChoosePickupPointContainerSelector = '#popup-choose-pickup-point',
@@ -144,6 +145,32 @@ const popupChoosePayContainerSelector = '#popup-choose-pay',
       btnChooseAddress = document.querySelector('.basket__content-header-btn[data-type="btn-choose-address"]'),
       btnSidebarChoosePay = document.querySelector('.basket-order__btn-edit[data-type="btn-sidebar-choose-pay"]'),
       btnSidebarChooseAddress = document.querySelector('.basket-order__btn-edit[data-type="btn-sidebar-choose-address"]');
+
+export
+const productSetting = {
+  productTemplateSelector: '#product',
+  productSelector: '.product-item',
+  productPreviewSelector: '.product-item__img',
+  productTitleSelector: '.product-item__title',
+  productColorSelector: '.product-item__property[data-type="product-color"]',
+  productSizeSelector: '.product-item__property[data-type="product-size"]',
+  productSellerSelector: '.product-item__seller',
+  productOrganizationNameSelector: '.organization__name',
+  productOrgNameSelector: '.organization__org-name',
+  productOrganizationRequisitesSelector: '.organization__requisites',
+  productOrganizationOrgAddressSelector: '.organization__org-address',
+  productCountSelector: '.product-item__count-num',
+  productAvailableSelector: '.product-item__available',
+  productNewPriceSelector: '.product-item__new-price',
+  productOldPriceSelector: '.product-item__old-price',
+  productDiscountSelector: '.discount__label[data-type="product-discount"]',
+  productDiscountSumSelector: '.discount__item[data-type="product-discount"]',
+  productPersonDiscountSelector: '.discount__label[data-type="product-person-discount"]',
+  productPersonDiscountSumSelector: '.discount__item[data-type="product-person-discount"]',
+  productDeleteBtnSelector: '.product-item__icon_type_delete',
+  productCountMinusBtnSelector: '.product-item__count-btn_type_minus',
+  productCountPlusBtnSelector: '.product-item__count-btn_type_plus',
+}
 
 export
 const cardSetting = {

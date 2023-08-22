@@ -5,3 +5,7 @@
   text-align: right;
   white-space: nowrap;
 }
+
+.discount__item:first-child:not(:empty) {
+  padding-bottom: 8px;
+}

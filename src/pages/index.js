@@ -4,10 +4,22 @@ import * as all from '../utils/constants.js';
 import Section from '../components/Section.js';
 import PopupWithChoosePay from '../components/PopupWithChoosePay.js';
 import PopupWithChooseAddress from '../components/PopupWithChooseAddress.js';
+import Product from '../components/Product.js';
 import Card from '../components/Card.js';
 import Pickup from '../components/Pickup.js';
 
 // create slices
+
+const productList = new Section({
+    data: all.userOrderExample,
+    renderer: (item) => {
+      const product = new Product(item, all.productSetting);
+      const productElement = product.generateProduct();
+      productList.setItem(productElement);
+    }
+  },
+  all.productContainerSelector,
+);
 
 const popupCardList = new Section({
     data: all.userDataExample.cards,
@@ -42,6 +54,7 @@ const popupPickupPointList = new Section({
   all.popupChoosePickupPointContainerSelector,
 );
 
+productList.renderItems()
 popupCardList.renderItems();
 popupPickupList.renderItems();
 popupPickupPointList.renderItems();

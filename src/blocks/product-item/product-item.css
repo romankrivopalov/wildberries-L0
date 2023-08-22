@@ -34,7 +34,7 @@
   }
 
   .product-item:hover .product-item__icons {
-    display: flex;
+    opacity: 1;
   }
 
   .product-item:last-child {
