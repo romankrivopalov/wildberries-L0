@@ -72,6 +72,7 @@
 @import url('../blocks/product-item/__price/product-item__price.css');
 @import url('../blocks/product-item/__new-price/product-item__new-price.css');
 @import url('../blocks/product-item/__currency/product-item__currency.css');
+@import url('../blocks/product-item/__price-wrapper/product-item__price-wrapper.css');
 @import url('../blocks/product-item/__old-price/product-item__old-price.css');
 
 @import url('../blocks/organization/organization.css');
@@ -81,6 +82,11 @@
 @import url('../blocks/organization/__org-name/organization__org-name.css');
 @import url('../blocks/organization/__requisites/organization__requisites.css');
 @import url('../blocks/organization/__org-address/organization__org-address.css');
+
+@import url('../blocks/discount/discount.css');
+@import url('../blocks/discount/__column/discount__column.css');
+@import url('../blocks/discount/__label/discount__label.css');
+@import url('../blocks/discount/__item/discount__item.css');
 
 @import url('../blocks/basket/basket.css');
 @import url('../blocks/basket/__title/basket__title.css');

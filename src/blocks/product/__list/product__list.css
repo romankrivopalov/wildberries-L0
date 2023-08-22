@@ -6,6 +6,6 @@
 
 @media screen and (min-width: 1024px) {
   .product__list {
-    padding: 18px 0 22px 0;
+    padding: 18px 16px 22px 0;
   }
 }

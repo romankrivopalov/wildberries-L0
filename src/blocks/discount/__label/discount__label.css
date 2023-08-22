@@ -1,0 +1,7 @@
+.discount__label {
+  margin: 0;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--color-system-gray);
+  white-space: nowrap;
+}

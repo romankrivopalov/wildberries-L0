@@ -7,6 +7,5 @@
   .basket__form {
     flex-direction: row;
     margin-top: 0;
-    gap: 32px;
   }
 }

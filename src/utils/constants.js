@@ -79,6 +79,10 @@ const userOrderExample = [
     quantity: 1,
     available: 2,
     price: 522,
+    priceInfo: {
+      discount: '55%',
+      discountUser: '10%',
+    },
     oldPrice: 1051,
   },
   {
@@ -96,6 +100,10 @@ const userOrderExample = [
     quantity: 200,
     available: 1000,
     price: 10122,
+    priceInfo: {
+      discount: '55%',
+      discountUser: '10%',
+    },
     oldPrice: 12208,
   },
   {
@@ -113,6 +121,10 @@ const userOrderExample = [
     quantity: 2,
     available: 2,
     price: 247,
+    priceInfo: {
+      discount: '55%',
+      discountUser: '10%',
+    },
     oldPrice: 475,
   },
 ]
