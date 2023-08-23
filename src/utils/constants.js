@@ -78,12 +78,11 @@ const userOrderExample = [
     },
     quantity: 1,
     available: 2,
-    price: 522,
     priceInfo: {
-      discount: 40,
+      discount: 30,
       discountUser: 10,
     },
-    oldPrice: 1051,
+    oldPrice: 3300,
   },
   {
     name: 'Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe',
@@ -99,12 +98,11 @@ const userOrderExample = [
     },
     quantity: 200,
     available: 1000,
-    price: 10122,
     priceInfo: {
-      discount: 32,
+      discount: 12,
       discountUser: 10,
     },
-    oldPrice: 12208,
+    oldPrice: 13200,
   },
   {
     name: 'Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell',
@@ -120,12 +118,11 @@ const userOrderExample = [
     },
     quantity: 2,
     available: 2,
-    price: 247,
     priceInfo: {
       discount: null,
       discountUser: 10,
     },
-    oldPrice: 475,
+    oldPrice: 690,
   },
 ]
 
