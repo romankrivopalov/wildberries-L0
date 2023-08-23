@@ -131,6 +131,9 @@
 
 @import url('../blocks/devilery-info/devivery-info.css');
 @import url('../blocks/devilery-info/_sidebar/delivery-info_sidebar.css');
+@import url('../blocks/devilery-info/__accent/delivery-info__accent.css');
+@import url('../blocks/devilery-info/__tooltip/delivery-info__tooltip.css');
+@import url('../blocks/devilery-info/__tooltip/_sidebar/delivery-info_sidebar.css');
 
 @import url('../blocks/basket-order/basket-order.css');
 @import url('../blocks/basket-order/__total/basket-order__total.css');
@@ -150,7 +153,6 @@
 @import url('../blocks/basket-order/__btn/basket-order__btn.css');
 @import url('../blocks/basket-order/__oferta/basket-order__oferta.css');
 @import url('../blocks/basket-order/__oferta-link/basket-order__oferta-link.css');
-@import url('../blocks/basket-order/__accent/basket-order__accent.css');
 
 @import url('../blocks/footer/footer.css');
 @import url('../blocks/footer/__copyright/footer__copyright.css');

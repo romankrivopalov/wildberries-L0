@@ -1,0 +1,5 @@
+.delivery-info__tooltip_sidebar {
+  top: 47px;
+  left: 50%;
+  transform: translateX(-50%);
+}
