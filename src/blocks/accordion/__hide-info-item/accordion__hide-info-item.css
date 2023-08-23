@@ -1,0 +1,14 @@
+.accordion__hide-info-item {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.accordion__hide-info-item:first-child {
+  padding-right: 5px;
+}
+
+.accordion__hide-info-item:last-child {
+  padding-left: 5px;
+}

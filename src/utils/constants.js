@@ -133,6 +133,53 @@ const popupSelectors = {
 };
 
 export
+const basketSetting = {
+      basketAccordionProductCountSelector: '.accordion__hide-info-item[data-type="accordion-count"]',
+      basketAccordionProductPriceSelector: '.accordion__hide-info-item[data-type="accordion-price"]',
+}
+
+export
+const productSetting = {
+      productTemplateSelector: '#product',
+      productSelector: '.product-item',
+      productPreviewSelector: '.product-item__img',
+      productTitleSelector: '.product-item__title',
+      productColorSelector: '.product-item__property[data-type="product-color"]',
+      productSizeSelector: '.product-item__property[data-type="product-size"]',
+      productSellerSelector: '.product-item__seller',
+      productOrganizationNameSelector: '.organization__name',
+      productOrgNameSelector: '.organization__org-name',
+      productOrganizationRequisitesSelector: '.organization__requisites',
+      productOrganizationOrgAddressSelector: '.organization__org-address',
+      productCountSelector: '.product-item__count-num',
+      productAvailableSelector: '.product-item__available',
+      productNewPriceSelector: '.product-item__new-price',
+      productOldPriceSelector: '.product-item__old-price',
+      productDiscountSelector: '.discount__label[data-type="product-discount"]',
+      productDiscountSumSelector: '.discount__item[data-type="product-discount"]',
+      productPersonDiscountSelector: '.discount__label[data-type="product-person-discount"]',
+      productPersonDiscountSumSelector: '.discount__item[data-type="product-person-discount"]',
+      productDeleteBtnSelector: '.product-item__icon_type_delete',
+      productCountMinusBtnSelector: '.product-item__count-btn_type_minus',
+      productCountPlusBtnSelector: '.product-item__count-btn_type_plus',
+}
+
+export
+const cardSetting = {
+      cardTemplateSelector: '#card',
+      cardSelector: '.card',
+      cardIconSelector: '.card__icon',
+      cardNumberSelector: '.card__number',
+}
+
+export
+const pickupSetting = {
+      pickupTemplateSelector: '#pickup',
+      pickupPointTemplateSelector: '#pickup-point',
+      pickupSelector: '.pickup',
+}
+
+export
 const productContainerSelector = '#product-list',
       popupChoosePayContainerSelector = '#popup-choose-pay',
       popupChooseAddressContainerSelector = '#popup-choose-address',
@@ -141,45 +188,5 @@ const productContainerSelector = '#product-list',
       btnChoosePay = document.querySelector('.basket__content-header-btn[data-type="btn-choose-pay"]'),
       btnChooseAddress = document.querySelector('.basket__content-header-btn[data-type="btn-choose-address"]'),
       btnSidebarChoosePay = document.querySelector('.basket-order__btn-edit[data-type="btn-sidebar-choose-pay"]'),
-      btnSidebarChooseAddress = document.querySelector('.basket-order__btn-edit[data-type="btn-sidebar-choose-address"]');
-
-export
-const productSetting = {
-  productTemplateSelector: '#product',
-  productSelector: '.product-item',
-  productPreviewSelector: '.product-item__img',
-  productTitleSelector: '.product-item__title',
-  productColorSelector: '.product-item__property[data-type="product-color"]',
-  productSizeSelector: '.product-item__property[data-type="product-size"]',
-  productSellerSelector: '.product-item__seller',
-  productOrganizationNameSelector: '.organization__name',
-  productOrgNameSelector: '.organization__org-name',
-  productOrganizationRequisitesSelector: '.organization__requisites',
-  productOrganizationOrgAddressSelector: '.organization__org-address',
-  productCountSelector: '.product-item__count-num',
-  productAvailableSelector: '.product-item__available',
-  productNewPriceSelector: '.product-item__new-price',
-  productOldPriceSelector: '.product-item__old-price',
-  productDiscountSelector: '.discount__label[data-type="product-discount"]',
-  productDiscountSumSelector: '.discount__item[data-type="product-discount"]',
-  productPersonDiscountSelector: '.discount__label[data-type="product-person-discount"]',
-  productPersonDiscountSumSelector: '.discount__item[data-type="product-person-discount"]',
-  productDeleteBtnSelector: '.product-item__icon_type_delete',
-  productCountMinusBtnSelector: '.product-item__count-btn_type_minus',
-  productCountPlusBtnSelector: '.product-item__count-btn_type_plus',
-}
-
-export
-const cardSetting = {
-  cardTemplateSelector: '#card',
-  cardSelector: '.card',
-  cardIconSelector: '.card__icon',
-  cardNumberSelector: '.card__number',
-}
-
-export
-const pickupSetting = {
-  pickupTemplateSelector: '#pickup',
-  pickupPointTemplateSelector: '#pickup-point',
-  pickupSelector: '.pickup',
-}
+      btnSidebarChooseAddress = document.querySelector('.basket-order__btn-edit[data-type="btn-sidebar-choose-address"]'),
+      productsTitles = ['товар', 'товара', 'товаров'];

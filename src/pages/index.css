@@ -30,6 +30,7 @@
 @import url('../blocks/accordion/__checkbox/accordion__checkbox.css');
 @import url('../blocks/accordion/__label/accordion__label.css');
 @import url('../blocks/accordion/__hide-info/accordion__hide-info.css');
+@import url('../blocks/accordion/__hide-info-item/accordion__hide-info-item.css');
 @import url('../blocks/accordion/__inner/accordion__inner.css');
 @import url('../blocks/accordion/__title/accordion__title.css');
 

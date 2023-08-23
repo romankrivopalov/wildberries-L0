@@ -7,13 +7,23 @@ import PopupWithChooseAddress from '../components/PopupWithChooseAddress.js';
 import Product from '../components/Product.js';
 import Card from '../components/Card.js';
 import Pickup from '../components/Pickup.js';
+import Basket from '../components/Basket.js';
+
+const basket = new Basket(all.basketSetting);
 
 // create slices
 
 const productList = new Section({
     data: all.userOrderExample,
     renderer: (item) => {
-      const product = new Product(item, all.productSetting);
+      const product = new Product(
+        item,
+        all.productSetting,
+        basket.decreaseCounterBasket,
+        basket.increaseCounterBasket,
+        basket.decreasePriceBasket,
+        basket.increasePriceBasket,
+      );
       const productElement = product.generateProduct();
       productList.setItem(productElement);
     }

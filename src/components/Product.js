@@ -1,8 +1,19 @@
 export default class Product {
-  constructor(data, productSetting) {
+  constructor(
+    data,
+    productSetting,
+    handleDecreaseAccordionCounter,
+    handleIncreaseAccordionCounter,
+    handleDecreaseAccordionPrice,
+    handleIncreaseAccordionPrice
+  ) {
     this._data = data;
     this._oldPrice = data.oldPrice;
     this._productSetting = productSetting;
+    this._handleDecreaseAccordionCounter = handleDecreaseAccordionCounter;
+    this._handleIncreaseAccordionCounter = handleIncreaseAccordionCounter;
+    this._handleDecreaseAccordionPrice = handleDecreaseAccordionPrice;
+    this._handleIncreaseAccordionPrice = handleIncreaseAccordionPrice;
   }
 
   _getTemplate = () => {
@@ -62,22 +73,19 @@ export default class Product {
   }
 
   _renderSum = (value) => {
-    const newPriceElement = this._product.querySelector(this._productSetting.productNewPriceSelector)
-
     value.toString().length > 5
-      ? newPriceElement.classList.add('product-item__new-price_type_small')
-      : newPriceElement.classList.remove('product-item__new-price_type_small')
+      ? this._newPriceElement.classList.add('product-item__new-price_type_small')
+      : this._newPriceElement.classList.remove('product-item__new-price_type_small')
 
-    newPriceElement.textContent = `${value.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')} сом`;
+    this._newPriceElement.textContent = `${value.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')} сом`;
   }
 
   _calculateSum = (quantity) => {
-    const fullOldSum = this._oldPrice * quantity;
-    const sumAfterDiscount = (fullOldSum)
+    this._sumDiscount = (this._oldPrice)
       * (this._data.priceInfo.discount
       + this._data.priceInfo.discountUser) / 100;
 
-    this._renderSum(fullOldSum - sumAfterDiscount);
+    this._renderSum((this._oldPrice - this._sumDiscount) * quantity);
   }
 
   _renderCounter = (value) => {
@@ -87,6 +95,7 @@ export default class Product {
   _increaseCounter = () => {
     if (this._productCount.value >= this._data.available) return
 
+    this._handleIncreaseAccordionPrice(this._oldPrice - this._sumDiscount);
     this._calculateSum(parseInt(this._productCount.value) + 1);
     this._calculateOldSum(parseInt(this._productCount.value) + 1);
     this._renderCounter(parseInt(this._productCount.value) + 1);
@@ -95,7 +104,8 @@ export default class Product {
   _decreaseCounter = () => {
     if (this._productCount.value <= 1) return
 
-    this._calculateSum(parseInt(this._productCount.value) - 1);
+    this._handleIncreaseAccordionPrice(-(this._oldPrice - this._sumDiscount));
+    this._calculateSum(parseInt(this._productCount.value) - 1)
     this._calculateOldSum(parseInt(this._productCount.value) - 1);
     this._renderCounter(parseInt(this._productCount.value) - 1)
   }
@@ -115,6 +125,7 @@ export default class Product {
 
     this._productDeleteBtn.addEventListener('click', () => {
       this._product.remove();
+      this._handleDecreaseAccordionCounter();
     });
   };
 
@@ -162,6 +173,9 @@ export default class Product {
       .querySelector(this._productSetting.productCountSelector);
     this._productCount.value = this._data.quantity;
 
+    this._newPriceElement = this._product
+      .querySelector(this._productSetting.productNewPriceSelector)
+
     this._calculateSum(this._data.quantity);
     this._calculateOldSum(this._data.quantity);
 
@@ -172,6 +186,8 @@ export default class Product {
     }
 
     this._setEventListeners();
+    this._handleIncreaseAccordionCounter();
+    this._handleIncreaseAccordionPrice((this._oldPrice - this._sumDiscount) * this._data.quantity);
 
     return this._product;
   }

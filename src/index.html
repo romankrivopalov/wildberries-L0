@@ -48,10 +48,14 @@
               Корзина
             </h1>
 
-            <div class="accordion product">
+            <div class="accordion product" data-type="basket-accordion-product">
               <input type="checkbox" class="accordion__checkbox" id="checkbox-accordion-product-missing">
               <label for="checkbox-accordion-product-missing" class="accordion__label"></label>
-              <span class="accordion__hide-info">266 товаров · 2 100 569 сом</span>
+              <span class="accordion__hide-info">
+                <p class="accordion__hide-info-item" data-type="accordion-count"></p>
+                ·
+                <p class="accordion__hide-info-item" data-type="accordion-price"></p>
+              </span>
               <div class="accordion__inner">
                 <input type="checkbox" class="product__checkbox">
                 <span class="product__checkbox-decor"></span>
