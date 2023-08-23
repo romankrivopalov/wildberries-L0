@@ -3,7 +3,6 @@ export default class Product {
     this._data = data;
     this._oldPrice = data.oldPrice;
     this._productSetting = productSetting;
-    console.log(data.oldPrice)
   }
 
   _getTemplate = () => {
@@ -63,9 +62,13 @@ export default class Product {
   }
 
   _renderSum = (value) => {
-    this._product
-      .querySelector(this._productSetting.productNewPriceSelector)
-      .textContent = `${value.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')} сом`;
+    const newPriceElement = this._product.querySelector(this._productSetting.productNewPriceSelector)
+
+    value.toString().length > 5
+      ? newPriceElement.classList.add('product-item__new-price_type_small')
+      : newPriceElement.classList.remove('product-item__new-price_type_small')
+
+    newPriceElement.textContent = `${value.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')} сом`;
   }
 
   _calculateSum = (quantity) => {
