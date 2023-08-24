@@ -9,6 +9,8 @@ import Card from '../components/Card.js';
 import Pickup from '../components/Pickup.js';
 import Basket from '../components/Basket.js';
 
+const cardList = [];
+
 const basket = new Basket(all.basketSetting);
 
 // create slices
@@ -34,13 +36,16 @@ const productList = new Section({
 const popupCardList = new Section({
     data: all.userDataExample.cards,
     renderer: (item) => {
-      const card = new Card(item, all.cardSetting);
+      const card = new Card(item, all.cardSetting, popupWithChoosePay.disabledAllInputs);
+      cardList.push(card);
       const cardElement = card.generateCard();
       popupCardList.setItem(cardElement);
-    }
+    },
   },
   all.popupChoosePayContainerSelector,
 );
+
+console.log(cardList)
 
 const popupPickupList = new Section({
     data: all.userDataExample.delevery.pickup,
@@ -64,22 +69,17 @@ const popupPickupPointList = new Section({
   all.popupChoosePickupPointContainerSelector,
 );
 
-productList.renderItems()
-popupCardList.renderItems();
-popupPickupList.renderItems();
-popupPickupPointList.renderItems();
-
-
-
-
 const popupWithChoosePay = new PopupWithChoosePay(
-  all.popupSelectors.choosePay
+  all.popupSelectors.choosePay, cardList
 );
-
 const popupWithChooseAddress = new PopupWithChooseAddress(
   all.popupSelectors.chooseAddress
 );
 
+productList.renderItems()
+popupCardList.renderItems();
+popupPickupList.renderItems();
+popupPickupPointList.renderItems();
 
 
 // set listeners

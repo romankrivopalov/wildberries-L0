@@ -189,6 +189,7 @@
 @import url('../blocks/card/__icon/card__icon.css');
 @import url('../blocks/card/__radio/card__radio.css');
 @import url('../blocks/card/__radio-decor/card__radio-decor.css');
+@import url('../blocks/card/__radio-decor/_active/card__radio-decor_active.css');
 @import url('../blocks/card/__number/card__number.css');
 
 @import url('../blocks/pickup/pickup.css');

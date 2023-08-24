@@ -1,11 +1,17 @@
 import Popup from "./Popup.js";
 
 export default class PopupWithChoosePay extends Popup {
-  constructor(popupSelector) {
+  constructor(popupSelector, cardList) {
     super(popupSelector);
+
+    this._cardList = cardList;
   }
 
-  _generateItem = () => {
-    this._cardList.forEach(i => console.log(i))
+  setEventListener() {
+    super.setEventListener();
+  }
+
+  disabledAllInputs = () => {
+    this._cardList.forEach(card => card.disableInput())
   }
 }
