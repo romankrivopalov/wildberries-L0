@@ -170,6 +170,9 @@ const cardSetting = {
       cardSelector: '.card',
       cardIconSelector: '.card__icon',
       cardNumberSelector: '.card__number',
+      cardInputSelecor: '.card__radio',
+      cardInputDecorSelecor: '.card__radio-decor',
+      cardInputActiveClass: 'card__radio-decor_active',
 }
 
 export

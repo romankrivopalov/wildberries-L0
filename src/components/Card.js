@@ -17,7 +17,7 @@ export default class Card {
   }
 
   _setEventListener = () => {
-    this._checkedInputDecor.addEventListener('click', () => {
+    this._cardInputDecor.addEventListener('click', () => {
       if (!this._isChecked) {
         this._disabledAllInputs();
 
@@ -27,13 +27,13 @@ export default class Card {
   }
 
   _enableInput = () => {
-    this._checkedInput.checked = true;
-    this._checkedInputDecor.classList.add('card__radio-decor_active');
+    this._cardInput.checked = true;
+    this._cardInputDecor.classList.add(this._cardSetting.cardInputActiveClass);
   }
 
   disableInput = () => {
-    this._checkedInput.checked = false;
-    this._checkedInputDecor.classList.remove('card__radio-decor_active');
+    this._cardInput.checked = false;
+    this._cardInputDecor.classList.remove(this._cardSetting.cardInputActiveClass);
   }
 
   generateCard = () => {
@@ -41,8 +41,8 @@ export default class Card {
     this._card.querySelector(this._cardSetting.cardNumberSelector).textContent = this._data.cardNumber;
     this._card.querySelector(this._cardSetting.cardIconSelector).src = this._data.cardUrlIcon;
 
-    this._checkedInput = this._card.querySelector('.card__radio');
-    this._checkedInputDecor = this._card.querySelector('.card__radio-decor');
+    this._cardInput = this._card.querySelector(this._cardSetting.cardInputSelecor);
+    this._cardInputDecor = this._card.querySelector(this._cardSetting.cardInputDecorSelecor);
 
     this._setEventListener();
 
