@@ -104,6 +104,7 @@
 @import url('../blocks/delivery/__label/delivery__label.css');
 @import url('../blocks/delivery/__address/delivery__address.css');
 @import url('../blocks/delivery/__data/delivery__data.css');
+@import url('../blocks/delivery/__data/_hide/delivery__data_hide.css');
 @import url('../blocks/delivery/__rate/delivery__rate.css');
 @import url('../blocks/delivery/__office-hours/delivery__office-hours.css');
 @import url('../blocks/delivery/__delivery-price/delivery__delivery-price.css');

@@ -9,7 +9,7 @@ import cardIconMaetro from '../images/icons/icon-card-maetro.svg'
 export
 const userDataExample = {
   delevery: {
-    pickupPoint: [
+    pickup: [
       {
         address: 'Бишкек, улица Табышалиева, 57',
       },
@@ -20,7 +20,7 @@ const userDataExample = {
         address: 'Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1',
       },
     ],
-    pickup: [
+    pickupPoint: [
       {
         address: 'г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1',
         rate: null,
@@ -148,7 +148,20 @@ const basketSetting = {
       basketAccordionProductPriceSelector: '.accordion__hide-info-item[data-type="accordion-price"]',
       cardIconSelector: '.pay__icon',
       cardNumberSelector: '.pay__number',
-      cardDateSelector: '.pay__date'
+      cardDateSelector: '.pay__date',
+      pickupTemplateSelector: '#pickup-point',
+      pickupTypeSelector: '.delivery__label[data-type="delivery-type"]',
+      pickupSidebarTypeSelector: '.basket-order__title[data-type="delivery-type"]',
+      pickupDataSelector: '.delivery__data',
+      pickupAddressSelector: '.delivery__address',
+      pickupSidebarAddressSelector: '.basket-order__address',
+      pickupRateSelector: '.delivery__rate',
+      pickupOfficeHoursSelector: '.delivery__office-hours',
+      pickupDataHideClass: 'delivery__data_hide',
+      pickupTypeText: 'Пункт выдачи',
+      pickupPointTypeText: 'Курьером',
+      pickupSidebarTypeText: 'Доставка в пункт выдачи',
+      pickupPointSidebarTypeText: 'Доставка курьером',
 }
 
 export
@@ -192,6 +205,11 @@ const pickupSetting = {
       pickupTemplateSelector: '#pickup',
       pickupPointTemplateSelector: '#pickup-point',
       pickupSelector: '.pickup',
+      pickupAddressSelector: '.pickup__address',
+      pickupPointRateSelector: '.pickup__rate',
+      pickupInputSelecor: '.pickup__radio',
+      pickupInputDecorSelecor: '.pickup__radio-decor',
+      pickupBtnDeleteSelecor: '.pickup__delete',
 }
 
 export

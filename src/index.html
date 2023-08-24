@@ -147,12 +147,12 @@
               </div>
 
               <div class="delivery__address-wrapper">
-                <span class="delivery__label">Пункт выдачи</span>
+                <span class="delivery__label" data-type="delivery-type"></span>
                 <div>
-                  <p class="delivery__address">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                  <p class="delivery__address"></p>
                   <div class="delivery__data">
-                    <div class="delivery__rate">4.99</div>
-                    <p class="delivery__office-hours">Ежедневно с 10 до 21 </p>
+                    <div class="delivery__rate"></div>
+                    <p class="delivery__office-hours"></p>
                   </div>
                 </div>
               </div>
@@ -285,7 +285,7 @@
 
             <div>
               <div class="basket-order__delivery">
-                <h3 class="basket-order__title">Доставка в&nbsp;пункт выдачи</h3>
+                <h3 class="basket-order__title" data-type="delivery-type">Доставка в&nbsp;пункт выдачи</h3>
                 <button
                   class="basket-order__btn-edit"
                   type="button"
@@ -373,8 +373,8 @@
         </div>
         <div class="popup__tabs">
           <div class="popup__tabs-items">
-            <a href="#tab_01" class="popup__tabs-item">В пункт выдачи</a>
-            <a href="#tab_02" class="popup__tabs-item">Курьером</a>
+            <a href="#tab_01" class="popup__tabs-item" data-type="popup-tab-pickup-point">В пункт выдачи</a>
+            <a href="#tab_02" class="popup__tabs-item" data-type="popup-tab-pickup" target="_top">Курьером</a>
           </div>
           <div class="popup__items">
             <div id="tab_01" class="popup__tabs-block">
@@ -391,7 +391,7 @@
         </div>
       </div>
 
-      <button class="popup__btn">Выбрать</button>
+      <button class="popup__btn" data-type="btn-popup-choose-address">Выбрать</button>
     </div>
   </section>
 

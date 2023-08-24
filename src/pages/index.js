@@ -10,6 +10,8 @@ import Pickup from '../components/Pickup.js';
 import Basket from '../components/Basket.js';
 
 const cardList = [];
+const pickupAddressList = [];
+const pickupPointAddressList = [];
 
 const basket = new Basket(all.basketSetting);
 
@@ -48,7 +50,13 @@ const popupCardList = new Section({
 const popupPickupList = new Section({
     data: all.userDataExample.delevery.pickup,
     renderer: (item) => {
-      const pickup = new Pickup(item, all.pickupSetting.pickupTemplateSelector, all.pickupSetting.pickupSelector);
+      const pickup = new Pickup(
+        item,
+        all.pickupSetting.pickupTemplateSelector,
+        all.pickupSetting,
+        popupWithChooseAddress.disabledAllInputs
+      );
+      pickupAddressList.push(pickup);
       const pickupElement = pickup.generatePickupElement();
       popupPickupList.setItem(pickupElement);
     }
@@ -59,7 +67,13 @@ const popupPickupList = new Section({
 const popupPickupPointList = new Section({
     data: all.userDataExample.delevery.pickupPoint,
     renderer: (item) => {
-      const pickupPoint = new Pickup(item, all.pickupSetting.pickupPointTemplateSelector, all.pickupSetting.pickupSelector);
+      const pickupPoint = new Pickup(
+        item,
+        all.pickupSetting.pickupPointTemplateSelector,
+        all.pickupSetting,
+        popupWithChooseAddress.disabledAllInputs
+      );
+      pickupPointAddressList.push(pickupPoint);
       const pickupPointElement = pickupPoint.generatePickupPointElement();
       popupPickupPointList.setItem(pickupPointElement);
     }
@@ -71,7 +85,7 @@ const popupWithChoosePay = new PopupWithChoosePay(
   all.popupSelectors.choosePay, cardList, basket.changeCard
 );
 const popupWithChooseAddress = new PopupWithChooseAddress(
-  all.popupSelectors.chooseAddress
+  all.popupSelectors.chooseAddress, pickupAddressList, pickupPointAddressList, basket.changeAddress
 );
 
 productList.renderItems()
@@ -100,4 +114,5 @@ all.btnSidebarChooseAddress.addEventListener('click', () => {
 
 popupWithChoosePay.setInitialCard();
 popupWithChoosePay.setEventListener();
+popupWithChooseAddress.setInitialAddress();
 popupWithChooseAddress.setEventListener();

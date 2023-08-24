@@ -18,7 +18,9 @@ export default class PopupWithChoosePay extends Popup {
     super.setEventListener();
 
     this._cardBtn.addEventListener('click', () => {
-      this._changeCard();
+      this._handleChangeCard(this._changeCard());
+
+      this.close();
     })
   }
 
@@ -29,7 +31,6 @@ export default class PopupWithChoosePay extends Popup {
   _changeCard = () => {
     const activeCard = this._cardList.find(card => card.isChecked);
 
-    this._handleChangeCard(activeCard);
-    this.close();
+    return activeCard;
   }
 }

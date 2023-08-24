@@ -1,4 +1,5 @@
 .pickup__radio-decor {
+  box-sizing: border-box;
   flex-shrink: 0;
   display: block;
   margin: 7px 10px 0 2px;
