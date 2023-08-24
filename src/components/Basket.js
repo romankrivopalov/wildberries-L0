@@ -8,6 +8,9 @@ export default class Basket {
     this._accordionProductCount = null;
     this._accordionProductPriceElement = document.querySelector(this._basketSetting.basketAccordionProductPriceSelector);
     this._accordionProductPrice = null;
+    this._cardIcons = document.querySelectorAll(this._basketSetting.cardIconSelector);
+    this._cardNumbers = document.querySelectorAll(this._basketSetting.cardNumberSelector);
+    this._cardDates = document.querySelectorAll(this._basketSetting.cardDateSelector);
   }
 
   _renderPriceBasket = () => {
@@ -25,7 +28,6 @@ export default class Basket {
 
   increasePriceBasket = (value) => { // +
     this._accordionProductPrice += value;
-    // console.log(value)
     this._renderPriceBasket(this._accordionProductPrice);
   }
 
@@ -35,5 +37,15 @@ export default class Basket {
 
   increaseCounterBasket = () => { // +
     this._renderCounterBasket(this._accordionProductCount += 1);
+  }
+
+  _renderCards = (card) => {
+    this._cardIcons.forEach(icon => icon.src = card.data.cardUrlIcon)
+    this._cardNumbers.forEach(number => number.textContent = card.data.cardNumber)
+    this._cardDates.forEach(date => date.textContent = card.data.cardDate)
+  }
+
+  changeCard = (card) => {
+    this._renderCards(card)
   }
 }

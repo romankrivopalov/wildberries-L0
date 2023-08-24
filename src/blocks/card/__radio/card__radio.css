@@ -5,3 +5,7 @@
   position: absolute;
   width: 1px;
 }
+
+.card__radio:checked ~ .card__radio-decor {
+  border: 5px solid var(--color-system-magenta);
+}

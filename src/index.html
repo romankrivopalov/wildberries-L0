@@ -208,7 +208,14 @@
                   Изменить
                 </button>
               </div>
-              <div class="pay__card-number">1234 12&bull;&bull; &bull;&bull;&bull;&bull; 1234 <span class="pay__card-date">01/30</span></div>
+              <div class="pay__wrapper">
+                <img class="pay__icon" src="<%=require('./images/icons/icon-card-mir.svg')%>" alt="Иконка карты пользователя. ">
+                <div class="pay__wrapper-card">
+                  <div class="pay__number">номер карты</div>
+                  <span class="pay__date">дата карты</span>
+                </div>
+              </div>
+
               <p class="pay__payment-info">Спишем оплату с&nbsp;карты при получении</p>
             </div>
 
@@ -307,7 +314,13 @@
                   aria-label="Изменить способ оплаты. ">
                 </button>
               </div>
-              <div class="basket-order__card-number">1234 12&bull;&bull; &bull;&bull;&bull;&bull; 1234</div>
+              <div class="pay pay_type_sidebar">
+                <div class="pay__wrapper pay__wrapper_type_sidebar">
+                  <img class="pay__icon" src="<%=require('./images/icons/icon-card-mir.svg')%>" alt="Иконка карты пользователя. ">
+                  <div class="pay__number pay__number_type_sidebar">номер карты</div>
+                </div>
+              </div>
+
               <div class="basket-order__payment">
                 <label class="basket-order__payment-wrapper">
                   <input class="basket-order__checkbox" type="checkbox">
@@ -347,7 +360,7 @@
         </ul>
       </div>
 
-      <button class="popup__btn">Выбрать</button>
+      <button class="popup__btn" data-type="btn-popup-choose-pay">Выбрать</button>
     </div>
   </section>
 

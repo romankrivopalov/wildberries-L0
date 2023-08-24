@@ -1,8 +1,8 @@
 export default class Card {
   constructor(data, cardSetting, disabledAllInputs) {
-    this._data = data;
+    this.data = data;
     this._cardSetting = cardSetting;
-    this._isChecked = false;
+    this.isChecked = false;
     this._disabledAllInputs = disabledAllInputs;
   }
 
@@ -18,7 +18,7 @@ export default class Card {
 
   _setEventListener = () => {
     this._cardInputDecor.addEventListener('click', () => {
-      if (!this._isChecked) {
+      if (!this.isChecked) {
         this._disabledAllInputs();
 
         this._enableInput();
@@ -27,19 +27,19 @@ export default class Card {
   }
 
   _enableInput = () => {
+    this.isChecked = true;
     this._cardInput.checked = true;
-    this._cardInputDecor.classList.add(this._cardSetting.cardInputActiveClass);
   }
 
   disableInput = () => {
+    this.isChecked = false;
     this._cardInput.checked = false;
-    this._cardInputDecor.classList.remove(this._cardSetting.cardInputActiveClass);
   }
 
   generateCard = () => {
     this._card = this._getTemplate();
-    this._card.querySelector(this._cardSetting.cardNumberSelector).textContent = this._data.cardNumber;
-    this._card.querySelector(this._cardSetting.cardIconSelector).src = this._data.cardUrlIcon;
+    this._card.querySelector(this._cardSetting.cardNumberSelector).textContent = this.data.cardNumber;
+    this._card.querySelector(this._cardSetting.cardIconSelector).src = this.data.cardUrlIcon;
 
     this._cardInput = this._card.querySelector(this._cardSetting.cardInputSelecor);
     this._cardInputDecor = this._card.querySelector(this._cardSetting.cardInputDecorSelecor);

@@ -114,8 +114,14 @@
 @import url('../blocks/delivery/__product-img/delivery__product-img.css');
 
 @import url('../blocks/pay/pay.css');
-@import url('../blocks/pay/__card-number/pay__card-number.css');
-@import url('../blocks/pay/__card-date/pay__card-date.css');
+@import url('../blocks/pay/_type/pay_type_sidebar.css');
+@import url('../blocks/pay/__wrapper/pay__wrapper.css');
+@import url('../blocks/pay/__wrapper/_type/pay__wrapper_type_sidebar.css');
+@import url('../blocks/pay/__wrapper-card/pay__wrapper-card.css');
+@import url('../blocks/pay/__icon/pay__icon.css');
+@import url('../blocks/pay/__number/pay__number.css');
+@import url('../blocks/pay/__number/_type/pay__number_type_sidebar.css');
+@import url('../blocks/pay/__date/pay__date.css');
 @import url('../blocks/pay/__payment-info/pay__payment-info.css');
 
 @import url('../blocks/recipient/recipient.css');
@@ -146,7 +152,6 @@
 @import url('../blocks/basket-order/__address/basket-order__address.css');
 @import url('../blocks/basket-order/__date/basket-order__date.css');
 @import url('../blocks/basket-order/__card/basket-order-card.css');
-@import url('../blocks/basket-order/__card-number/basket-order__card-number.css');
 @import url('../blocks/basket-order/__payment/basket-order__payment.css');
 @import url('../blocks/basket-order/__payment-wrapper/basket-order__payment-wrapper.css');
 @import url('../blocks/basket-order/__checkbox/basket-order__checkbox.css');
@@ -189,7 +194,6 @@
 @import url('../blocks/card/__icon/card__icon.css');
 @import url('../blocks/card/__radio/card__radio.css');
 @import url('../blocks/card/__radio-decor/card__radio-decor.css');
-@import url('../blocks/card/__radio-decor/_active/card__radio-decor_active.css');
 @import url('../blocks/card/__number/card__number.css');
 
 @import url('../blocks/pickup/pickup.css');

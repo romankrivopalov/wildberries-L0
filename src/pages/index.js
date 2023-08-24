@@ -45,8 +45,6 @@ const popupCardList = new Section({
   all.popupChoosePayContainerSelector,
 );
 
-console.log(cardList)
-
 const popupPickupList = new Section({
     data: all.userDataExample.delevery.pickup,
     renderer: (item) => {
@@ -70,7 +68,7 @@ const popupPickupPointList = new Section({
 );
 
 const popupWithChoosePay = new PopupWithChoosePay(
-  all.popupSelectors.choosePay, cardList
+  all.popupSelectors.choosePay, cardList, basket.changeCard
 );
 const popupWithChooseAddress = new PopupWithChooseAddress(
   all.popupSelectors.chooseAddress

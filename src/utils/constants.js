@@ -45,17 +45,17 @@ const userDataExample = {
       cardUrlIcon: cardIconMir,
     },
     {
-      cardNumber: '1234 56•• •••• 1234',
+      cardNumber: '1234 56•• •••• 1235',
       cardDate: '02/28',
       cardUrlIcon: cardIconVisa,
     },
     {
-      cardNumber: '1234 56•• •••• 1234',
+      cardNumber: '1234 56•• •••• 1236',
       cardDate: '05/29',
       cardUrlIcon: cardIconMasterCard,
     },
     {
-      cardNumber: '1234 56•• •••• 1234',
+      cardNumber: '1234 56•• •••• 1237',
       cardDate: '12/24',
       cardUrlIcon: cardIconMaetro,
     }
@@ -78,6 +78,9 @@ const userOrderExample = [
     },
     quantity: 1,
     available: 2,
+    deliveryTime: {
+      2: [20230205, 20230206],
+    },
     priceInfo: {
       discount: 30,
       discountUser: 10,
@@ -98,6 +101,10 @@ const userOrderExample = [
     },
     quantity: 200,
     available: 1000,
+    deliveryTime: {
+      184: [20230205, 20230206],
+      816: [20230207, 20230208],
+    },
     priceInfo: {
       discount: 12,
       discountUser: 10,
@@ -118,6 +125,9 @@ const userOrderExample = [
     },
     quantity: 2,
     available: 2,
+    deliveryTime: {
+      2: [20230205, 20230206],
+    },
     priceInfo: {
       discount: null,
       discountUser: 10,
@@ -136,6 +146,9 @@ export
 const basketSetting = {
       basketAccordionProductCountSelector: '.accordion__hide-info-item[data-type="accordion-count"]',
       basketAccordionProductPriceSelector: '.accordion__hide-info-item[data-type="accordion-price"]',
+      cardIconSelector: '.pay__icon',
+      cardNumberSelector: '.pay__number',
+      cardDateSelector: '.pay__date'
 }
 
 export
@@ -172,7 +185,6 @@ const cardSetting = {
       cardNumberSelector: '.card__number',
       cardInputSelecor: '.card__radio',
       cardInputDecorSelecor: '.card__radio-decor',
-      cardInputActiveClass: 'card__radio-decor_active',
 }
 
 export
