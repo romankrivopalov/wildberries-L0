@@ -98,5 +98,6 @@ all.btnSidebarChooseAddress.addEventListener('click', () => {
   popupWithChooseAddress.open();
 });
 
+popupWithChoosePay.setInitialCard();
 popupWithChoosePay.setEventListener();
 popupWithChooseAddress.setEventListener();

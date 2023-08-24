@@ -21,12 +21,12 @@ export default class Card {
       if (!this.isChecked) {
         this._disabledAllInputs();
 
-        this._enableInput();
+        this.enableInput();
       }
     });
   }
 
-  _enableInput = () => {
+  enableInput = () => {
     this.isChecked = true;
     this._cardInput.checked = true;
   }

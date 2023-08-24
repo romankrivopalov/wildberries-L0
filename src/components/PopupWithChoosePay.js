@@ -9,7 +9,12 @@ export default class PopupWithChoosePay extends Popup {
     this._handleChangeCard = handleChangeCard;
   }
 
-  setEventListener() {
+  setInitialCard = () => {
+    this._cardList[this._cardList.length - 1].enableInput();
+    this._handleChangeCard(this._cardList[this._cardList.length - 1]);
+  }
+
+  setEventListener = () => {
     super.setEventListener();
 
     this._cardBtn.addEventListener('click', () => {

@@ -46,6 +46,6 @@ export default class Basket {
   }
 
   changeCard = (card) => {
-    this._renderCards(card)
+    this._renderCards(card);
   }
 }
