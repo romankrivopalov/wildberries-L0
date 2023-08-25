@@ -8,6 +8,8 @@ export default class Product {
     handleIncreaseAccordionPrice,
     handleDecreaseTotalPrice,
     handleIncreaseTotalPrice,
+    handleDecreaseTotalCount,
+    handleIncreaseTotalCount,
   ) {
     this._data = data;
     this._oldPrice = data.oldPrice;
@@ -18,6 +20,8 @@ export default class Product {
     this._handleIncreaseAccordionPrice = handleIncreaseAccordionPrice;
     this._handleDecreaseTotalPrice = handleDecreaseTotalPrice;
     this._handleIncreaseTotalPrice = handleIncreaseTotalPrice;
+    this._handleDecreaseTotalCount = handleDecreaseTotalCount;
+    this._handleIncreaseTotalCount = handleIncreaseTotalCount;
     this.id = data.id;
     this.isChecked = false;
   }
@@ -91,41 +95,46 @@ export default class Product {
   _increaseCounter = () => {
     if (this._productCount.value >= this._data.available) return
 
-    this._handleIncreaseTotalPrice(this._oldPrice - this._sumDiscount);
     this._handleIncreaseAccordionPrice(this._oldPrice - this._sumDiscount);
     this._renderSum(this._calculateSum(parseInt(this._productCount.value) + 1));
     this._renderOldSum(this._calculateOldSum(parseInt(this._productCount.value) + 1));
     this._renderCounter(parseInt(this._productCount.value) + 1);
+    this._handleIncreaseTotalPrice(this._oldPrice - this._sumDiscount);
+    this._handleIncreaseTotalCount(1);
   }
 
   _decreaseCounter = () => {
     if (this._productCount.value <= 1) return
 
-    this._handleDecreaseTotalPrice(this._oldPrice - this._sumDiscount);
     this._handleIncreaseAccordionPrice(-(this._oldPrice - this._sumDiscount));
     this._renderSum(this._calculateSum(parseInt(this._productCount.value) - 1));
     this._renderOldSum(this._calculateOldSum(parseInt(this._productCount.value) - 1));
     this._renderCounter(parseInt(this._productCount.value) - 1);
+    this._handleDecreaseTotalPrice(this._oldPrice - this._sumDiscount);
+    this._handleDecreaseTotalCount(1);
   }
 
   enableInput = () => {
     this.isChecked = true;
     this._productInput.checked = true;
 
-    this._handleIncreaseTotalPrice((this._oldPrice - this._sumDiscount) * this._data.quantity);
+    this._handleIncreaseTotalPrice((this._oldPrice - this._sumDiscount) * this._productCount.value);
+    this._handleIncreaseTotalCount(parseInt(this._productCount.value));
   }
 
   disableInput = () => {
     this.isChecked = false;
     this._productInput.checked = false;
 
-    this._handleDecreaseTotalPrice((this._oldPrice - this._sumDiscount) * this._data.quantity);
+    this._handleDecreaseTotalPrice((this._oldPrice - this._sumDiscount) * this._productCount.value);
+    this._handleDecreaseTotalCount(parseInt(this._productCount.value));
   }
 
   _removeProduct = () => {
     // if product not selected, do not decrease total price
     if (this.isChecked) {
-      this._handleDecreaseTotalPrice((this._oldPrice - this._sumDiscount) * this._data.quantity, this.id)
+      this._handleDecreaseTotalPrice((this._oldPrice - this._sumDiscount) * this._productCount.value, this.id);
+      this._handleDecreaseTotalCount(this._productCount.value);
     };
 
     this._handleDecreaseAccordionCounter();

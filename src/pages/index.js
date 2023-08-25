@@ -28,6 +28,8 @@ const productList = new Section({
         basket.increasePriceBasket,
         basket.decreaseTotalPrice,
         basket.increaseTotalPrice,
+        basket.decreaseTotalCount,
+        basket.increaseTotalCount,
       );
       productItemList.push(product);
       const productElement = product.generateProduct();

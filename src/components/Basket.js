@@ -22,8 +22,26 @@ export default class Basket {
     this._pickupRate = document.querySelector(this._basketSetting.pickupRateSelector);
     this._pickupOfficeHours = document.querySelector(this._basketSetting.pickupOfficeHoursSelector);
     this._basketTotalPrice = document.querySelector('#basket-total-price');
+    this._basketTotalCount = document.querySelector('#basket-total-count');
     this._totalPrice = null;
+    this._totalCount = null;
     this.allProductCheckboxIsChecked = false;
+  }
+
+  // total count
+
+  _renderTotalCount = () => {
+    this._basketTotalCount.textContent = `${this._totalCount} ${getEndLine(this._totalCount, productsTitles)}`;
+  }
+
+  decreaseTotalCount = (count) => {
+    this._totalCount -= count;
+    this._renderTotalCount();
+  }
+
+  increaseTotalCount = (count) => { // +
+    this._totalCount += count;
+    this._renderTotalCount();
   }
 
   // total price
