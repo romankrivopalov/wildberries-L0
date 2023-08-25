@@ -23,9 +23,27 @@ export default class Basket {
     this._pickupOfficeHours = document.querySelector(this._basketSetting.pickupOfficeHoursSelector);
     this._basketTotalPrice = document.querySelector('#basket-total-price');
     this._basketTotalCount = document.querySelector('#basket-total-count');
+    this._basketTotalOldPrice = document.querySelector('#basket-total-old-price');
     this._totalPrice = null;
     this._totalCount = null;
+    this._totalOldPrice = null;
     this.allProductCheckboxIsChecked = false;
+  }
+
+  // total old price
+
+  _renderTotalOldPrice = () => {
+    this._basketTotalOldPrice.textContent = `${this._totalOldPrice.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')} сом`;
+  }
+
+  decreaseTotalOldPrice = (value) => {
+    this._totalOldPrice -= value;
+    this._renderTotalOldPrice();
+  }
+
+  increaseTotalOldPrice = (value) => { // +
+    this._totalOldPrice += value;
+    this._renderTotalOldPrice();
   }
 
   // total count
@@ -50,11 +68,7 @@ export default class Basket {
     this._basketTotalPrice.textContent = `${this._totalPrice.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')} сом`;
   }
 
-  decreaseTotalPrice = (value, idForDeleteCard) => {
-    if (idForDeleteCard) {
-      this._changeProductListArray(idForDeleteCard);
-    }
-
+  decreaseTotalPrice = (value) => {
     this._totalPrice -= value;
     this._renderTotalPrice();
 
@@ -140,7 +154,7 @@ export default class Basket {
 
   // products
 
-  _changeProductListArray = (idForDeleteCard) => {
+  removeProductInListArray = (idForDeleteCard) => {
     this._productList = this._productList.filter(item => item.id !== idForDeleteCard);
   }
 

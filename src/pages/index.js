@@ -22,6 +22,7 @@ const productList = new Section({
       const product = new Product(
         item,
         all.productSetting,
+        basket.removeProductInListArray,
         basket.decreaseCounterBasket,
         basket.increaseCounterBasket,
         basket.decreasePriceBasket,
@@ -30,6 +31,8 @@ const productList = new Section({
         basket.increaseTotalPrice,
         basket.decreaseTotalCount,
         basket.increaseTotalCount,
+        basket.decreaseTotalOldPrice,
+        basket.increaseTotalOldPrice,
       );
       productItemList.push(product);
       const productElement = product.generateProduct();
