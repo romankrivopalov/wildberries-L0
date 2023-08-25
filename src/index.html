@@ -57,8 +57,9 @@
                 <p class="accordion__hide-info-item" data-type="accordion-price"></p>
               </span>
               <div class="accordion__inner">
-                <input type="checkbox" class="product__checkbox" id="checkbox-product-all">
-                <label for="checkbox-product-all" class="product__checkbox-decor"></label>
+                <input class="product__checkbox" type="checkbox" data-type="checkbox-all-product">
+                <span class="product__checkbox-decor" data-type="checkbox-all-product-decor"></span>
+
                 <span class="product__checkbox-with-text">Выбрать все</span>
 
                 <ul class="product__list" id="product-list">
@@ -267,7 +268,7 @@
             <div>
               <h2 class="basket-order__total">
                 <span>Итого</span>
-                <span>2 101 063 сом</span>
+                <span id="basket-total-price">2 101 063 сом</span>
               </h2>
               <div class="basket-order__total-row">
                 <span>203 товара</span>

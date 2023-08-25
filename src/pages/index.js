@@ -9,11 +9,10 @@ import Card from '../components/Card.js';
 import Pickup from '../components/Pickup.js';
 import Basket from '../components/Basket.js';
 
+const productItemList = [];
 const cardList = [];
 const pickupAddressList = [];
 const pickupPointAddressList = [];
-
-const basket = new Basket(all.basketSetting);
 
 // create slices
 
@@ -27,7 +26,10 @@ const productList = new Section({
         basket.increaseCounterBasket,
         basket.decreasePriceBasket,
         basket.increasePriceBasket,
+        basket.decreaseTotalPrice,
+        basket.increaseTotalPrice,
       );
+      productItemList.push(product);
       const productElement = product.generateProduct();
       productList.setItem(productElement);
     }
@@ -81,6 +83,10 @@ const popupPickupPointList = new Section({
   all.popupChoosePickupPointContainerSelector,
 );
 
+// create classes
+
+const basket = new Basket(all.basketSetting, productItemList);
+
 const popupWithChoosePay = new PopupWithChoosePay(
   all.popupSelectors.choosePay, cardList, basket.changeCard
 );
@@ -112,6 +118,8 @@ all.btnSidebarChooseAddress.addEventListener('click', () => {
   popupWithChooseAddress.open();
 });
 
+basket.setEventListeners();
+basket.enableAllProducts();
 popupWithChoosePay.setInitialCard();
 popupWithChoosePay.setEventListener();
 popupWithChooseAddress.setInitialAddress();

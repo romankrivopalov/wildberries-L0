@@ -188,6 +188,8 @@ const productSetting = {
       productDeleteBtnSelector: '.product-item__icon_type_delete',
       productCountMinusBtnSelector: '.product-item__count-btn_type_minus',
       productCountPlusBtnSelector: '.product-item__count-btn_type_plus',
+      productInputSelecor: '.product__checkbox',
+      productInputDecorSelecor: '.product__checkbox-decor_type_item',
 }
 
 export

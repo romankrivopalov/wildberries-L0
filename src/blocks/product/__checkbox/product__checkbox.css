@@ -6,7 +6,7 @@
   overflow: hidden;
 }
 
-.product__checkbox:checked + .product__checkbox-decor {
+.product__checkbox:checked ~ .product__checkbox-decor {
   background-color: var(--color-system-magenta);
   background-image: url('../../../images/icons/icon-checkbox-check.svg');
   background-size: 12px;

@@ -5,7 +5,9 @@ export default class Product {
     handleDecreaseAccordionCounter,
     handleIncreaseAccordionCounter,
     handleDecreaseAccordionPrice,
-    handleIncreaseAccordionPrice
+    handleIncreaseAccordionPrice,
+    handleDecreaseTotalPrice,
+    handleIncreaseTotalPrice,
   ) {
     this._data = data;
     this._oldPrice = data.oldPrice;
@@ -14,6 +16,9 @@ export default class Product {
     this._handleIncreaseAccordionCounter = handleIncreaseAccordionCounter;
     this._handleDecreaseAccordionPrice = handleDecreaseAccordionPrice;
     this._handleIncreaseAccordionPrice = handleIncreaseAccordionPrice;
+    this._handleDecreaseTotalPrice = handleDecreaseTotalPrice;
+    this._handleIncreaseTotalPrice = handleIncreaseTotalPrice;
+    this.isChecked = false;
   }
 
   _getTemplate = () => {
@@ -95,6 +100,7 @@ export default class Product {
   _increaseCounter = () => {
     if (this._productCount.value >= this._data.available) return
 
+    this._handleIncreaseTotalPrice(this._oldPrice - this._sumDiscount);
     this._handleIncreaseAccordionPrice(this._oldPrice - this._sumDiscount);
     this._renderSum(this._calculateSum(parseInt(this._productCount.value) + 1));
     this._renderOldSum(this._calculateOldSum(parseInt(this._productCount.value) + 1));
@@ -104,16 +110,35 @@ export default class Product {
   _decreaseCounter = () => {
     if (this._productCount.value <= 1) return
 
+    this._handleDecreaseTotalPrice(this._oldPrice - this._sumDiscount);
     this._handleIncreaseAccordionPrice(-(this._oldPrice - this._sumDiscount));
     this._renderSum(this._calculateSum(parseInt(this._productCount.value) - 1));
     this._renderOldSum(this._calculateOldSum(parseInt(this._productCount.value) - 1));
     this._renderCounter(parseInt(this._productCount.value) - 1);
   }
 
+  enableInput = () => {
+    this.isChecked = true;
+    this._productInput.checked = true;
+
+    this._handleIncreaseTotalPrice((this._oldPrice - this._sumDiscount) * this._data.quantity);
+  }
+
+  disableInput = () => {
+    this.isChecked = false;
+    this._productInput.checked = false;
+
+    this._handleDecreaseTotalPrice((this._oldPrice - this._sumDiscount) * this._data.quantity);
+  }
+
   _setEventListeners = () => {
-    this._productDeleteBtn = this._product.querySelector(this._productSetting.productDeleteBtnSelector);
-    this._productCountMinusBtn = this._product.querySelector(this._productSetting.productCountMinusBtnSelector);
-    this._productCountPlusBtn = this._product.querySelector(this._productSetting.productCountPlusBtnSelector);
+    this._productInputDecor.addEventListener('click', () => {
+      if (!this.isChecked) {
+        this.enableInput();
+      } else {
+        this.disableInput();
+      }
+    });
 
     this._productCountPlusBtn.addEventListener('click', () => {
       this._increaseCounter();
@@ -125,12 +150,17 @@ export default class Product {
 
     this._productDeleteBtn.addEventListener('click', () => {
       this._product.remove();
+      this._handleDecreaseTotalPrice((this._oldPrice - this._sumDiscount) * this._data.quantity);
       this._handleDecreaseAccordionCounter();
     });
   };
 
   generateProduct = () => {
     this._product = this._getTemplate();
+
+    this._productInput = this._product.querySelector(this._productSetting.productInputSelecor);
+    this._productInputDecor = this._product.querySelector(this._productSetting.productInputDecorSelecor);
+
     this._product.
       querySelector(this._productSetting.productPreviewSelector)
       .src = this._data.image;
@@ -185,6 +215,10 @@ export default class Product {
 
     this._newPriceElement = this._product
       .querySelector(this._productSetting.productNewPriceSelector)
+
+    this._productDeleteBtn = this._product.querySelector(this._productSetting.productDeleteBtnSelector);
+    this._productCountMinusBtn = this._product.querySelector(this._productSetting.productCountMinusBtnSelector);
+    this._productCountPlusBtn = this._product.querySelector(this._productSetting.productCountPlusBtnSelector);
 
     this._renderSum(this._calculateSum(this._data.quantity))
     this._renderOldSum(this._calculateOldSum(this._data.quantity));

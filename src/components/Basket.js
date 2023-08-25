@@ -2,12 +2,15 @@ import { productsTitles } from '../utils/constants.js'
 import getEndLine from '../utils/getEndLine.js';
 
 export default class Basket {
-  constructor(basketSetting) {
+  constructor(basketSetting, productList) {
     this._basketSetting = basketSetting;
+    this._productList = productList;
     this._accordionProductCountElement = document.querySelector(this._basketSetting.basketAccordionProductCountSelector);
     this._accordionProductCount = null;
     this._accordionProductPriceElement = document.querySelector(this._basketSetting.basketAccordionProductPriceSelector);
     this._accordionProductPrice = null;
+    this._accordionCheckboxAllProduct = document.querySelector('.product__checkbox[data-type="checkbox-all-product"]');
+    this._accordionCheckboxAllProductDecor = document.querySelector('.product__checkbox-decor[data-type="checkbox-all-product-decor"]');
     this._cardIcons = document.querySelectorAll(this._basketSetting.cardIconSelector);
     this._cardNumbers = document.querySelectorAll(this._basketSetting.cardNumberSelector);
     this._cardDates = document.querySelectorAll(this._basketSetting.cardDateSelector);
@@ -18,15 +21,40 @@ export default class Basket {
     this._pickupSidebarAddress = document.querySelector(this._basketSetting.pickupSidebarAddressSelector);
     this._pickupRate = document.querySelector(this._basketSetting.pickupRateSelector);
     this._pickupOfficeHours = document.querySelector(this._basketSetting.pickupOfficeHoursSelector);
+    this._basketTotalPrice = document.querySelector('#basket-total-price');
+    this._totalPrice = null;
+    this.allProductCheckboxIsChecked = false;
   }
+
+  // total price
+
+  _renderTotalPrice = () => {
+    this._basketTotalPrice.textContent = `${this._totalPrice.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')} сом`;
+  }
+
+  decreaseTotalPrice = (value) => {
+    this._totalPrice -= value;
+    this._renderTotalPrice();
+
+    if (!this.checkInputProducts()) {
+      this.disableInputAllProduct();
+    }
+  }
+
+  increaseTotalPrice = (value) => { // +
+    this._totalPrice += value;
+    this._renderTotalPrice();
+
+    if (this.checkInputProducts()) {
+      this.enableInputAllProduct();
+    }
+  }
+
+  // accordion price
 
   _renderPriceBasket = () => {
     this._accordionProductPriceElement.textContent =
       `${this._accordionProductPrice.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')} сом`
-  }
-
-  _renderCounterBasket = (value) => {
-    this._accordionProductCountElement.textContent = `${value} ${getEndLine(value, productsTitles)}`
   }
 
   decreasePriceBasket = () => {
@@ -38,6 +66,12 @@ export default class Basket {
     this._renderPriceBasket(this._accordionProductPrice);
   }
 
+  // accordion counter
+
+  _renderCounterBasket = (value) => {
+    this._accordionProductCountElement.textContent = `${value} ${getEndLine(value, productsTitles)}`
+  }
+
   decreaseCounterBasket = () => {
     this._renderCounterBasket(this._accordionProductCount -= 1);
   }
@@ -45,6 +79,8 @@ export default class Basket {
   increaseCounterBasket = () => { // +
     this._renderCounterBasket(this._accordionProductCount += 1);
   }
+
+  // cards
 
   _renderCards = (card) => {
     this._cardIcons.forEach(icon => icon.src = card.data.cardUrlIcon);
@@ -76,5 +112,45 @@ export default class Basket {
 
   changeAddress = (address) => {
     this._renderAddress(address);
+  }
+
+
+
+  enableInputAllProduct = () => {
+    this.allProductCheckboxIsChecked = true;
+    this._accordionCheckboxAllProduct.checked = true;
+  }
+
+  disableInputAllProduct = () => {
+    this.allProductCheckboxIsChecked = false;
+    this._accordionCheckboxAllProduct.checked = false;
+  }
+
+  enableAllProducts = () => {
+    this._productList.forEach(product => {
+      if (!product.isChecked) {
+        this.enableInputAllProduct();
+        product.enableInput();
+      };
+    });
+  }
+
+  checkInputProducts = () => {
+    return this._productList.every(product => product.isChecked);
+  }
+
+  setEventListeners = () => {
+    this._accordionCheckboxAllProductDecor.addEventListener('click', () => {
+      if (!this.allProductCheckboxIsChecked) {
+        this.enableAllProducts();
+      } else {
+        this._productList.forEach(product => {
+          if (product.isChecked) {
+            this.disableInputAllProduct();
+            product.disableInput();
+          };
+        });
+      }
+    })
   }
 }
