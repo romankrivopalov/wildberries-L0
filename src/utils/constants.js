@@ -65,6 +65,7 @@ const userDataExample = {
 export
 const userOrderExample = [
   {
+    id: 12001,
     name: 'Футболка UZcotton мужская',
     image: productIconShort,
     color: 'белый',
@@ -88,6 +89,7 @@ const userOrderExample = [
     oldPrice: 3300,
   },
   {
+    id: 12002,
     name: 'Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe',
     image: productIconCase,
     color: 'прозрачный',
@@ -112,6 +114,7 @@ const userOrderExample = [
     oldPrice: 13200,
   },
   {
+    id: 12003,
     name: 'Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell',
     image: productIconPencils,
     color: null,

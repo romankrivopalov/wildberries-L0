@@ -32,7 +32,11 @@ export default class Basket {
     this._basketTotalPrice.textContent = `${this._totalPrice.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')} сом`;
   }
 
-  decreaseTotalPrice = (value) => {
+  decreaseTotalPrice = (value, idForDeleteCard) => {
+    if (idForDeleteCard) {
+      this._changeProductListArray(idForDeleteCard);
+    }
+
     this._totalPrice -= value;
     this._renderTotalPrice();
 
@@ -92,6 +96,8 @@ export default class Basket {
     this._renderCards(card);
   }
 
+  // address delivery
+
   _renderAddress = (address) => {
     this._pickupAddress.textContent = address.data.address;
     this._pickupSidebarAddress.textContent = address.data.address;
@@ -114,7 +120,11 @@ export default class Basket {
     this._renderAddress(address);
   }
 
+  // products
 
+  _changeProductListArray = (idForDeleteCard) => {
+    this._productList = this._productList.filter(item => item.id !== idForDeleteCard);
+  }
 
   enableInputAllProduct = () => {
     this.allProductCheckboxIsChecked = true;

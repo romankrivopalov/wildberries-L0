@@ -18,17 +18,8 @@ export default class Product {
     this._handleIncreaseAccordionPrice = handleIncreaseAccordionPrice;
     this._handleDecreaseTotalPrice = handleDecreaseTotalPrice;
     this._handleIncreaseTotalPrice = handleIncreaseTotalPrice;
+    this.id = data.id;
     this.isChecked = false;
-  }
-
-  _getTemplate = () => {
-    const productElement = document
-      .querySelector(this._productSetting.productTemplateSelector)
-      .content
-      .querySelector(this._productSetting.productSelector)
-      .cloneNode(true);
-
-    return productElement;
   }
 
   _renderOldSum = ({ sum, discount, discountUser }) => {
@@ -131,6 +122,17 @@ export default class Product {
     this._handleDecreaseTotalPrice((this._oldPrice - this._sumDiscount) * this._data.quantity);
   }
 
+  _removeProduct = () => {
+    // if product not selected, do not decrease total price
+    if (this.isChecked) {
+      this._handleDecreaseTotalPrice((this._oldPrice - this._sumDiscount) * this._data.quantity, this.id)
+    };
+
+    this._handleDecreaseAccordionCounter();
+
+    this._product.remove();
+  }
+
   _setEventListeners = () => {
     this._productInputDecor.addEventListener('click', () => {
       if (!this.isChecked) {
@@ -149,11 +151,19 @@ export default class Product {
     });
 
     this._productDeleteBtn.addEventListener('click', () => {
-      this._product.remove();
-      this._handleDecreaseTotalPrice((this._oldPrice - this._sumDiscount) * this._data.quantity);
-      this._handleDecreaseAccordionCounter();
+      this._removeProduct();
     });
   };
+
+  _getTemplate = () => {
+    const productElement = document
+      .querySelector(this._productSetting.productTemplateSelector)
+      .content
+      .querySelector(this._productSetting.productSelector)
+      .cloneNode(true);
+
+    return productElement;
+  }
 
   generateProduct = () => {
     this._product = this._getTemplate();
