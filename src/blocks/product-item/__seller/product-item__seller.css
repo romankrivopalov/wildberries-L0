@@ -1,6 +1,6 @@
 .product-item__seller {
   margin: 0;
-  padding: 8px 0 0;
+  padding: 0;
   font-size: 13px;
   line-height: 16px;
   color: var(--color-system-gray);
@@ -8,6 +8,6 @@
 
 @media screen and (min-width: 1024px) {
   .product-item__seller {
-    padding-top: 8px;
+    margin-bottom: 2px;
   }
 }

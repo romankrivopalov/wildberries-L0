@@ -16,8 +16,7 @@
 
 @media screen and (min-width: 1024px) {
   .product-item__title {
-    margin: 0;
-    padding-top: 1px;
+    margin: 1px 0 7px;
     font-size: 16px;
     line-height: 24px;
     max-height: max-content;

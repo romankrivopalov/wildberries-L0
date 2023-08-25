@@ -141,16 +141,26 @@ export default class Product {
       querySelector(this._productSetting.productTitleSelector)
       .textContent = this._data.name.trim();
 
-    if (this._data.color) {
-      this._product.
-        querySelector(this._productSetting.productColorSelector)
-        .textContent = `Цвет: ${this._data.color.trim()}`;
-    }
+    if (this._data.color || this._data.size) {
+      if (this._data.color) {
+        this._product.
+          querySelector(this._productSetting.productColorSelector)
+          .textContent = `Цвет: ${this._data.color.trim()}`;
+      }
 
-    if (this._data.size) {
+      if (this._data.size) {
+        this._product.
+          querySelector(this._productSetting.productSizeSelector)
+          .textContent = `${this._data.size}`;
+      } else {
+        this._product.
+          querySelector('.product-item__property-wrapper')
+          .style.display = 'none';
+      }
+    } else {
       this._product.
-        querySelector(this._productSetting.productSizeSelector)
-        .textContent = `Размер: ${this._data.size}`;
+        querySelector('.product-item__properties')
+        .style.display = 'none';
     }
 
     this._product
