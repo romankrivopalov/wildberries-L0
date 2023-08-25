@@ -13,6 +13,8 @@ export default class Product {
     handleIncreaseTotalCount,
     handleDecreaseTotalOldPrice,
     handleIncreaseTotalOldPrice,
+    handleDecreaseTotalDiscount,
+    handleIncreaseTotalDiscount,
   ) {
     this._data = data;
     this._oldPrice = data.oldPrice;
@@ -28,6 +30,8 @@ export default class Product {
     this._handleIncreaseTotalCount = handleIncreaseTotalCount;
     this._handleDecreaseTotalOldPrice = handleDecreaseTotalOldPrice;
     this._handleIncreaseTotalOldPrice = handleIncreaseTotalOldPrice;
+    this._handleDecreaseTotalDiscount = handleDecreaseTotalDiscount;
+    this._handleIncreaseTotalDiscount = handleIncreaseTotalDiscount;
     this.id = data.id;
     this.isChecked = false;
   }
@@ -108,6 +112,7 @@ export default class Product {
     this._handleIncreaseTotalPrice(this._oldPrice - this._sumDiscount);
     this._handleIncreaseTotalCount(1);
     this._handleIncreaseTotalOldPrice(this._oldPrice);
+    this._handleIncreaseTotalDiscount(this._sumDiscount * this._productCount.value);
   }
 
   _decreaseCounter = () => {
@@ -120,6 +125,7 @@ export default class Product {
     this._handleDecreaseTotalPrice(this._oldPrice - this._sumDiscount);
     this._handleDecreaseTotalCount(1);
     this._handleDecreaseTotalOldPrice(this._oldPrice);
+    this._handleDecreaseTotalDiscount(this._sumDiscount * this._productCount.value);
   }
 
   enableInput = () => {
@@ -129,6 +135,7 @@ export default class Product {
     this._handleIncreaseTotalPrice((this._oldPrice - this._sumDiscount) * this._productCount.value);
     this._handleIncreaseTotalCount(parseInt(this._productCount.value));
     this._handleIncreaseTotalOldPrice(this._oldPrice * this._productCount.value);
+    this._handleIncreaseTotalDiscount(this._sumDiscount * this._productCount.value);
   }
 
   disableInput = () => {
@@ -138,6 +145,7 @@ export default class Product {
     this._handleDecreaseTotalPrice((this._oldPrice - this._sumDiscount) * this._productCount.value);
     this._handleDecreaseTotalCount(parseInt(this._productCount.value));
     this._handleDecreaseTotalOldPrice(this._oldPrice * this._productCount.value);
+    this._handleDecreaseTotalDiscount(this._sumDiscount * this._productCount.value);
   }
 
   _removeProduct = () => {
@@ -148,6 +156,7 @@ export default class Product {
       this._handleDecreaseTotalPrice((this._oldPrice - this._sumDiscount) * this._productCount.value);
       this._handleDecreaseTotalCount(this._productCount.value);
       this._handleDecreaseTotalOldPrice(this._oldPrice * this._productCount.value);
+      this._handleDecreaseTotalDiscount(this._sumDiscount * this._productCount.value);
     };
 
     this._handleDecreaseAccordionCounter();

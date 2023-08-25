@@ -24,10 +24,30 @@ export default class Basket {
     this._basketTotalPrice = document.querySelector('#basket-total-price');
     this._basketTotalCount = document.querySelector('#basket-total-count');
     this._basketTotalOldPrice = document.querySelector('#basket-total-old-price');
+    this._basketTotalDiscount = document.querySelector('#basket-total-discount');
     this._totalPrice = null;
     this._totalCount = null;
     this._totalOldPrice = null;
+    this._totalDiscount = null;
     this.allProductCheckboxIsChecked = false;
+  }
+
+  // total discount
+
+  _renderTotalDiscount = () => {
+    this._basketTotalDiscount.textContent = `−${this._totalDiscount.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')} сом`;
+  }
+
+  decreaseTotalDiscount = (value) => {
+    console.log(value)
+    this._totalDiscount -= value;
+    this._renderTotalDiscount();
+  }
+
+  increaseTotalDiscount = (value) => { // +
+    console.log(value)
+    this._totalDiscount += value;
+    this._renderTotalDiscount();
   }
 
   // total old price
