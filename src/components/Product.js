@@ -15,6 +15,8 @@ export default class Product {
     handleIncreaseTotalOldPrice,
     handleDecreaseTotalDiscount,
     handleIncreaseTotalDiscount,
+    handleDecreaseCount,
+    handleIncreaseCount,
   ) {
     this._data = data;
     this._oldPrice = data.oldPrice;
@@ -32,6 +34,8 @@ export default class Product {
     this._handleIncreaseTotalOldPrice = handleIncreaseTotalOldPrice;
     this._handleDecreaseTotalDiscount = handleDecreaseTotalDiscount;
     this._handleIncreaseTotalDiscount = handleIncreaseTotalDiscount;
+    this._handleDecreaseCount = handleDecreaseCount;
+    this._handleIncreaseCount = handleIncreaseCount;
     this.deliveryDate = this._data.deliveryDate;
     this.id = data.id;
     this.image = data.image;
@@ -161,6 +165,7 @@ export default class Product {
       this._handleDecreaseTotalDiscount(this._sumDiscount * this._productCount.value);
     };
 
+    this._handleIncreaseCount(-1);
     this._handleDecreaseAccordionCounter();
 
     this._product.remove();
@@ -274,6 +279,7 @@ export default class Product {
 
     this._setEventListeners();
     this._handleIncreaseAccordionCounter();
+    this._handleIncreaseCount(1);
     this._handleIncreaseAccordionPrice((this._oldPrice - this._sumDiscount) * this._data.quantity);
 
     return this._product;

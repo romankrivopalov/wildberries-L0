@@ -36,6 +36,8 @@ const productList = new Section({
         basket.increaseTotalOldPrice,
         basket.decreaseTotalDiscount,
         basket.increaseTotalDiscount,
+        basket.decreaseCount,
+        basket.increaseCount,
       );
       productItemList.push(product);
       const productElement = product.generateProduct();

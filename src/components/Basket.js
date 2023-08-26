@@ -32,8 +32,11 @@ export default class Basket {
     this._basketCheckboxPaymentType = document.querySelector('.basket-order__checkbox[data-type="checkbox-sidebar-payment-type"]');
     this._basketCheckboxPaymentTypeDecor = document.querySelector('.basket-order__checkbox-decor[data-type="checkbox-sidebar-payment-type"]');
     this._basketTotalBtnSubmit = document.querySelector('.basket-order__btn[data-type="btn-sidebar-total"]');
+    this._headerIconCounter = document.querySelector('.header__link-count[data-type="counter-header"]');
+    this._navbarMobileIconCounter = document.querySelector('.navbar-mobile__icon-count[data-type="counter-mobile"]');
     this._totalPrice = null;
     this._totalCount = null;
+    this._count = null;
     this._totalOldPrice = null;
     this._totalDiscount = null;
     this.allProductCheckboxIsChecked = false;
@@ -88,6 +91,23 @@ export default class Basket {
   increaseTotalCount = (count) => { // +
     this._totalCount += count;
     this._renderTotalCount();
+  }
+
+  // count
+
+  _renderCount = () => {
+    this._headerIconCounter.textContent = this._count.toString();
+    this._navbarMobileIconCounter.textContent = this._count.toString();
+  }
+
+  decreaseCount = (value) => {
+    this._count -= value;
+    this._renderCount();
+  }
+
+  increaseCount = (value) => { // +
+    this._count += value;
+    this._renderCount();
   }
 
   // total price

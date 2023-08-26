@@ -1,4 +1,5 @@
 .header__link {
+  position: relative;
   padding: 0;
   width: 56px;
   color: var(--color-system-white);

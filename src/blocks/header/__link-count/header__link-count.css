@@ -1,0 +1,16 @@
+.header__link-count {
+  box-sizing: border-box;
+  position: absolute;
+  top: -4px;
+  right: 9px;
+  margin: 0;
+  padding: 0 4px;
+  min-width: 16px;
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-system-white);
+  background-color: var(--color-system-orange);
+  border-radius: 8px;
+}
