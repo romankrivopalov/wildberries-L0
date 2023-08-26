@@ -38,6 +38,9 @@ const productList = new Section({
         basket.increaseTotalDiscount,
         basket.decreaseCount,
         basket.increaseCount,
+        basket.checkInputProducts,
+        basket.disableInputAllProduct,
+        basket.enableInputAllProduct,
       );
       productItemList.push(product);
       const productElement = product.generateProduct();

@@ -17,6 +17,9 @@ export default class Product {
     handleIncreaseTotalDiscount,
     handleDecreaseCount,
     handleIncreaseCount,
+    handleCheckInputProducts,
+    handleDisableInputAllProduct,
+    handleEnableInputAllProduct,
   ) {
     this._data = data;
     this._oldPrice = data.oldPrice;
@@ -36,6 +39,9 @@ export default class Product {
     this._handleIncreaseTotalDiscount = handleIncreaseTotalDiscount;
     this._handleDecreaseCount = handleDecreaseCount;
     this._handleIncreaseCount = handleIncreaseCount;
+    this._handleCheckInputProducts = handleCheckInputProducts;
+    this._handleDisableInputAllProduct = handleDisableInputAllProduct;
+    this._handleEnableInputAllProduct = handleEnableInputAllProduct;
     this.deliveryDate = this._data.deliveryDate;
     this.id = data.id;
     this.image = data.image;
@@ -111,27 +117,31 @@ export default class Product {
   _increaseCounter = () => {
     if (this._productCount.value >= this._data.available) return
 
-    this._handleIncreaseAccordionPrice(this._oldPrice - this._sumDiscount);
-    this._renderSum(this._calculateSum(parseInt(this._productCount.value) + 1));
-    this._renderOldSum(this._calculateOldSum(parseInt(this._productCount.value) + 1));
-    this._renderCounter(parseInt(this._productCount.value) + 1);
-    this._handleIncreaseTotalPrice(this._oldPrice - this._sumDiscount);
-    this._handleIncreaseTotalCount(1);
-    this._handleIncreaseTotalOldPrice(this._oldPrice);
-    this._handleIncreaseTotalDiscount(this._sumDiscount * this._productCount.value);
+    if (this.isChecked) {
+      this._handleIncreaseAccordionPrice(this._oldPrice - this._sumDiscount);
+      this._renderSum(this._calculateSum(parseInt(this._productCount.value) + 1));
+      this._renderOldSum(this._calculateOldSum(parseInt(this._productCount.value) + 1));
+      this._renderCounter(parseInt(this._productCount.value) + 1);
+      this._handleIncreaseTotalPrice(this._oldPrice - this._sumDiscount);
+      this._handleIncreaseTotalCount(1);
+      this._handleIncreaseTotalOldPrice(this._oldPrice);
+      this._handleIncreaseTotalDiscount(this._sumDiscount * this._productCount.value);
+    }
   }
 
   _decreaseCounter = () => {
     if (this._productCount.value <= 1) return
 
-    this._handleIncreaseAccordionPrice(-(this._oldPrice - this._sumDiscount));
-    this._renderSum(this._calculateSum(parseInt(this._productCount.value) - 1));
-    this._renderOldSum(this._calculateOldSum(parseInt(this._productCount.value) - 1));
-    this._renderCounter(parseInt(this._productCount.value) - 1);
-    this._handleDecreaseTotalPrice(this._oldPrice - this._sumDiscount);
-    this._handleDecreaseTotalCount(1);
-    this._handleDecreaseTotalOldPrice(this._oldPrice);
-    this._handleDecreaseTotalDiscount(this._sumDiscount * this._productCount.value);
+    if (this.isChecked) {
+      this._handleIncreaseAccordionPrice(-(this._oldPrice - this._sumDiscount));
+      this._renderSum(this._calculateSum(parseInt(this._productCount.value) - 1));
+      this._renderOldSum(this._calculateOldSum(parseInt(this._productCount.value) - 1));
+      this._renderCounter(parseInt(this._productCount.value) - 1);
+      this._handleDecreaseTotalPrice(this._oldPrice - this._sumDiscount);
+      this._handleDecreaseTotalCount(1);
+      this._handleDecreaseTotalOldPrice(this._oldPrice);
+      this._handleDecreaseTotalDiscount(this._sumDiscount * this._productCount.value);
+    }
   }
 
   enableInput = () => {
@@ -167,6 +177,11 @@ export default class Product {
 
     this._handleIncreaseCount(-1);
     this._handleDecreaseAccordionCounter();
+
+    // check all inputs if delete disabled product
+    this._handleCheckInputProducts()
+      ? this._handleEnableInputAllProduct()
+      : this._handleDisableInputAllProduct()
 
     this._product.remove();
   }
