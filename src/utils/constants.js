@@ -81,7 +81,7 @@ const userOrderExample = [
     available: 2,
     deliveryDate: [
       {
-        2: ['2023-02-05', '2023-02-06'],
+        1: ['2023-02-05', '2023-02-06'],
       }
     ],
     priceInfo: {

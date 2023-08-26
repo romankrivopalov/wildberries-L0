@@ -34,6 +34,7 @@ export default class Product {
     this._handleIncreaseTotalDiscount = handleIncreaseTotalDiscount;
     this.deliveryDate = this._data.deliveryDate;
     this.id = data.id;
+    this.image = data.image;
     this.isChecked = false;
   }
 

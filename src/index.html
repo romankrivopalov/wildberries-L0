@@ -167,26 +167,6 @@
 
               <ul class="delivery__items">
                 <li class="delivery__item">
-                  <span class="delivery__label">5—6 февраля</span>
-                  <ul class="delivery__product-list">
-                    <li>
-                      <img class="delivery__product-img" src="<%=require('./images/item-01.jpg')%>" alt="">
-                    </li>
-                    <li>
-                      <img class="delivery__product-img" src="<%=require('./images/item-02.jpg')%>" alt="">
-                    </li>
-                    <li>
-                      <img class="delivery__product-img" src="<%=require('./images/item-03.jpg')%>" alt="">
-                    </li>
-                  </ul>
-                </li>
-                <li class="delivery__item">
-                  <span class="delivery__label">7—8 февраля</span>
-                  <ul class="delivery__product-list">
-                    <li>
-                      <img class="delivery__product-img" src="<%=require('./images/item-02.jpg')%>" alt="">
-                    </li>
-                  </ul>
                 </li>
               </ul>
 
@@ -427,6 +407,21 @@
       <span class="navbar-mobile__icon navbar-mobile__icon_type_profile"></span>
     </a>
   </div>
+
+  <template id="basket-delivery">
+    <li class="delivery__item">
+      <span class="delivery__label"></span>
+      <ul class="delivery__product-list">
+      </ul>
+    </li>
+  </template>
+
+  <template id="basket-delivery-item">
+    <li class="delivery__item-img">
+      <img class="delivery__product-img" src="<%=require('./images/item-01.jpg')%>" alt="">
+      <div class="delivery__count-label"></div>
+    </li>
+  </template>
 
   <template id="product">
     <li class="product-item">

@@ -8,6 +8,7 @@ import Product from '../components/Product.js';
 import Card from '../components/Card.js';
 import Pickup from '../components/Pickup.js';
 import Basket from '../components/Basket.js';
+import Delivery from '../components/Delivery.js';
 
 const productItemList = [];
 const cardList = [];
@@ -90,9 +91,29 @@ const popupPickupPointList = new Section({
   all.popupChoosePickupPointContainerSelector,
 );
 
-// create classes
+const basket = new Basket(
+  all.basketSetting,
+  productItemList,
+  {
+    renderDeliveries: (itemList) => {
+      const deliveryListItem = new Section(
+        {
+          data: itemList,
+          renderer: (item) => {
+            const delivery = new Delivery(
+              item
+            );
+            const deliveryElement = delivery.generateDelivery();
+            deliveryListItem.setItem(deliveryElement);
+          }
+        },
+        '.delivery__items'
+      );
 
-const basket = new Basket(all.basketSetting, productItemList);
+      return deliveryListItem;
+    },
+  }
+);
 
 const popupWithChoosePay = new PopupWithChoosePay(
   all.popupSelectors.choosePay, cardList, basket.changeCard
@@ -105,7 +126,6 @@ productList.renderItems()
 popupCardList.renderItems();
 popupPickupList.renderItems();
 popupPickupPointList.renderItems();
-
 
 // set listeners
 

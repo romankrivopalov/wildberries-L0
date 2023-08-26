@@ -3,9 +3,10 @@ import { deliveryMonthTitles } from '../utils/constants.js';
 import getEndLine from '../utils/getEndLine.js';
 
 export default class Basket {
-  constructor(basketSetting, productList) {
+  constructor(basketSetting, productList, { renderDeliveries }) {
     this._basketSetting = basketSetting;
     this._productList = productList;
+    this._renderDeliveries = renderDeliveries;
     this._accordionProductCountElement = document.querySelector(this._basketSetting.basketAccordionProductCountSelector);
     this._accordionProductCount = null;
     this._accordionProductPriceElement = document.querySelector(this._basketSetting.basketAccordionProductPriceSelector);
@@ -27,6 +28,7 @@ export default class Basket {
     this._basketTotalOldPrice = document.querySelector('#basket-total-old-price');
     this._basketTotalDiscount = document.querySelector('#basket-total-discount');
     this._basketTotalDeliveryDate = document.querySelector('.basket-order__date[data-type="delivery_total-date"]');
+    this._basketDeliveryDateItemList = document.querySelector('.delivery__items');
     this._basketCheckboxPaymentType = document.querySelector('.basket-order__checkbox[data-type="checkbox-sidebar-payment-type"]');
     this._basketCheckboxPaymentTypeDecor = document.querySelector('.basket-order__checkbox-decor[data-type="checkbox-sidebar-payment-type"]');
     this._basketTotalBtnSubmit = document.querySelector('.basket-order__btn[data-type="btn-sidebar-total"]');
@@ -127,20 +129,67 @@ export default class Basket {
     }
   }
 
+  _renderDeliveryDateItem = () => {
+    this._basketDeliveryDateItemList
+  }
+
   calculateDeliveryDate = () => {
+    const arrayDataItems = [];
+    const arrayDataItemsResult = [];
     let firstDate = Infinity;
     let lastDate = -Infinity;
 
     this._productList.forEach(product => {
       product.deliveryDate.forEach(date => {
         for (let count in date) {
+          // for date sidebar
           if (Date.parse(date[count][0]) < firstDate) firstDate = new Date(date[count][0]);
           if (Date.parse(date[count][1]) > lastDate) lastDate = new Date(date[count][1]);
         };
       });
+
+      product.deliveryDate.forEach((count) => {
+        arrayDataItems.push(
+          {
+            date: [Object.values(count)[0][0], Object.values(count)[0][1]],
+            item: [{ count: Object.keys(count)[0], image: product.image }],
+          }
+        )
+      })
     });
 
+    arrayDataItems.forEach(data => {
+      if (!arrayDataItemsResult.length) {
+        // first element
+        arrayDataItemsResult.push({
+          date: [Object.values(data)[0][0], Object.values(data)[0][1]],
+          item: [{ count: data.item[0].count, image: data.item[0].image }] }
+        );
+      } else {
+        // add item in date
+        for (let i = 0; i < arrayDataItemsResult.length; i++) {
+          if (
+            Date.parse(new Date(arrayDataItemsResult[i].date[0])) === Date.parse(new Date(Object.values(data)[0][0]))
+            && Date.parse(new Date(arrayDataItemsResult[i].date[0])) === Date.parse(new Date(Object.values(data)[0][0]))
+          ) {
+            arrayDataItemsResult[i].item.push({ count: data.item[0].count, image: data.item[0].image });
+            return;
+          }
+        }
+
+        // add new item
+        arrayDataItemsResult.push({
+          date: [Object.values(data)[0][0], Object.values(data)[0][1]],
+          item: [{ count: data.item[0].count, image: data.item[0].image }] }
+        );
+      }
+    })
+
     this._renderTotalDeliveryDate(firstDate, lastDate);
+
+    const deliverySlice = this._renderDeliveries(arrayDataItemsResult);
+
+    deliverySlice.renderItems();
   }
 
   // accordion price

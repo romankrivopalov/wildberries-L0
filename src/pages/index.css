@@ -111,8 +111,10 @@
 @import url('../blocks/delivery/__price/delivery__price.css');
 @import url('../blocks/delivery/__items/delivery__items.css');
 @import url('../blocks/delivery/__item/delivery__item.css');
+@import url('../blocks/delivery/__item-img/delivery__item-img.css');
 @import url('../blocks/delivery/__product-list/delivery__product-list.css');
 @import url('../blocks/delivery/__product-img/delivery__product-img.css');
+@import url('../blocks/delivery/__count-label/delivery__count-label.css');
 
 @import url('../blocks/pay/pay.css');
 @import url('../blocks/pay/_type/pay_type_sidebar.css');
