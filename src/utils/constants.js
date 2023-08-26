@@ -79,9 +79,11 @@ const userOrderExample = [
     },
     quantity: 1,
     available: 2,
-    deliveryTime: {
-      2: [20230205, 20230206],
-    },
+    deliveryDate: [
+      {
+        2: ['2023-02-05', '2023-02-06'],
+      }
+    ],
     priceInfo: {
       discount: 30,
       discountUser: 10,
@@ -103,10 +105,14 @@ const userOrderExample = [
     },
     quantity: 200,
     available: 1000,
-    deliveryTime: {
-      184: [20230205, 20230206],
-      816: [20230207, 20230208],
-    },
+    deliveryDate: [
+      {
+        184: ['2023-02-05', '2023-02-06'],
+      },
+      {
+        816: ['2023-02-07', '2023-02-08'],
+      }
+    ],
     priceInfo: {
       discount: 12,
       discountUser: 10,
@@ -128,9 +134,11 @@ const userOrderExample = [
     },
     quantity: 2,
     available: 2,
-    deliveryTime: {
-      2: [20230205, 20230206],
-    },
+    deliveryDate: [
+      {
+        2: ['2023-02-05', '2023-02-06'],
+      }
+    ],
     priceInfo: {
       discount: null,
       discountUser: 10,
@@ -227,4 +235,18 @@ const productContainerSelector = '#product-list',
       btnChooseAddress = document.querySelector('.basket__content-header-btn[data-type="btn-choose-address"]'),
       btnSidebarChoosePay = document.querySelector('.basket-order__btn-edit[data-type="btn-sidebar-choose-pay"]'),
       btnSidebarChooseAddress = document.querySelector('.basket-order__btn-edit[data-type="btn-sidebar-choose-address"]'),
-      productsTitles = ['товар', 'товара', 'товаров'];
+      productsTitles = ['товар', 'товара', 'товаров'],
+      deliveryMonthTitles = [
+        'января',
+        'февраля',
+        'марта',
+        'апреля',
+        'мая',
+        'июня',
+        'июля',
+        'августа',
+        'сентября',
+        'октября',
+        'ноября',
+        'декабря',
+      ];

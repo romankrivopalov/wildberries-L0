@@ -127,6 +127,7 @@ all.btnSidebarChooseAddress.addEventListener('click', () => {
 
 basket.setEventListeners();
 basket.enableAllProducts();
+basket.calculateDeliveryDate();
 popupWithChoosePay.setInitialCard();
 popupWithChoosePay.setEventListener();
 popupWithChooseAddress.setInitialAddress();

@@ -1,4 +1,5 @@
-import { productsTitles } from '../utils/constants.js'
+import { productsTitles } from '../utils/constants.js';
+import { deliveryMonthTitles } from '../utils/constants.js';
 import getEndLine from '../utils/getEndLine.js';
 
 export default class Basket {
@@ -25,6 +26,7 @@ export default class Basket {
     this._basketTotalCount = document.querySelector('#basket-total-count');
     this._basketTotalOldPrice = document.querySelector('#basket-total-old-price');
     this._basketTotalDiscount = document.querySelector('#basket-total-discount');
+    this._basketTotalDeliveryDate = document.querySelector('.basket-order__date[data-type="delivery_total-date"]');
     this._basketCheckboxPaymentType = document.querySelector('.basket-order__checkbox[data-type="checkbox-sidebar-payment-type"]');
     this._basketCheckboxPaymentTypeDecor = document.querySelector('.basket-order__checkbox-decor[data-type="checkbox-sidebar-payment-type"]');
     this._basketTotalBtnSubmit = document.querySelector('.basket-order__btn[data-type="btn-sidebar-total"]');
@@ -108,6 +110,37 @@ export default class Basket {
     if (this.checkInputProducts()) {
       this.enableInputAllProduct();
     }
+  }
+
+  // delivery date
+
+  _renderTotalDeliveryDate = (firstDate, lastDate) => {
+    const firstMonth = firstDate.getMonth();
+    const lastMonth = firstDate.getMonth();
+
+    if (firstMonth === lastMonth) {
+      this._basketTotalDeliveryDate.textContent =
+        `${firstDate.getDate()}-${lastDate.getDate()} ${deliveryMonthTitles[lastMonth].substring(0, 3)}`;
+    } else {
+      this._basketTotalDeliveryDate.textContent =
+        `${firstDate.getDate()} ${deliveryMonthTitles[firstMonth].substring(0, 3)}-${lastDate.getDate()} ${deliveryMonthTitles[lastMonth].substring(0, 3)}`;
+    }
+  }
+
+  calculateDeliveryDate = () => {
+    let firstDate = Infinity;
+    let lastDate = -Infinity;
+
+    this._productList.forEach(product => {
+      product.deliveryDate.forEach(date => {
+        for (let count in date) {
+          if (Date.parse(date[count][0]) < firstDate) firstDate = new Date(date[count][0]);
+          if (Date.parse(date[count][1]) > lastDate) lastDate = new Date(date[count][1]);
+        };
+      });
+    });
+
+    this._renderTotalDeliveryDate(firstDate, lastDate);
   }
 
   // accordion price

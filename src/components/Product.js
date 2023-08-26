@@ -32,6 +32,7 @@ export default class Product {
     this._handleIncreaseTotalOldPrice = handleIncreaseTotalOldPrice;
     this._handleDecreaseTotalDiscount = handleDecreaseTotalDiscount;
     this._handleIncreaseTotalDiscount = handleIncreaseTotalDiscount;
+    this.deliveryDate = this._data.deliveryDate;
     this.id = data.id;
     this.isChecked = false;
   }
