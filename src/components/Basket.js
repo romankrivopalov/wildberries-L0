@@ -25,6 +25,9 @@ export default class Basket {
     this._basketTotalCount = document.querySelector('#basket-total-count');
     this._basketTotalOldPrice = document.querySelector('#basket-total-old-price');
     this._basketTotalDiscount = document.querySelector('#basket-total-discount');
+    this._basketCheckboxPaymentType = document.querySelector('.basket-order__checkbox[data-type="checkbox-sidebar-payment-type"]');
+    this._basketCheckboxPaymentTypeDecor = document.querySelector('.basket-order__checkbox-decor[data-type="checkbox-sidebar-payment-type"]');
+    this._basketTotalBtnSubmit = document.querySelector('.basket-order__btn[data-type="btn-sidebar-total"]');
     this._totalPrice = null;
     this._totalCount = null;
     this._totalOldPrice = null;
@@ -39,13 +42,11 @@ export default class Basket {
   }
 
   decreaseTotalDiscount = (value) => {
-    console.log(value)
     this._totalDiscount -= value;
     this._renderTotalDiscount();
   }
 
   increaseTotalDiscount = (value) => { // +
-    console.log(value)
     this._totalDiscount += value;
     this._renderTotalDiscount();
   }
@@ -70,6 +71,9 @@ export default class Basket {
 
   _renderTotalCount = () => {
     this._basketTotalCount.textContent = `${this._totalCount} ${getEndLine(this._totalCount, productsTitles)}`;
+
+    // change text in btn, else check input
+    this._changeTextTotalBtn();
   }
 
   decreaseTotalCount = (count) => {
@@ -201,6 +205,30 @@ export default class Basket {
     return this._productList.every(product => product.isChecked);
   }
 
+  // total checkbox and btn submit
+
+  _changeTextTotalBtn = () => {
+    if (this._basketCheckboxPaymentType.checked) {
+      this._totalPrice.toString().length > 5
+        ? this._basketTotalBtnSubmit.classList.add('basket-order__btn_type_small')
+        : this._basketTotalBtnSubmit.classList.remove('basket-order__btn_type_small');
+
+      this._basketTotalBtnSubmit.textContent =
+        `Оплатить ${this._totalPrice.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')} сом`;
+    } else {
+      this._basketTotalBtnSubmit.classList.remove('basket-order__btn_type_small');
+      this._basketTotalBtnSubmit.textContent = 'Заказать';
+    }
+  }
+
+  _toggleInputPaymentType = () => {
+    this._basketCheckboxPaymentType.checked = !this._basketCheckboxPaymentType.checked;
+
+    this._changeTextTotalBtn();
+  }
+
+  // set listeners
+
   setEventListeners = () => {
     this._accordionCheckboxAllProductDecor.addEventListener('click', () => {
       if (!this.allProductCheckboxIsChecked) {
@@ -213,6 +241,10 @@ export default class Basket {
           };
         });
       }
+    })
+
+    this._basketCheckboxPaymentTypeDecor.addEventListener('click', () => {
+      this._toggleInputPaymentType();
     })
   }
 }

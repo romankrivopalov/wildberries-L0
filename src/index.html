@@ -324,8 +324,8 @@
 
               <div class="basket-order__payment">
                 <label class="basket-order__payment-wrapper">
-                  <input class="basket-order__checkbox" type="checkbox">
-                  <span class="basket-order__checkbox-decor"></span>
+                  <input class="basket-order__checkbox" type="checkbox" data-type="checkbox-sidebar-payment-type">
+                  <label class="basket-order__checkbox-decor" data-type="checkbox-sidebar-payment-type"></label>
                   <span class="basket-order__checkbox-text">Списать оплату сразу</span>
                 </label>
                 <p class="basket-order__payment-info">Спишем оплату с&nbsp;карты при получении</p>
@@ -333,8 +333,22 @@
             </div>
 
             <div class="basket-order__order">
-              <button class="basket-order__btn">Заказать</button>
-              <p class="basket-order__oferta">Соглашаюсь <a class="basket-order__oferta-link" href="#" target="_blank">с правилами пользования торговой площадкой</a> и <a class="basket-order__oferta-link" href="#" target="_blank">возврата</a></p>
+              <button
+                class="basket-order__btn basket-order__btn_type_small"
+                type="submit"
+                data-type="btn-sidebar-total">
+                Заказать
+              </button>
+              <p class="basket-order__oferta">
+                Соглашаюсь
+                <a class="basket-order__oferta-link" href="#" target="_blank">
+                  с правилами пользования торговой площадкой
+                </a>
+                и
+                <a class="basket-order__oferta-link" href="#" target="_blank">
+                  возврата
+                </a>
+              </p>
             </div>
 
 

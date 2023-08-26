@@ -159,6 +159,7 @@
 @import url('../blocks/basket-order/__checkbox-decor/basket-order__checkbox-decor.css');
 @import url('../blocks/basket-order/__payment-info/basket-order__payment-info.css');
 @import url('../blocks/basket-order/__btn/basket-order__btn.css');
+@import url('../blocks/basket-order/__btn/_type/basket-order__btn_type_small.css');
 @import url('../blocks/basket-order/__oferta/basket-order__oferta.css');
 @import url('../blocks/basket-order/__oferta-link/basket-order__oferta-link.css');
 
