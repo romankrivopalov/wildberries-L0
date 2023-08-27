@@ -43,7 +43,7 @@
 
     <main class="basket">
       <div class="container">
-        <form class="basket__form">
+        <form class="basket__form" name="basket-form" novalidate>
           <div class="basket__content">
             <h1 class="basket__title">
               Корзина
@@ -205,32 +205,56 @@
               <h2 class="basket__section-title">Получатель</h2>
               <div class="recipient__wrapper">
                 <div class="recipient__input-wrapper recipient__input-wrapper_type_first-name">
-                  <input class="recipient__input" type="text" placeholder=" " required>
+                  <input
+                    id="input-recipient-firstname"
+                    class="recipient__input"
+                    type="text"
+                    pattern="^[a-zA-Z]+$"
+                    placeholder=" "
+                    required>
                   <span class="recipient__input-label">Имя</span>
-                  <span class="recipient__input-error"></span>
+                  <span class="recipient__input-error input-recipient-firstname-error">Укажите имя</span>
                 </div>
                 <div class="recipient__input-wrapper recipient__input-wrapper_type_last-name">
-                  <input class="recipient__input" type="text" placeholder=" " required>
+                  <input
+                    id="input-recipient-lastname"
+                    class="recipient__input"
+                    type="text"
+                    pattern="^[a-zA-Z]+$"
+                    placeholder=" "
+                    required>
                   <span class="recipient__input-label">Фамилия</span>
-                  <span class="recipient__input-error"></span>
+                  <span class="recipient__input-error input-recipient-lastname-error">Введите фамилию</span>
                 </div>
                 <div class="recipient__input-wrapper recipient__input-wrapper_type_email">
                   <input
+                    id="input-recipient-email"
                     class="recipient__input"
                     type="email"
                     pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
                     placeholder=" "
                     required>
                   <span class="recipient__input-label">Электронная почта</span>
-                  <span class="recipient__input-error"></span>
+                  <span class="recipient__input-error input-recipient-email-error">
+                    Проверьте адрес электронной почты
+                  </span>
                 </div>
                 <div class="recipient__input-wrapper recipient__input-wrapper_type_phone">
-                  <input class="recipient__input" type="tel" placeholder="" required>
+                  <input
+                    id="input-recipient-phone"
+                    class="recipient__input"
+                    type="tel"
+                    placeholder=" "
+                    pattern="\+[0-9] [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}"
+                    required>
                   <span class="recipient__input-label">Телефон</span>
-                  <span class="recipient__input-error"></span>
+                  <span class="recipient__input-error input-recipient-phone-error">
+                    Формат: +9 999 999 99 99
+                  </span>
                 </div>
                 <div class="recipient__input-wrapper recipient__input-wrapper_type_payer-number">
                   <input
+                    id="input-recipient-payer-number"
                     class="recipient__input"
                     type="text"
                     minlength="14"
@@ -239,7 +263,9 @@
                     placeholder=""
                     required>
                   <span class="recipient__input-label">ИНН</span>
-                  <span class="recipient__payer-number-info">Для таможенного оформления</span>
+                  <span class="recipient__payer-number-info input-recipient-payer-number-error">
+                    Для таможенного оформления
+                  </span>
                 </div>
               </div>
             </div>

@@ -14,17 +14,6 @@
   border-color: var(--color-system-gray);
 }
 
-/* если инпут не валидный и не показан плейсхолдер */
-.recipient__input:not(:valid):not(:placeholder-shown) {
-  border-color: var(--color-system-red);
-  color: var(--color-system-red);
-}
-
-/* если инпут не валидный и не показан плейсхолдер */
-.recipient__input:not(:valid):not(:placeholder-shown) ~ .recipient__input-label {
-  color: var(--color-system-red);
-}
-
 /* если инпут в фокусе или у инпута не показан плейсхолдер */
 .recipient__input:focus ~ .recipient__input-label,
 .recipient__input:not(:placeholder-shown) ~ .recipient__input-label {

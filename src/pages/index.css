@@ -137,8 +137,10 @@
 @import url('../blocks/recipient/__input-wrapper/_type/recipient__input-wrapper_type_phone.css');
 @import url('../blocks/recipient/__input-wrapper/_type/recipient__input-wrapper_type_payer-number.css');
 @import url('../blocks/recipient/__input/recipient__input.css');
+@import url('../blocks/recipient/__input/_type/recipient__input_type_error.css');
 @import url('../blocks/recipient/__input-label/recipient__input-label.css');
 @import url('../blocks/recipient/__input-error/recipient__input-error.css');
+@import url('../blocks/recipient/__input-error/_type/recipient__input_type_show.css');
 @import url('../blocks/recipient/__payer-number-info/recipient__payer-number-info.css');
 
 @import url('../blocks/devilery-info/devivery-info.css');

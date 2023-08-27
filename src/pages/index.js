@@ -1,4 +1,5 @@
 import './index.css';
+import { formSetting } from '../utils/constants.js';
 
 import * as all from '../utils/constants.js';
 import Section from '../components/Section.js';
@@ -9,11 +10,16 @@ import Card from '../components/Card.js';
 import Pickup from '../components/Pickup.js';
 import Basket from '../components/Basket.js';
 import Delivery from '../components/Delivery.js';
+import FormValidator from '../components/FormValidator.js';
 
 const productItemList = [];
 const cardList = [];
 const pickupAddressList = [];
 const pickupPointAddressList = [];
+
+// validation
+
+const basketFormValidator = new FormValidator(formSetting, all.basketForm);
 
 // create slices
 
@@ -157,3 +163,5 @@ popupWithChoosePay.setInitialCard();
 popupWithChoosePay.setEventListener();
 popupWithChooseAddress.setInitialAddress();
 popupWithChooseAddress.setEventListener();
+
+basketFormValidator.enableValidation();

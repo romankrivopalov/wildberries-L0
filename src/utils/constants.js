@@ -248,5 +248,14 @@ const productContainerSelector = '#product-list',
         'сентября',
         'октября',
         'ноября',
-        'декабря',
-      ];
+        'декабря'],
+      basketForm = document.forms['basket-form'];
+
+export
+const formSetting = {
+  formSelector: '.popup__form',
+  inputSelector: '.recipient__input',
+  submitButtonSelector: '.basket-order__btn',
+  inputErrorClass: 'recipient__input_type_error',
+  errorClass: 'recipient__input_type_show',
+}
