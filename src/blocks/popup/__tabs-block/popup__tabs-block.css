@@ -2,6 +2,6 @@
   display: none;
 }
 
-.popup__tabs-block:target {
+.popup__tabs-block:first-child {
   display: block;
 }
