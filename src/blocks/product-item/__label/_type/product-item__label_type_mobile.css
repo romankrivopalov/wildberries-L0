@@ -1,0 +1,9 @@
+.product-item__label_type_mobile {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .product-item__label_type_mobile {
+    display: inline-block;
+  }
+}

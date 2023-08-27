@@ -1,0 +1,14 @@
+.product__checkbox-decor_type_item {
+  background-color: var(--color-system-white);
+  top: 16px;
+  left: 4px;
+}
+
+@media screen and (min-width: 1024px) {
+  .product__checkbox-decor_type_item {
+    top: 60px;
+    left: 0;
+    background-color: inherit;
+    transform: translateY(-50%);
+  }
+}

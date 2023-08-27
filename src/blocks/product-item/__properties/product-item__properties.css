@@ -1,0 +1,12 @@
+.product-item__properties {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+@media screen and (min-width: 1024px) {
+  .product-item__properties {
+    margin-bottom: 8px;
+    gap: 17px;
+  }
+}

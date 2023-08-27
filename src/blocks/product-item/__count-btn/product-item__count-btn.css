@@ -1,0 +1,14 @@
+.product-item__count-btn {
+  position: absolute;
+  height: 32px;
+  width: 24px;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .product-item__count-btn {
+    width: 30px;
+  }
+}

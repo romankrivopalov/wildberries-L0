@@ -1,0 +1,12 @@
+.delivery__label {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  width: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .delivery__label {
+    width: 155px;
+  }
+}

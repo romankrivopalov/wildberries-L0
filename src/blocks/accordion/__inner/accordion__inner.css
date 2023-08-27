@@ -1,0 +1,13 @@
+.accordion__inner {
+  position: relative;
+  opacity: 1;
+  margin: 0;
+  max-height: 2000px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+  .accordion__inner {
+    margin-right: -16px;
+  }
+}

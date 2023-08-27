@@ -1,0 +1,33 @@
+.accordion__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+.accordion__checkbox:checked ~ .accordion__inner {
+  opacity: 0;
+  max-height: 0;
+}
+
+/* добавить плавность только при открытии */
+.accordion__checkbox:not(:checked) ~ .accordion__inner {
+  transition: max-height 2s linear;
+}
+
+.accordion__checkbox:not(:checked) ~ .accordion__hide-info {
+  display: none;
+}
+
+.accordion__checkbox:checked + .accordion__label::after {
+  top: 12px;
+  right: 15px;
+  transform: rotate(-45deg);
+}
+
+.accordion__checkbox:checked + .accordion__label::before {
+  top: 12px;
+  right: 15px;
+  transform: rotate(-45deg);
+}

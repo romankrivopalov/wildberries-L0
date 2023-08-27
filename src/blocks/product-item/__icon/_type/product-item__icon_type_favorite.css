@@ -1,0 +1,8 @@
+.product-item__icon_type_favorite {
+  -webkit-mask-image: url('../../../../images/icons/icon-favorite.svg');
+  mask-image: url('../../../../images/icons/icon-favorite.svg');
+}
+
+.product-item__icon_type_favorite:hover {
+  background-color: var(--color-system-magenta);
+}

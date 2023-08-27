@@ -1,0 +1,9 @@
+.product {
+  padding: 0 0 16px 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .product {
+    padding-bottom: 17px;
+  }
+}

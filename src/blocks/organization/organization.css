@@ -1,0 +1,12 @@
+.organization {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .organization {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+  }
+}

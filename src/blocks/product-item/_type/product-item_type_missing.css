@@ -1,0 +1,16 @@
+.product-item_type_missing {
+  grid-template-areas:
+  "image-missing property"
+  "icons icons";
+  grid-template-rows: 1Fr 24px;
+  row-gap: 12px;
+}
+
+@media screen and (min-width: 1024px) {
+  .product-item_type_missing {
+    grid-template-areas:
+    "image-missing property icons";
+    grid-template-columns: 72px 1fr 182px;
+    grid-template-rows: 1fr;
+  }
+}

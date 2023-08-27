@@ -1,0 +1,12 @@
+.product-item__old-price {
+  display: block;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--color-system-gray);
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.product-item__old-price:hover ~ .discount {
+  display: flex;
+}

@@ -1,0 +1,8 @@
+.product-item__icon_type_delete {
+  -webkit-mask-image: url('../../../../images/icons/icon-remove.svg');
+  mask-image: url('../../../../images/icons/icon-remove.svg');
+}
+
+.product-item__icon_type_delete:hover {
+  background-color: var(--color-system-orange);
+}

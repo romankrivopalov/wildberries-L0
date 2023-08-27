@@ -1,0 +1,12 @@
+.header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .header__row {
+    margin-right: -4px;
+  }
+}

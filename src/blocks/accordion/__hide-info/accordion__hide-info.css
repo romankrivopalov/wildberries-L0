@@ -1,0 +1,7 @@
+.accordion__hide-info {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-size: 16px;
+  line-height: 24px;
+}

@@ -1,0 +1,16 @@
+.delivery-info__tooltip {
+  box-sizing: border-box;
+  display: none;
+  position: absolute;
+  top: 24px;
+  left: 249px;
+  margin: 0;
+  padding: 10px 16px 14px;
+  width: 288px;
+  font-size: 13px;
+  line-height: 16px;
+  background-color: var(--color-system-white);
+  border-radius: 8px;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.30), 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+  z-index: 20;
+}

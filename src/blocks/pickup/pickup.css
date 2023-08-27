@@ -1,0 +1,11 @@
+.pickup {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0;
+  padding: 20px 0 0 0;
+}
+
+.pickup:first-child {
+  padding-top: 0;
+}

@@ -1,0 +1,6 @@
+.header__icon_type_cart {
+  margin-left: 10px;
+  margin-right: 18px;
+  -webkit-mask-image: url('../../../../images/icons/icon-cart.svg');
+  mask-image: url('../../../../images/icons/icon-cart.svg');
+}

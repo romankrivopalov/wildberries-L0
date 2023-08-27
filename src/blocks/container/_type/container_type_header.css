@@ -1,0 +1,9 @@
+.container_type_header {
+  padding: 0 13px;
+}
+
+@media screen and (min-width: 1024px) {
+  .container_type_header {
+    padding: 0 24px;
+  }
+}

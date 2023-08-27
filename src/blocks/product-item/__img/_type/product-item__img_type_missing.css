@@ -1,0 +1,4 @@
+.product-item__img_type_missing {
+  grid-area: image-missing;
+  filter: grayscale(100) brightness(95%);
+}

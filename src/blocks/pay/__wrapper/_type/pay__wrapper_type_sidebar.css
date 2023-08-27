@@ -1,0 +1,11 @@
+.pay__wrapper_type_sidebar {
+  display: none;
+  align-items: center;
+  margin: 4px 0 12px;
+}
+
+@media screen and (min-width: 1024px) {
+  .pay__wrapper_type_sidebar {
+    display: flex;
+  }
+}

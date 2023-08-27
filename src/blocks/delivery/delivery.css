@@ -1,0 +1,11 @@
+.delivery {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media screen and (min-width: 1024px) {
+  .delivery {
+    gap: 16px;
+  }
+}

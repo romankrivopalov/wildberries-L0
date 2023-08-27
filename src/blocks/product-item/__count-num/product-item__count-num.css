@@ -1,0 +1,26 @@
+.product-item__count-num {
+  margin: 0;
+  padding: 0;
+  width: 80px;
+  height: 32px;
+  background-color: var(--color-system-white);
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.product-item__count-num {
+  outline: none;
+}
+
+.product-item__count-num::-webkit-outer-spin-button,
+.product-item__count-num::-webkit-inner-spin-button {
+	display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .product-item__count-num {
+    width: 100%;
+    height: 44px;
+  }
+}

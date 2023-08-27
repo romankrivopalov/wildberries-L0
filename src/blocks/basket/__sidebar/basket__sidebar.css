@@ -1,0 +1,23 @@
+.basket__sidebar {
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 1024px) {
+  .basket__sidebar {
+    box-sizing: content-box;
+    margin: -2px 0 0 0;
+    padding: 16px 24px 24px 24px;
+    width: 303px;
+    border-radius: 16px;
+    background-color: var(--color-system-white);
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.30), 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+    z-index: 20;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .basket__sidebar {
+    box-sizing: border-box;
+    width: 429px;
+  }
+}

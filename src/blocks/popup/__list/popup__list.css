@@ -1,0 +1,26 @@
+.popup__list {
+  margin: 12px -12px 0 0;
+  padding: 0 12px 0 0;
+  list-style: none;
+  overflow-y: auto;
+}
+
+.popup__list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.popup__list::-webkit-scrollbar-thumb {
+  height: 30px;
+  background-color: #d3d4dd;
+  border-radius: 3px;
+}
+
+.popup__list::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-system-gray);
+}
+
+@media screen and (min-width: 1024px) {
+  .popup__list {
+    max-height: 175px;
+  }
+}

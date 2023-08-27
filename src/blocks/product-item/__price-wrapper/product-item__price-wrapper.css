@@ -1,0 +1,4 @@
+.product-item__price-wrapper {
+  flex-grow: 1;
+  position: relative;
+}

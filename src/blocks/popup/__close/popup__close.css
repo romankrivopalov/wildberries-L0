@@ -1,0 +1,26 @@
+.popup__close {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.popup__close::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-system-gray);
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.popup__close::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-system-gray);
+  transform: translate(-50%,-50%) rotate(-45deg);
+}

@@ -1,0 +1,14 @@
+.product-item__property {
+  margin: 0;
+  padding: 0 0 8px;
+  display: block;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+  .product-item__property {
+    margin: 0;
+    padding: 0;
+  }
+}

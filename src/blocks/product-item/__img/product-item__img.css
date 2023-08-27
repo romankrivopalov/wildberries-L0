@@ -1,0 +1,18 @@
+.product-item__img {
+  grid-area: image-missing;
+  margin: 0;
+  display: block;
+  width: 80px;
+  height: 106px;
+  border-radius: 8px;
+  object-fit: cover;
+  filter: brightness(93%);
+}
+
+@media screen and (min-width: 1024px) {
+  .product-item__img {
+    margin-left: auto;
+    width: auto;
+    height: 96px;
+  }
+}

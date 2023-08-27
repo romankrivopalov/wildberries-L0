@@ -1,0 +1,6 @@
+.header__icon_type_profile {
+  margin-left: 15px;
+  margin-right: 13px;
+  -webkit-mask-image: url('../../../../images/icons/icon-profile.svg');
+  mask-image: url('../../../../images/icons/icon-profile.svg');
+}

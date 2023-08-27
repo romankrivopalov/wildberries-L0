@@ -1,0 +1,7 @@
+.recipient__payer-number-info {
+  display: block;
+  margin: 0 0 0 -1px;
+  min-height: 16px;
+  font-size: 12px;
+  line-height: 14px;
+}

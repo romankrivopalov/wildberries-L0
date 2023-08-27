@@ -1,0 +1,11 @@
+.header__nav-element {
+  display: flex;
+  gap: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .header__nav-element {
+    gap: 16px;
+    align-items: center;
+  }
+}

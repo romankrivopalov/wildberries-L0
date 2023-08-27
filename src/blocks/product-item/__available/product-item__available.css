@@ -1,0 +1,14 @@
+.product-item__available {
+  flex-grow: 1;
+  display: block;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--color-system-orange);
+}
+
+@media screen and (min-width: 1024px) {
+  .product-item__available {
+    flex-grow: inherit;
+    align-self: flex-start;
+  }
+}

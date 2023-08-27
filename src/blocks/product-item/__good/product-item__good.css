@@ -1,0 +1,17 @@
+.product-item__good {
+  grid-area: property;
+  flex-grow: 1;
+  margin: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .product-item__good {
+    width: 275px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .product-item__good {
+    width: 309px;
+  }
+}

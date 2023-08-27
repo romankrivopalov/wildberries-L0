@@ -1,0 +1,30 @@
+.recipient__input {
+  margin: 0 0 4px;
+  padding: 15px 0 1px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  border-bottom: 1px solid #CCC;
+  background-color: inherit;
+}
+
+.recipient__input:focus {
+  outline: none;
+  border-color: var(--color-system-gray);
+}
+
+/* если инпут в фокусе или у инпута не показан плейсхолдер */
+.recipient__input:focus ~ .recipient__input-label,
+.recipient__input:not(:placeholder-shown) ~ .recipient__input-label {
+  top: 0;
+  font-size: 12px;
+  line-height: 14px;
+  transition: all, .2s;
+}
+
+@media screen and (min-width: 1024px) {
+  .recipient__input {
+    padding-top: 18px;
+  }
+}

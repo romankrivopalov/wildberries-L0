@@ -1,0 +1,11 @@
+.basket__form {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+  .basket__form {
+    flex-direction: row;
+    margin-top: 0;
+  }
+}

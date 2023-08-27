@@ -1,0 +1,15 @@
+.delivery__delivery-price {
+  margin: 0;
+  padding: 8px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .delivery__delivery-price {
+    padding: 0;
+    flex-direction: row;
+    gap: 30px;
+  }
+}

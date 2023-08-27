@@ -1,0 +1,15 @@
+.devivery-info_sidebar {
+  padding: 8px 8px 8px 38px;
+  min-height: 49px;
+  background-color: var(--color-system-smoky-dark);
+}
+
+.devivery-info_sidebar::after {
+  left: 8px;
+}
+
+@media screen and (min-width: 1024px) {
+  .devivery-info_sidebar {
+    background-color: var(--color-system-smoky);
+  }
+}

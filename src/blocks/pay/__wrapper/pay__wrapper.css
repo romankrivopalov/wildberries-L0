@@ -1,0 +1,12 @@
+.pay__wrapper {
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .pay__wrapper {
+    margin-top: 8px;
+  }
+}

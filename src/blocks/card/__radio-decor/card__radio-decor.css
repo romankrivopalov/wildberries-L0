@@ -1,0 +1,9 @@
+.card__radio-decor {
+  box-sizing: border-box;
+  margin: 0 10px 0 2px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #CCC;
+  border-radius: 100%;
+  cursor: pointer;
+}

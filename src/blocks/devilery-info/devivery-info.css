@@ -1,0 +1,32 @@
+.devivery-info {
+  box-sizing: border-box;
+  position: relative;
+  padding: 2px 0 2px 38px;
+  font-size: 13px;
+  line-height: 16px;
+  background-color: inherit;
+  border-radius: 8px;
+}
+
+.devivery-info::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 8px;
+  width: 22px;
+  height: 100%;
+  background-image: url('../../images/icons/icon-success.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .devivery-info {
+    padding: 2px 0 2px 30px;
+  }
+
+  .devivery-info::after {
+    left: 0;
+  }
+}

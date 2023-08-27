@@ -1,0 +1,15 @@
+.delivery__count-label {
+  box-sizing: border-box;
+  position: absolute;
+  top: -8px;
+  right: -4px;
+  margin: 0;
+  padding: 0 4px;
+  min-width: 16px;
+  font-size: 10px;
+  line-height: 16px;
+  text-align: center;
+  color: var(--color-system-white);
+  background-color: var(--color-system-orange);
+  border-radius: 8px;
+}

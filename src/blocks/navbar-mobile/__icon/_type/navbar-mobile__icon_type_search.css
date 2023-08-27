@@ -1,0 +1,4 @@
+.navbar-mobile__icon_type_search {
+  -webkit-mask-image: url('../../../../images/icons/icon-mobile-search.svg');
+  mask-image: url('../../../../images/icons/icon-mobile-search.svg');
+}

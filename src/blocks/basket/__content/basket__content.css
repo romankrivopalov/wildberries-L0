@@ -1,0 +1,11 @@
+.basket__content {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .basket__content {
+    padding-right: 32px;
+  }
+}

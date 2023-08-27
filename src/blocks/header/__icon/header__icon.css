@@ -1,0 +1,9 @@
+.header__icon {
+  display: block;
+  margin: 1px auto 5px auto;
+  width: 28px;
+  height: 28px;
+  background-color: var(--color-system-white);
+  background-position: center;
+  background-repeat: no-repeat;
+}

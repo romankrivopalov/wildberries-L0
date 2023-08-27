@@ -1,0 +1,14 @@
+.organization__icon-info {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url('../../../images/icons/icon-info.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.organization__icon-info:hover > .organization__info {
+  display: block;
+}

@@ -1,0 +1,23 @@
+.header__burger {
+  padding: 12px 3px;
+  width: 28px;
+  height: 28px;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  transition: border-color .1s ease-out;
+}
+
+@media screen and (min-width: 1024px) {
+  .header__burger {
+    padding: 11px 9px;
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(255, 255, 255, .45);
+    border-radius: 8px;
+  }
+
+  .header__burger:hover {
+    border-color: var(--color-system-white);
+  }
+}

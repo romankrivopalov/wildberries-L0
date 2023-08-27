@@ -1,0 +1,8 @@
+.delivery__product-img {
+  display: block;
+  width: 41px;
+  height: 56px;
+  border-radius: 8px;
+  object-fit: cover;
+  filter: brightness(93%);
+}

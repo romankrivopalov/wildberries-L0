@@ -1,0 +1,5 @@
+.popup__tabs-items {
+  display: flex;
+  gap: 8px;
+  margin: 0 0 24px;
+}

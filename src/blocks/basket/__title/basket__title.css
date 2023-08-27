@@ -1,0 +1,17 @@
+.basket__title {
+  position: relative;
+  margin: -9px 0 16px;
+  padding: 0;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  z-index: 20;
+}
+
+@media screen and (min-width: 1024px) {
+  .basket__title {
+    margin: 11px 0 27px;
+    font-size: 28px;
+    line-height: 36px;
+  }
+}

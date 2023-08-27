@@ -1,0 +1,11 @@
+.discount__item {
+  margin: 0;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.discount__item:first-child:not(:empty) {
+  padding-bottom: 8px;
+}

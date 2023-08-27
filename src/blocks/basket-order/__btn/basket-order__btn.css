@@ -1,0 +1,23 @@
+.basket-order__btn {
+  margin: 10px 0 12px 0;
+  padding: 8px 32px 12px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--color-system-white);
+  background-color: var(--color-system-magenta);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.basket-order__btn:hover {
+  background-color: var(--color-btn-hover);
+}
+
+@media screen and (min-width: 1024px) {
+  .basket-order__btn {
+    margin-top: 0;
+  }
+}

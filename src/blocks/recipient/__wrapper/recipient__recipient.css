@@ -1,0 +1,23 @@
+.recipient__wrapper {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+      'first-name'
+      'last-name'
+      'email'
+      'phone'
+      'payer-number';
+  gap: 11px;
+}
+
+@media screen and (min-width: 1024px) {
+  .recipient__wrapper {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+      'first-name first-name first-name last-name last-name last-name'
+      'email email phone phone payer-number payer-number';
+    column-gap: 24px;
+    row-gap: 0;
+  }
+}

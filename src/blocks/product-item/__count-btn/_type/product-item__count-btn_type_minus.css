@@ -1,0 +1,22 @@
+.product-item__count-btn_type_minus {
+  top: 0;
+  left: 0;
+}
+
+.product-item__count-btn_type_minus::after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 10px;
+  width: 10px;
+  height: 2px;
+  background-color: var(--color-text-black);
+}
+
+@media screen and (min-width: 1024px) {
+  .product-item__count-btn_type_minus::after {
+    top: 22px;
+    left: 11px;
+    width: 9px;
+  }
+}

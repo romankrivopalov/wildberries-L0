@@ -1,0 +1,4 @@
+.popup__tabs {
+  display: flex;
+  flex-direction: column;
+}

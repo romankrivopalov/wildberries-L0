@@ -1,0 +1,7 @@
+.popup__tabs-block {
+  display: none;
+}
+
+.popup__tabs-block:first-child {
+  display: block;
+}

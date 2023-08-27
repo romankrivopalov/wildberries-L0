@@ -1,0 +1,10 @@
+.product-item__property-wrapper {
+  display: flex;
+  gap: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .product-item__property-wrapper {
+    gap: 4px;
+  }
+}

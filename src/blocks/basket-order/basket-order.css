@@ -1,0 +1,12 @@
+.basket-order {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+  .basket-order {
+    gap: 24px;
+    align-self: flex-start;
+  }
+}

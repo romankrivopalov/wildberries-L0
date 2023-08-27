@@ -1,0 +1,10 @@
+.basket {
+  flex-grow: 1;
+  margin: 0 0 16px 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .basket {
+    margin-bottom: 0;
+  }
+}

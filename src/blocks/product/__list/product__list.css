@@ -1,0 +1,11 @@
+.product__list {
+  margin: 0;
+  padding: 20px 0 32px 0;
+  list-style: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .product__list {
+    padding: 18px 16px 22px 0;
+  }
+}

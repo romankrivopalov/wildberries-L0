@@ -1,0 +1,22 @@
+.accordion {
+  position: relative;
+  width: 100%;
+  min-height: 44px;
+}
+
+.accordion::after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #DEDEE1;
+  z-index: -10;
+}
+
+@media screen and (min-width: 1024px) {
+  .accordion::after {
+    top: 39px;
+  }
+}

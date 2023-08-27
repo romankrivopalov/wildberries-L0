@@ -1,0 +1,21 @@
+.basket__content-header-btn {
+  margin: 4px 0 0 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-system-magenta);
+  font-weight: 700;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.basket__content-header-btn:hover {
+  color: var(--color-btn-hover);
+}
+
+@media screen and (min-width: 1024px) {
+  .basket__content-header-btn {
+    margin-top: 8px;
+  }
+}

@@ -1,0 +1,10 @@
+.basket-order__card {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .basket-order__card {
+    display: flex;
+    justify-content: space-between;
+  }
+}

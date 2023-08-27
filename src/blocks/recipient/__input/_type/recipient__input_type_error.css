@@ -1,0 +1,4 @@
+.recipient__input_type_error {
+  border-color: var(--color-system-red);
+  color: var(--color-system-red);
+}

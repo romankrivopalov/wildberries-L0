@@ -1,0 +1,12 @@
+.discount__label {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--color-system-gray);
+  white-space: nowrap;
+}
+
+.discount__label:first-child:not(:empty) {
+  padding-bottom: 8px;
+}

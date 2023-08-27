@@ -1,0 +1,16 @@
+.pickup__delete {
+  flex-shrink: 0;
+  margin: 0 0 0 auto;
+  width: 20px;
+  height: 20px;
+  -webkit-mask-image: url('../../../images/icons/icon-remove.svg');
+  mask-image: url('../../../images/icons/icon-remove.svg');
+  background-color: var(--color-system-gray);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.pickup__delete:hover {
+  background-color: var(--color-system-orange);
+}

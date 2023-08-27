@@ -1,0 +1,13 @@
+.organization__info {
+  box-sizing: border-box;
+  display: none;
+  position: absolute;
+  top: 23px;
+  left: -113px;
+  padding: 11px 16px 13px;
+  width: 280px;
+  background-color: var(--color-system-white);
+  border-radius: 8px;
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.30)) drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.15));
+  z-index: 40;
+}
