@@ -194,5 +194,5 @@
 .pickup__info{display:flex;margin:4px 0 0;padding:0 0 0 12px;position:relative}.pickup__info:after{background-image:url(images/icon-rate..svg);background-position:50%;background-repeat:no-repeat;content:"";height:12px;left:0;position:absolute;top:2px;width:12px}
 .pickup__rate{font-size:13px;line-height:16px;margin:0 4px;padding:0}
 .pickup__label{color:var(--color-system-gray);font-size:13px;line-height:16px;margin:0;padding:0 0 0 4px}
-.pickup__delete{background-color:var(--color-system-gray);cursor:pointer;flex-shrink:0;height:20px;margin:0 0 0 auto;-webkit-mask-image:url(images/icon-remove..svg);mask-image:url(images/icon-remove..svg);width:20px}.pickup__delete:hover{background-color:var(--color-system-orange)}
+.pickup__delete{background-color:var(--color-system-gray);background-position:50%;background-repeat:no-repeat;cursor:pointer;flex-shrink:0;height:20px;margin:0 0 0 auto;-webkit-mask-image:url(images/icon-remove..svg);mask-image:url(images/icon-remove..svg);width:20px}.pickup__delete:hover{background-color:var(--color-system-orange)}
 
