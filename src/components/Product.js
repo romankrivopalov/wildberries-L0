@@ -98,8 +98,8 @@ export default class Product {
 
   _renderSum = (value) => {
     value.toString().length > 5
-      ? this._newPriceElement.classList.add('product-item__new-price_type_small')
-      : this._newPriceElement.classList.remove('product-item__new-price_type_small')
+      ? this._newPriceElement.classList.add(this._productSetting.productNewPriceSmallTextClass)
+      : this._newPriceElement.classList.remove(this._productSetting.productNewPriceSmallTextClass)
 
     this._newPriceElement.textContent = `${value.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')} сом`;
   }
@@ -117,13 +117,13 @@ export default class Product {
   }
 
   _increaseCounter = () => {
-    this._productCountPlusBtn.classList.remove('product-item__count-btn_type_disabled');
+    this._productCountPlusBtn.classList.remove(this._productSetting.productCountBtnTypeDisabledClass);
 
     if (this._productCount.value >= (this._data.available - 1)) {
-      this._productCountPlusBtn.classList.add('product-item__count-btn_type_disabled');
+      this._productCountPlusBtn.classList.add(this._productSetting.productCountBtnTypeDisabledClass);
     }
 
-    this._productCountMinusBtn.classList.remove('product-item__count-btn_type_disabled');
+    this._productCountMinusBtn.classList.remove(this._productSetting.productCountBtnTypeDisabledClass);
     if (this._productCount.value >= this._data.available) return
 
     if (this.isChecked) {
@@ -139,10 +139,10 @@ export default class Product {
   }
 
   _decreaseCounter = () => {
-    this._productCountPlusBtn.classList.remove('product-item__count-btn_type_disabled');
+    this._productCountPlusBtn.classList.remove(this._productSetting.productCountBtnTypeDisabledClass);
 
     if (this._productCount.value <= 2) {
-      this._productCountMinusBtn.classList.add('product-item__count-btn_type_disabled');
+      this._productCountMinusBtn.classList.add(this._productSetting.productCountBtnTypeDisabledClass);
     }
 
     if (this._productCount.value <= 1) return
@@ -263,12 +263,12 @@ export default class Product {
           .textContent = `${this._data.size}`;
       } else {
         this._productMissing.
-          querySelector('.product-item__property-wrapper')
+          querySelector(this._productSetting.productPropertyWrapperSelector)
           .style.display = 'none';
       }
     } else {
       this._productMissing.
-        querySelector('.product-item__properties')
+        querySelector(this._productSetting.productItemPropertiesSelector)
         .style.display = 'none';
     }
 
@@ -311,12 +311,12 @@ export default class Product {
           .textContent = `${this._data.size}`;
       } else {
         this._product.
-          querySelector('.product-item__property-wrapper')
+          querySelector(this._productSetting.productPropertyWrapperSelector)
           .style.display = 'none';
       }
     } else {
       this._product.
-        querySelector('.product-item__properties')
+        querySelector(this._productSetting.productItemPropertiesSelector)
         .style.display = 'none';
     }
 

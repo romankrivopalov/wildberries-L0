@@ -119,7 +119,7 @@ const basket = new Basket(
             deliveryListItem.setItem(deliveryElement);
           }
         },
-        '.delivery__items'
+        all.deliveryItemsContainerSelector
       );
 
       return deliveryListItem;

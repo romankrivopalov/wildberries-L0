@@ -6,14 +6,14 @@ export default class Basket {
   constructor(basketSetting, productList, { renderDeliveries }) {
     this._basketSetting = basketSetting;
     this._productList = productList;
-    this._productListMissingContainer = document.querySelector('#product-list-missing');
+    this._productListMissingContainer = document.querySelector(this._basketSetting.productListMissingContainerSelector);
     this._renderDeliveries = renderDeliveries;
     this._accordionProductCountElement = document.querySelector(this._basketSetting.basketAccordionProductCountSelector);
     this._accordionProductCount = null;
     this._accordionProductPriceElement = document.querySelector(this._basketSetting.basketAccordionProductPriceSelector);
     this._accordionProductPrice = null;
-    this._accordionCheckboxAllProduct = document.querySelector('.product__checkbox[data-type="checkbox-all-product"]');
-    this._accordionCheckboxAllProductDecor = document.querySelector('.product__checkbox-decor[data-type="checkbox-all-product-decor"]');
+    this._accordionCheckboxAllProduct = document.querySelector(this._basketSetting.accordionCheckboxAllProductSelector);
+    this._accordionCheckboxAllProductDecor = document.querySelector(this._basketSetting.accordionCheckboxAllProductDecorSelector);
     this._cardIcons = document.querySelectorAll(this._basketSetting.cardIconSelector);
     this._cardNumbers = document.querySelectorAll(this._basketSetting.cardNumberSelector);
     this._cardDates = document.querySelectorAll(this._basketSetting.cardDateSelector);
@@ -24,17 +24,17 @@ export default class Basket {
     this._pickupSidebarAddress = document.querySelector(this._basketSetting.pickupSidebarAddressSelector);
     this._pickupRate = document.querySelector(this._basketSetting.pickupRateSelector);
     this._pickupOfficeHours = document.querySelector(this._basketSetting.pickupOfficeHoursSelector);
-    this._basketTotalPrice = document.querySelector('#basket-total-price');
-    this._basketTotalCount = document.querySelector('#basket-total-count');
-    this._basketTotalOldPrice = document.querySelector('#basket-total-old-price');
-    this._basketTotalDiscount = document.querySelector('#basket-total-discount');
-    this._basketTotalDeliveryDate = document.querySelector('.basket-order__date[data-type="delivery_total-date"]');
-    this._basketDeliveryDateItemList = document.querySelector('.delivery__items');
-    this._basketCheckboxPaymentType = document.querySelector('.basket-order__checkbox[data-type="checkbox-sidebar-payment-type"]');
-    this._basketCheckboxPaymentTypeDecor = document.querySelector('.basket-order__checkbox-decor[data-type="checkbox-sidebar-payment-type"]');
-    this._basketTotalBtnSubmit = document.querySelector('.basket-order__btn[data-type="btn-sidebar-total"]');
-    this._headerIconCounter = document.querySelector('.header__link-count[data-type="counter-header"]');
-    this._navbarMobileIconCounter = document.querySelector('.navbar-mobile__icon-count[data-type="counter-mobile"]');
+    this._basketTotalPrice = document.querySelector(this._basketSetting.basketTotalPriceSelector);
+    this._basketTotalCount = document.querySelector(this._basketSetting.basketTotalCountSelector);
+    this._basketTotalOldPrice = document.querySelector(this._basketSetting.basketTotalOldPriceSelector);
+    this._basketTotalDiscount = document.querySelector(this._basketSetting.basketTotalDiscountSelector);
+    this._basketTotalDeliveryDate = document.querySelector(this._basketSetting.basketTotalDeliveryDateSelector);
+    this._basketDeliveryDateItemList = document.querySelector(this._basketSetting.basketDeliveryDateItemListSelector);
+    this._basketCheckboxPaymentType = document.querySelector(this._basketSetting.basketCheckboxPaymentTypeSelector);
+    this._basketCheckboxPaymentTypeDecor = document.querySelector(this._basketSetting.basketCheckboxPaymentTypeDecorSelector);
+    this._basketTotalBtnSubmit = document.querySelector(this._basketSetting.basketTotalBtnSubmitSelector);
+    this._headerIconCounter = document.querySelector(this._basketSetting.headerIconCounterSelector);
+    this._navbarMobileIconCounter = document.querySelector(this._basketSetting.navbarMobileIconCounterSelector);
     this._totalPrice = null;
     this._totalCount = null;
     this._count = null;
@@ -318,13 +318,13 @@ export default class Basket {
   _changeTextTotalBtn = () => {
     if (this._basketCheckboxPaymentType.checked) {
       this._totalPrice.toString().length > 5
-        ? this._basketTotalBtnSubmit.classList.add('basket-order__btn_type_small')
-        : this._basketTotalBtnSubmit.classList.remove('basket-order__btn_type_small');
+        ? this._basketTotalBtnSubmit.classList.add(this._basketSetting.basketOrderBtnSmallTextClass)
+        : this._basketTotalBtnSubmit.classList.remove(this._basketSetting.basketOrderBtnSmallTextClass);
 
       this._basketTotalBtnSubmit.textContent =
         `Оплатить ${this._totalPrice.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')} сом`;
     } else {
-      this._basketTotalBtnSubmit.classList.remove('basket-order__btn_type_small');
+      this._basketTotalBtnSubmit.classList.remove(this._basketSetting.basketOrderBtnSmallTextClass);
       this._basketTotalBtnSubmit.textContent = 'Заказать';
     }
   }

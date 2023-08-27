@@ -173,6 +173,21 @@ const basketSetting = {
       pickupPointTypeText: 'Курьером',
       pickupSidebarTypeText: 'Доставка в пункт выдачи',
       pickupPointSidebarTypeText: 'Доставка курьером',
+      productListMissingContainerSelector: '#product-list-missing',
+      accordionCheckboxAllProductSelector: '.product__checkbox[data-type="checkbox-all-product"]',
+      accordionCheckboxAllProductDecorSelector: '.product__checkbox-decor[data-type="checkbox-all-product-decor"]',
+      basketTotalPriceSelector: '#basket-total-price',
+      basketTotalCountSelector: '#basket-total-count',
+      basketTotalOldPriceSelector: '#basket-total-old-price',
+      basketTotalDiscountSelector: '#basket-total-discount',
+      basketTotalDeliveryDateSelector: '.basket-order__date[data-type="delivery_total-date"]',
+      basketDeliveryDateItemListSelector: '.delivery__items',
+      basketCheckboxPaymentTypeSelector: '.basket-order__checkbox[data-type="checkbox-sidebar-payment-type"]',
+      basketCheckboxPaymentTypeDecorSelector: '.basket-order__checkbox-decor[data-type="checkbox-sidebar-payment-type"]',
+      basketTotalBtnSubmitSelector: '.basket-order__btn[data-type="btn-sidebar-total"]',
+      headerIconCounterSelector: '.header__link-count[data-type="counter-header"]',
+      navbarMobileIconCounterSelector: '.navbar-mobile__icon-count[data-type="counter-mobile"]',
+      basketOrderBtnSmallTextClass: 'basket-order__btn_type_small',
 }
 
 export
@@ -203,6 +218,10 @@ const productSetting = {
       productCountPlusBtnSelector: '.product-item__count-btn_type_plus',
       productInputSelecor: '.product__checkbox',
       productInputDecorSelecor: '.product__checkbox-decor_type_item',
+      productNewPriceSmallTextClass: 'product-item__new-price_type_small',
+      productCountBtnTypeDisabledClass: 'product-item__count-btn_type_disabled',
+      productPropertyWrapperSelector: '.product-item__property-wrapper',
+      productItemPropertiesSelector: '.product-item__properties',
 }
 
 export
@@ -251,7 +270,8 @@ const productContainerSelector = '#product-list',
         'октября',
         'ноября',
         'декабря'],
-      basketForm = document.forms['basket-form'];
+      basketForm = document.forms['basket-form'],
+      deliveryItemsContainerSelector = '.delivery__items';
 
 export
 const formSetting = {
