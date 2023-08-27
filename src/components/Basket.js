@@ -6,6 +6,7 @@ export default class Basket {
   constructor(basketSetting, productList, { renderDeliveries }) {
     this._basketSetting = basketSetting;
     this._productList = productList;
+    this._productListMissingContainer = document.querySelector('#product-list-missing');
     this._renderDeliveries = renderDeliveries;
     this._accordionProductCountElement = document.querySelector(this._basketSetting.basketAccordionProductCountSelector);
     this._accordionProductCount = null;
@@ -210,6 +211,12 @@ export default class Basket {
     const deliverySlice = this._renderDeliveries(arrayDataItemsResult);
 
     deliverySlice.renderItems();
+  }
+
+  // product missing
+
+  setProductMissing = (item) => {
+    this._productListMissingContainer.prepend(item);
   }
 
   // accordion price

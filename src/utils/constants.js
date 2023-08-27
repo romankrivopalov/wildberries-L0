@@ -178,7 +178,9 @@ const basketSetting = {
 export
 const productSetting = {
       productTemplateSelector: '#product',
+      productMissingTemplateSelector: '#product-miising',
       productSelector: '.product-item',
+      productMissingSelector: '.product-item_type_missing',
       productPreviewSelector: '.product-item__img',
       productTitleSelector: '.product-item__title',
       productColorSelector: '.product-item__property[data-type="product-color"]',

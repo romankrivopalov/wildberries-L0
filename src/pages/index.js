@@ -47,6 +47,7 @@ const productList = new Section({
         basket.checkInputProducts,
         basket.disableInputAllProduct,
         basket.enableInputAllProduct,
+        basket.setProductMissing,
       );
       productItemList.push(product);
       const productElement = product.generateProduct();

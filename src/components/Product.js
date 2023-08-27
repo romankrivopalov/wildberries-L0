@@ -20,6 +20,7 @@ export default class Product {
     handleCheckInputProducts,
     handleDisableInputAllProduct,
     handleEnableInputAllProduct,
+    handleSetProductMissing,
   ) {
     this._data = data;
     this._oldPrice = data.oldPrice;
@@ -42,6 +43,7 @@ export default class Product {
     this._handleCheckInputProducts = handleCheckInputProducts;
     this._handleDisableInputAllProduct = handleDisableInputAllProduct;
     this._handleEnableInputAllProduct = handleEnableInputAllProduct;
+    this._hadleSetProductMissing = handleSetProductMissing,
     this.deliveryDate = this._data.deliveryDate;
     this.id = data.id;
     this.image = data.image;
@@ -184,6 +186,7 @@ export default class Product {
       : this._handleDisableInputAllProduct()
 
     this._product.remove();
+    this._productMissing.remove();
   }
 
   _setEventListeners = () => {
@@ -206,20 +209,68 @@ export default class Product {
     this._productDeleteBtn.addEventListener('click', () => {
       this._removeProduct();
     });
+
+    if (this._productMissingDeleteBtn) {
+      this._productMissingDeleteBtn.addEventListener('click', () => {
+        this._removeProduct();
+      });
+    }
   };
 
-  _getTemplate = () => {
+  _getTemplate = (templateSelector, itemSelector) => {
     const productElement = document
-      .querySelector(this._productSetting.productTemplateSelector)
+      .querySelector(templateSelector)
       .content
-      .querySelector(this._productSetting.productSelector)
+      .querySelector(itemSelector)
       .cloneNode(true);
 
     return productElement;
   }
 
+  _generateProductMissing = () => {
+    this._productMissing = this._getTemplate(
+      this._productSetting.productMissingTemplateSelector,
+      this._productSetting.productMissingSelector,
+    );
+
+    this._productMissing.querySelector(this._productSetting.productPreviewSelector).src = this._data.image;
+    this._productMissing.querySelector(this._productSetting.productTitleSelector).textContent = this._data.name.trim();
+    this._productMissing.querySelector(this._productSetting.productPreviewSelector).alt = this._data.name.trim();
+
+    if (this._data.color || this._data.size) {
+      if (this._data.color) {
+        this._productMissing.
+          querySelector(this._productSetting.productColorSelector)
+          .textContent = `Цвет: ${this._data.color.trim()}`;
+      }
+
+      if (this._data.size) {
+        this._productMissing.
+          querySelector(this._productSetting.productSizeSelector)
+          .textContent = `${this._data.size}`;
+      } else {
+        this._productMissing.
+          querySelector('.product-item__property-wrapper')
+          .style.display = 'none';
+      }
+    } else {
+      this._productMissing.
+        querySelector('.product-item__properties')
+        .style.display = 'none';
+    }
+
+    this._productMissingDeleteBtn = this._productMissing.querySelector(this._productSetting.productDeleteBtnSelector);
+
+    this._setEventListeners();
+
+    return this._productMissing;
+  }
+
   generateProduct = () => {
-    this._product = this._getTemplate();
+    this._product = this._getTemplate(
+      this._productSetting.productTemplateSelector,
+      this._productSetting.productSelector
+    );
 
     this._productInput = this._product.querySelector(this._productSetting.productInputSelecor);
     this._productInputDecor = this._product.querySelector(this._productSetting.productInputDecorSelecor);
@@ -296,6 +347,10 @@ export default class Product {
     this._handleIncreaseAccordionCounter();
     this._handleIncreaseCount(1);
     this._handleIncreaseAccordionPrice((this._oldPrice - this._sumDiscount) * this._data.quantity);
+
+    if (Infinity) { // condition if there is no product
+      this._hadleSetProductMissing(this._generateProductMissing());
+    }
 
     return this._product;
   }
