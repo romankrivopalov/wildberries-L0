@@ -1,7 +1,7 @@
 # **wildberries-L0#**
 > Задание L0
 
-![preview](https://github.com/romankrivopalov/wildberries-L0/src/images/rpeview.png)
+![preview](https://github.com/romankrivopalov/wildberries-L0/src/images/preview.png)
 
 Задание по созданию фрагмента маркетплейса "Товары и точка" - корзины, в рамках стажировки в коммпании Wildberries.
 
