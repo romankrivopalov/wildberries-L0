@@ -5,7 +5,6 @@ export default class Delivery {
     this._data = data;
     this._dataItems = this._data.item;
     this._deliveryDateItemSetting = deliveryDateItemSetting;
-    console.log(this._dataItems)
   }
 
   _getDeliveryItemTemplate = () => {
