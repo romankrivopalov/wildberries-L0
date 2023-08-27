@@ -96,6 +96,8 @@
 @import url('../blocks/basket/__content/basket__content.css');
 @import url('../blocks/basket/__sidebar/basket__sidebar.css');
 @import url('../blocks/basket/__content-section/basket__content-section.css');
+@import url('../blocks/basket/__content-section/_type/basket__content-section_type_delivery.css');
+@import url('../blocks/basket/__content-section/_type/basket__content-section_type_recipient.css');
 @import url('../blocks/basket/__section-title/basket__section-title.css');
 @import url('../blocks/basket/__content-header/basket__content-header.css');
 @import url('../blocks/basket/__content-header-btn/basket__content-header-btn.css');

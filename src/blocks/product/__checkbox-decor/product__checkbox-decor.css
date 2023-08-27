@@ -1,8 +1,8 @@
 .product__checkbox-decor {
   position: absolute;
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   background-color: inherit;
   border: 1px solid rgba(0, 0, 0, .2);
   border-radius: 6px;
