@@ -9,3 +9,9 @@
     width: 275px;
   }
 }
+
+@media screen and (min-width: 1400px) {
+  .product-item__good {
+    width: 309px;
+  }
+}

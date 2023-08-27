@@ -4,6 +4,7 @@
 
 @media screen and (min-width: 1024px) {
   .basket__sidebar {
+    box-sizing: content-box;
     margin: -2px 0 0 0;
     padding: 16px 24px 24px 24px;
     width: 303px;
@@ -16,6 +17,7 @@
 
 @media screen and (min-width: 1400px) {
   .basket__sidebar {
+    box-sizing: border-box;
     width: 429px;
   }
 }

@@ -66,6 +66,7 @@
 @import url('../blocks/product-item/__count-btn/product-item__count-btn.css');
 @import url('../blocks/product-item/__count-btn/_type/product-item__count-btn_type_minus.css');
 @import url('../blocks/product-item/__count-btn/_type/product-item__count-btn_type_plus.css');
+@import url('../blocks/product-item/__count-btn/_type/product-item__count-btn_type_disabled.css');
 @import url('../blocks/product-item/__available/product-item__available.css');
 @import url('../blocks/product-item/__icons/product-item__icons.css');
 @import url('../blocks/product-item/__icon/product-item__icon.css');

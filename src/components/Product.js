@@ -117,6 +117,13 @@ export default class Product {
   }
 
   _increaseCounter = () => {
+    this._productCountPlusBtn.classList.remove('product-item__count-btn_type_disabled');
+
+    if (this._productCount.value >= (this._data.available - 1)) {
+      this._productCountPlusBtn.classList.add('product-item__count-btn_type_disabled');
+    }
+
+    this._productCountMinusBtn.classList.remove('product-item__count-btn_type_disabled');
     if (this._productCount.value >= this._data.available) return
 
     if (this.isChecked) {
@@ -132,6 +139,12 @@ export default class Product {
   }
 
   _decreaseCounter = () => {
+    this._productCountPlusBtn.classList.remove('product-item__count-btn_type_disabled');
+
+    if (this._productCount.value <= 2) {
+      this._productCountMinusBtn.classList.add('product-item__count-btn_type_disabled');
+    }
+
     if (this._productCount.value <= 1) return
 
     if (this.isChecked) {
