@@ -189,6 +189,12 @@ export default class Product {
     this._productMissing.remove();
   }
 
+  _setEventListenerForProductMissing = () => {
+    this._productMissingDeleteBtn.addEventListener('click', () => {
+      this._removeProduct();
+    });
+  }
+
   _setEventListeners = () => {
     this._productInputDecor.addEventListener('click', () => {
       if (!this.isChecked) {
@@ -209,12 +215,6 @@ export default class Product {
     this._productDeleteBtn.addEventListener('click', () => {
       this._removeProduct();
     });
-
-    if (this._productMissingDeleteBtn) {
-      this._productMissingDeleteBtn.addEventListener('click', () => {
-        this._removeProduct();
-      });
-    }
   };
 
   _getTemplate = (templateSelector, itemSelector) => {
@@ -261,7 +261,7 @@ export default class Product {
 
     this._productMissingDeleteBtn = this._productMissing.querySelector(this._productSetting.productDeleteBtnSelector);
 
-    this._setEventListeners();
+    this._setEventListenerForProductMissing();
 
     return this._productMissing;
   }
@@ -343,14 +343,14 @@ export default class Product {
         .textContent = `Осталось ${this._data.available} шт.`;
     }
 
+    if (Infinity) { // condition if there is no product
+      this._hadleSetProductMissing(this._generateProductMissing());
+    }
+
     this._setEventListeners();
     this._handleIncreaseAccordionCounter();
     this._handleIncreaseCount(1);
     this._handleIncreaseAccordionPrice((this._oldPrice - this._sumDiscount) * this._data.quantity);
-
-    if (Infinity) { // condition if there is no product
-      this._hadleSetProductMissing(this._generateProductMissing());
-    }
 
     return this._product;
   }
