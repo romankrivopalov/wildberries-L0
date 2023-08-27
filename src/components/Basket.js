@@ -80,6 +80,8 @@ export default class Basket {
   _renderTotalCount = () => {
     this._basketTotalCount.textContent = `${this._totalCount} ${getEndLine(this._totalCount, productsTitles)}`;
 
+    this.calculateDeliveryDate();
+
     // change text in btn, else check input
     this._changeTextTotalBtn();
   }
@@ -150,10 +152,6 @@ export default class Basket {
     }
   }
 
-  _renderDeliveryDateItem = () => {
-    this._basketDeliveryDateItemList
-  }
-
   calculateDeliveryDate = () => {
     const arrayDataItems = [];
     const arrayDataItemsResult = [];
@@ -184,7 +182,7 @@ export default class Basket {
         // first element
         arrayDataItemsResult.push({
           date: [Object.values(data)[0][0], Object.values(data)[0][1]],
-          item: [{ count: data.item[0].count, image: data.item[0].image }] }
+          item: [{ count: data.item[0].count, image: data.item[0].image }] } // change count
         );
       } else {
         // add item in date
@@ -210,6 +208,7 @@ export default class Basket {
 
     const deliverySlice = this._renderDeliveries(arrayDataItemsResult);
 
+    deliverySlice.removeItems();
     deliverySlice.renderItems();
   }
 

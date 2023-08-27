@@ -5,6 +5,10 @@ export default class Section {
     this._container = document.querySelector(containerSelector);
   }
 
+  removeItems = () => {
+    this._container.innerHTML = '';
+  }
+
   setItem = (element) => {
     this._container.prepend(element);
   }
