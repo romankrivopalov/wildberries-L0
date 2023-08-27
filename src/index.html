@@ -53,9 +53,9 @@
               <input type="checkbox" class="accordion__checkbox" id="checkbox-accordion-product-missing">
               <label for="checkbox-accordion-product-missing" class="accordion__label"></label>
               <span class="accordion__hide-info">
-                <p class="accordion__hide-info-item" data-type="accordion-count"></p>
+                <span class="accordion__hide-info-item" data-type="accordion-count"></span>
                 ·
-                <p class="accordion__hide-info-item" data-type="accordion-price"></p>
+                <span class="accordion__hide-info-item" data-type="accordion-price"></span>
               </span>
               <div class="accordion__inner">
                 <input class="product__checkbox" type="checkbox" data-type="checkbox-all-product">
@@ -273,7 +273,7 @@
               <div class="basket-order__payment">
                 <label class="basket-order__payment-wrapper">
                   <input class="basket-order__checkbox" type="checkbox" data-type="checkbox-sidebar-payment-type">
-                  <label class="basket-order__checkbox-decor" data-type="checkbox-sidebar-payment-type"></label>
+                  <span class="basket-order__checkbox-decor" data-type="checkbox-sidebar-payment-type"></span>
                   <span class="basket-order__checkbox-text">Списать оплату сразу</span>
                 </label>
                 <p class="basket-order__payment-info">Спишем оплату с&nbsp;карты при получении</p>
@@ -483,6 +483,7 @@
         <button
           class="product-item__icon product-item__icon_type_delete"
           type="button">
+        </button>
       </div>
     </li>
   </template>

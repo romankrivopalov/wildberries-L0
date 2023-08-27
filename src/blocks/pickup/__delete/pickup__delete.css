@@ -6,6 +6,8 @@
   -webkit-mask-image: url('../../../images/icons/icon-remove.svg');
   mask-image: url('../../../images/icons/icon-remove.svg');
   background-color: var(--color-system-gray);
+  background-position: center;
+  background-repeat: no-repeat;
   cursor: pointer;
 }
 
