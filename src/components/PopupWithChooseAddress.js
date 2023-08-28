@@ -12,7 +12,6 @@ export default class PopupWithChooseAddress extends Popup {
     this._popupPickupPointTab = document.querySelector('.popup__tabs-item[data-type="popup-tab-pickup-point"]');
     this._popupPickupPointBlockWithTab = document.querySelector('.popup__tabs-block[data-type="popup-tab-pickup-point-block"]');
     this._handleChangeElement = handleChangeElement;
-    console.log(this._popupPickupPointBlockWithTab)
   }
 
   setInitialAddress = () => {
@@ -37,7 +36,6 @@ export default class PopupWithChooseAddress extends Popup {
     })
 
     this._popupPickupPointTab.addEventListener('click', () => {
-      console.log(22)
       this._pickupPointAddressList.forEach(element => element.disableInput());
       this._pickupPointAddressList[this._pickupPointAddressList.length - 1].enableInput();
 

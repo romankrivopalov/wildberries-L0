@@ -80,8 +80,6 @@ export default class Basket {
   _renderTotalCount = () => {
     this._basketTotalCount.textContent = `${this._totalCount} ${getEndLine(this._totalCount, productsTitles)}`;
 
-    this.calculateDeliveryDate();
-
     // change text in btn, else check input
     this._changeTextTotalBtn();
   }
@@ -152,64 +150,70 @@ export default class Basket {
     }
   }
 
-  calculateDeliveryDate = () => {
-    const arrayDataItems = [];
-    const arrayDataItemsResult = [];
-    let firstDate = Infinity;
-    let lastDate = -Infinity;
+  _calculateDeliveryDate = (arrayList) => {
+    if (arrayList.length) {
+      const arrayDataItems = [];
+      const arrayDataItemsResult = [];
+      let firstDate = Infinity;
+      let lastDate = -Infinity;
 
-    this._productList.forEach(product => {
-      product.deliveryDate.forEach(date => {
-        for (let count in date) {
-          // for date sidebar
-          if (Date.parse(date[count][0]) < firstDate) firstDate = new Date(date[count][0]);
-          if (Date.parse(date[count][1]) > lastDate) lastDate = new Date(date[count][1]);
-        };
+      arrayList.forEach(product => {
+        product.deliveryDate.forEach(date => {
+          for (let count in date) {
+            // for date sidebar
+            if (Date.parse(date[count][0]) < firstDate) firstDate = new Date(date[count][0]);
+            if (Date.parse(date[count][1]) > lastDate) lastDate = new Date(date[count][1]);
+          };
+        });
+
+        product.deliveryDate.forEach((count) => {
+          arrayDataItems.push(
+            {
+              date: [Object.values(count)[0][0], Object.values(count)[0][1]],
+              item: [{ count: Object.keys(count)[0], image: product.image }],
+            }
+          )
+        })
       });
 
-      product.deliveryDate.forEach((count) => {
-        arrayDataItems.push(
-          {
-            date: [Object.values(count)[0][0], Object.values(count)[0][1]],
-            item: [{ count: Object.keys(count)[0], image: product.image }],
+      arrayDataItems.forEach(data => {
+        if (!arrayDataItemsResult.length) {
+          // first element
+          arrayDataItemsResult.push({
+            date: [Object.values(data)[0][0], Object.values(data)[0][1]],
+            item: [{ count: data.item[0].count, image: data.item[0].image }] } // change count
+          );
+        } else {
+          // add item in date
+          for (let i = 0; i < arrayDataItemsResult.length; i++) {
+            if (
+              Date.parse(new Date(arrayDataItemsResult[i].date[0])) === Date.parse(new Date(Object.values(data)[0][0]))
+              && Date.parse(new Date(arrayDataItemsResult[i].date[0])) === Date.parse(new Date(Object.values(data)[0][0]))
+            ) {
+              arrayDataItemsResult[i].item.push({ count: data.item[0].count, image: data.item[0].image });
+              return;
+            }
           }
-        )
-      })
-    });
 
-    arrayDataItems.forEach(data => {
-      if (!arrayDataItemsResult.length) {
-        // first element
-        arrayDataItemsResult.push({
-          date: [Object.values(data)[0][0], Object.values(data)[0][1]],
-          item: [{ count: data.item[0].count, image: data.item[0].image }] } // change count
-        );
-      } else {
-        // add item in date
-        for (let i = 0; i < arrayDataItemsResult.length; i++) {
-          if (
-            Date.parse(new Date(arrayDataItemsResult[i].date[0])) === Date.parse(new Date(Object.values(data)[0][0]))
-            && Date.parse(new Date(arrayDataItemsResult[i].date[0])) === Date.parse(new Date(Object.values(data)[0][0]))
-          ) {
-            arrayDataItemsResult[i].item.push({ count: data.item[0].count, image: data.item[0].image });
-            return;
-          }
+          // add new item
+          arrayDataItemsResult.push({
+            date: [Object.values(data)[0][0], Object.values(data)[0][1]],
+            item: [{ count: data.item[0].count, image: data.item[0].image }] }
+          );
         }
+      })
 
-        // add new item
-        arrayDataItemsResult.push({
-          date: [Object.values(data)[0][0], Object.values(data)[0][1]],
-          item: [{ count: data.item[0].count, image: data.item[0].image }] }
-        );
-      }
-    })
+      this._renderTotalDeliveryDate(firstDate, lastDate);
 
-    this._renderTotalDeliveryDate(firstDate, lastDate);
+      const deliverySlice = this._renderDeliveries(arrayDataItemsResult);
 
-    const deliverySlice = this._renderDeliveries(arrayDataItemsResult);
+      deliverySlice.removeItems();
+      deliverySlice.renderItems();
+    } else {
+      const deliverySlice = this._renderDeliveries();
 
-    deliverySlice.removeItems();
-    deliverySlice.renderItems();
+      deliverySlice.removeItems();
+    }
   }
 
   // product missing
@@ -286,8 +290,42 @@ export default class Basket {
 
   // products
 
+  changeCountProductListArray = (productId, count) => {
+    for (let i = 0; i < this._productList.length; i++) {
+      if (this._productList[i].id === productId) {
+        // get count last date
+        const [ countDate ] = Object.keys(this._productList[i].deliveryDate[this._productList[i].deliveryDate.length - 1]);
+        // get dates array
+        const valuesDate = Object.values(this._productList[i].deliveryDate[this._productList[i].deliveryDate.length - 1][countDate]);
+        // create new object
+        const newObj = { [count]: valuesDate };
+        // add new obj
+        this._productList[i].deliveryDate[this._productList[i].deliveryDate.length - 1] = newObj;
+        // remove old obj
+        delete this._productList[i].deliveryDate[this._productList[i].deliveryDate.length - 1][countDate]
+
+        i = this._productList.length + 1;
+      }
+    }
+
+    this._calculateDeliveryDate(this._productList);
+  }
+
   removeProductInListArray = (idForDeleteCard) => {
-    this._productList = this._productList.filter(item => item.id !== idForDeleteCard);
+    this._productList = this._productList.filter(item => item.id !== idForDeleteCard)
+
+    this._calculateDeliveryDate(this._productList);
+  }
+
+  addInicialProductInListArray = () => {
+    this._calculateDeliveryDate(this._productList);
+  }
+
+  addProductInListArray = (productItem) => {
+    this._productList = this._productList.filter(item => item.id !== productItem.id)
+
+    this._productList.push(productItem);
+    this._calculateDeliveryDate(this._productList);
   }
 
   enableInputAllProduct = () => {

@@ -2,7 +2,9 @@ export default class Product {
   constructor(
     data,
     productSetting,
-    handleRemoveProduct,
+    handleAddProductToArray,
+    handleRemoveProductFromArray,
+    handleChangeCountProductInArray,
     handleDecreaseAccordionCounter,
     handleIncreaseAccordionCounter,
     handleDecreaseAccordionPrice,
@@ -25,7 +27,9 @@ export default class Product {
     this._data = data;
     this._oldPrice = data.oldPrice;
     this._productSetting = productSetting;
-    this._handleRemoveProduct = handleRemoveProduct;
+    this._handleAddProduct = handleAddProductToArray;
+    this._handleRemoveProduct = handleRemoveProductFromArray;
+    this._handleChangeCountProductInArray = handleChangeCountProductInArray;
     this._handleDecreaseAccordionCounter = handleDecreaseAccordionCounter;
     this._handleIncreaseAccordionCounter = handleIncreaseAccordionCounter;
     this._handleDecreaseAccordionPrice = handleDecreaseAccordionPrice;
@@ -117,6 +121,8 @@ export default class Product {
   }
 
   _increaseCounter = () => {
+    this._handleChangeCountProductInArray(this.id, parseInt(this._productCount.value) + 1)
+
     this._productCountPlusBtn.classList.remove(this._productSetting.productCountBtnTypeDisabledClass);
 
     if (this._productCount.value >= (this._data.available - 1)) {
@@ -139,6 +145,8 @@ export default class Product {
   }
 
   _decreaseCounter = () => {
+    this._handleChangeCountProductInArray(this.id, parseInt(this._productCount.value) - 1)
+
     this._productCountPlusBtn.classList.remove(this._productSetting.productCountBtnTypeDisabledClass);
 
     if (this._productCount.value <= 2) {
@@ -160,6 +168,8 @@ export default class Product {
   }
 
   enableInput = () => {
+    this._handleAddProduct(this._data);
+
     this.isChecked = true;
     this._productInput.checked = true;
 
@@ -170,6 +180,8 @@ export default class Product {
   }
 
   disableInput = () => {
+    this._handleRemoveProduct(this.id);
+
     this.isChecked = false;
     this._productInput.checked = false;
 
