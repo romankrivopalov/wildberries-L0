@@ -29,7 +29,9 @@ const productList = new Section({
       const product = new Product(
         item,
         all.productSetting,
+        basket.addProductInListArray,
         basket.removeProductInListArray,
+        basket.changeCountProductListArray,
         basket.decreaseCounterBasket,
         basket.increaseCounterBasket,
         basket.decreasePriceBasket,
@@ -157,9 +159,9 @@ all.btnSidebarChooseAddress.addEventListener('click', () => {
   popupWithChooseAddress.open();
 });
 
+basket.addInicialProductInListArray()
 basket.setEventListeners();
 basket.enableAllProducts();
-basket.calculateDeliveryDate();
 popupWithChoosePay.setInitialCard();
 popupWithChoosePay.setEventListener();
 popupWithChooseAddress.setInitialAddress();

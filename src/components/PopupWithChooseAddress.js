@@ -36,7 +36,6 @@ export default class PopupWithChooseAddress extends Popup {
     })
 
     this._popupPickupPointTab.addEventListener('click', () => {
-      console.log(22)
       this._pickupPointAddressList.forEach(element => element.disableInput());
       this._pickupPointAddressList[this._pickupPointAddressList.length - 1].enableInput();
 
