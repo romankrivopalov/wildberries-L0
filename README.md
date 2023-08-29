@@ -1,4 +1,4 @@
-# **wildberries-L0#**
+# **wildberries-L0**
 > Задание L0
 
 ![preview](https://github.com/romankrivopalov/wildberries-L0/blob/main/src/images/preview.png?raw=true)
