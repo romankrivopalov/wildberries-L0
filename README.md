@@ -3,7 +3,7 @@
 
 ![preview](https://github.com/romankrivopalov/wildberries-L0/blob/main/src/images/preview.png?raw=true)
 
-Задание по созданию фрагмента маркетплейса "Товары и точка" - корзины, в рамках стажировки в коммпании Wildberries.
+Задание по созданию фрагмента маркетплейса "Товары и точка" - корзины, в рамках стажировки в компании Wildberries.
 
 ### **Требования**
 ***
