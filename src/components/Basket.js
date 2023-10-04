@@ -97,8 +97,13 @@ export default class Basket {
   // count
 
   _renderCount = () => {
-    this._headerIconCounter.textContent = this._count.toString();
-    this._navbarMobileIconCounter.textContent = this._count.toString();
+    if (this._count <= 0) {
+      this._headerIconCounter.textContent = '';
+      this._navbarMobileIconCounter.textContent = '';
+    } else {
+      this._headerIconCounter.textContent = this._count.toString();
+      this._navbarMobileIconCounter.textContent = this._count.toString();
+    }
   }
 
   decreaseCount = (value) => {
