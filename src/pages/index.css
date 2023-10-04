@@ -72,6 +72,7 @@
 @import url('../blocks/product-item/__icon/product-item__icon.css');
 @import url('../blocks/product-item/__icon/_type/product-item__icon_type_favorite.css');
 @import url('../blocks/product-item/__icon/_type/product-item__icon_type_delete.css');
+@import url('../blocks/product-item/__icon/_type/product-item__icon_type_active.css');
 @import url('../blocks/product-item/__price/product-item__price.css');
 @import url('../blocks/product-item/__new-price/product-item__new-price.css');
 @import url('../blocks/product-item/__new-price/_type/product-item__new-price_type_small.css');

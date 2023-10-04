@@ -217,6 +217,11 @@ export default class Product {
     this._productMissingDeleteBtn.addEventListener('click', () => {
       this._productMissing.remove();
     });
+
+    this._productMissingFavoriteBtn.addEventListener('click', () => {
+      this._productFavoriteBtn.classList.toggle(this._productSetting.productIconActiveClass);
+      this._productMissingFavoriteBtn.classList.toggle(this._productSetting.productIconActiveClass);
+    });
   }
 
   _setEventListeners = () => {
@@ -234,6 +239,11 @@ export default class Product {
 
     this._productCountMinusBtn.addEventListener('click', () => {
       this._decreaseCounter();
+    });
+
+    this._productFavoriteBtn.addEventListener('click', () => {
+      this._productFavoriteBtn.classList.toggle(this._productSetting.productIconActiveClass);
+      this._productMissingFavoriteBtn.classList.toggle(this._productSetting.productIconActiveClass);
     });
 
     this._productDeleteBtn.addEventListener('click', () => {
@@ -283,6 +293,7 @@ export default class Product {
         .style.display = 'none';
     }
 
+    this._productMissingFavoriteBtn = this._productMissing.querySelector(this._productSetting.productFavotiteBtnSelector);
     this._productMissingDeleteBtn = this._productMissing.querySelector(this._productSetting.productDeleteBtnSelector);
 
     this._setEventListenerForProductMissing();
@@ -354,6 +365,7 @@ export default class Product {
     this._newPriceElement = this._product
       .querySelector(this._productSetting.productNewPriceSelector)
 
+    this._productFavoriteBtn = this._product.querySelector(this._productSetting.productFavotiteBtnSelector);
     this._productDeleteBtn = this._product.querySelector(this._productSetting.productDeleteBtnSelector);
     this._productCountMinusBtn = this._product.querySelector(this._productSetting.productCountMinusBtnSelector);
     this._productCountPlusBtn = this._product.querySelector(this._productSetting.productCountPlusBtnSelector);
