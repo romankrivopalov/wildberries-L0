@@ -121,8 +121,6 @@ export default class Product {
   }
 
   _increaseCounter = () => {
-    this._handleChangeCountProductInArray(this.id, parseInt(this._productCount.value) + 1)
-
     this._productCountPlusBtn.classList.remove(this._productSetting.productCountBtnTypeDisabledClass);
 
     if (this._productCount.value >= (this._data.available - 1)) {
@@ -131,6 +129,8 @@ export default class Product {
 
     this._productCountMinusBtn.classList.remove(this._productSetting.productCountBtnTypeDisabledClass);
     if (this._productCount.value >= this._data.available) return
+
+    this._handleChangeCountProductInArray(this.id, parseInt(this._productCount.value) + 1)
 
     if (this.isChecked) {
       this._handleIncreaseAccordionPrice(this._oldPrice - this._sumDiscount);
@@ -145,8 +145,6 @@ export default class Product {
   }
 
   _decreaseCounter = () => {
-    this._handleChangeCountProductInArray(this.id, parseInt(this._productCount.value) - 1)
-
     this._productCountPlusBtn.classList.remove(this._productSetting.productCountBtnTypeDisabledClass);
 
     if (this._productCount.value <= 2) {
@@ -154,6 +152,8 @@ export default class Product {
     }
 
     if (this._productCount.value <= 1) return
+
+    this._handleChangeCountProductInArray(this.id, parseInt(this._productCount.value) - 1)
 
     if (this.isChecked) {
       this._handleIncreaseAccordionPrice(-(this._oldPrice - this._sumDiscount));
