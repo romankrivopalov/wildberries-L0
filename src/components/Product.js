@@ -105,7 +105,7 @@ export default class Product {
       ? this._newPriceElement.classList.add(this._productSetting.productNewPriceSmallTextClass)
       : this._newPriceElement.classList.remove(this._productSetting.productNewPriceSmallTextClass)
 
-    this._newPriceElement.textContent = `${value.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')} сом`;
+    this._newPriceElement.textContent = `${value.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')}`;
   }
 
   _calculateSum = (quantity) => {
