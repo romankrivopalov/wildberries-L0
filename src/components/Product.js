@@ -211,12 +211,11 @@ export default class Product {
       : this._handleDisableInputAllProduct()
 
     this._product.remove();
-    this._productMissing.remove();
   }
 
   _setEventListenerForProductMissing = () => {
     this._productMissingDeleteBtn.addEventListener('click', () => {
-      this._removeProduct();
+      this._productMissing.remove();
     });
   }
 
