@@ -105,7 +105,7 @@ export default class Product {
       ? this._newPriceElement.classList.add(this._productSetting.productNewPriceSmallTextClass)
       : this._newPriceElement.classList.remove(this._productSetting.productNewPriceSmallTextClass)
 
-    this._newPriceElement.textContent = `${value.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')} сом`;
+    this._newPriceElement.textContent = `${value.toString().replace(/(\d)(?=(\d{3})+$)/g, '$1 ')}`;
   }
 
   _calculateSum = (quantity) => {
@@ -121,8 +121,6 @@ export default class Product {
   }
 
   _increaseCounter = () => {
-    this._handleChangeCountProductInArray(this.id, parseInt(this._productCount.value) + 1)
-
     this._productCountPlusBtn.classList.remove(this._productSetting.productCountBtnTypeDisabledClass);
 
     if (this._productCount.value >= (this._data.available - 1)) {
@@ -131,6 +129,8 @@ export default class Product {
 
     this._productCountMinusBtn.classList.remove(this._productSetting.productCountBtnTypeDisabledClass);
     if (this._productCount.value >= this._data.available) return
+
+    this._handleChangeCountProductInArray(this.id, parseInt(this._productCount.value) + 1)
 
     if (this.isChecked) {
       this._handleIncreaseAccordionPrice(this._oldPrice - this._sumDiscount);
@@ -145,8 +145,6 @@ export default class Product {
   }
 
   _decreaseCounter = () => {
-    this._handleChangeCountProductInArray(this.id, parseInt(this._productCount.value) - 1)
-
     this._productCountPlusBtn.classList.remove(this._productSetting.productCountBtnTypeDisabledClass);
 
     if (this._productCount.value <= 2) {
@@ -154,6 +152,8 @@ export default class Product {
     }
 
     if (this._productCount.value <= 1) return
+
+    this._handleChangeCountProductInArray(this.id, parseInt(this._productCount.value) - 1)
 
     if (this.isChecked) {
       this._handleIncreaseAccordionPrice(-(this._oldPrice - this._sumDiscount));
@@ -211,12 +211,16 @@ export default class Product {
       : this._handleDisableInputAllProduct()
 
     this._product.remove();
-    this._productMissing.remove();
   }
 
   _setEventListenerForProductMissing = () => {
     this._productMissingDeleteBtn.addEventListener('click', () => {
-      this._removeProduct();
+      this._productMissing.remove();
+    });
+
+    this._productMissingFavoriteBtn.addEventListener('click', () => {
+      this._productFavoriteBtn.classList.toggle(this._productSetting.productIconActiveClass);
+      this._productMissingFavoriteBtn.classList.toggle(this._productSetting.productIconActiveClass);
     });
   }
 
@@ -235,6 +239,11 @@ export default class Product {
 
     this._productCountMinusBtn.addEventListener('click', () => {
       this._decreaseCounter();
+    });
+
+    this._productFavoriteBtn.addEventListener('click', () => {
+      this._productFavoriteBtn.classList.toggle(this._productSetting.productIconActiveClass);
+      this._productMissingFavoriteBtn.classList.toggle(this._productSetting.productIconActiveClass);
     });
 
     this._productDeleteBtn.addEventListener('click', () => {
@@ -284,6 +293,7 @@ export default class Product {
         .style.display = 'none';
     }
 
+    this._productMissingFavoriteBtn = this._productMissing.querySelector(this._productSetting.productFavotiteBtnSelector);
     this._productMissingDeleteBtn = this._productMissing.querySelector(this._productSetting.productDeleteBtnSelector);
 
     this._setEventListenerForProductMissing();
@@ -355,6 +365,7 @@ export default class Product {
     this._newPriceElement = this._product
       .querySelector(this._productSetting.productNewPriceSelector)
 
+    this._productFavoriteBtn = this._product.querySelector(this._productSetting.productFavotiteBtnSelector);
     this._productDeleteBtn = this._product.querySelector(this._productSetting.productDeleteBtnSelector);
     this._productCountMinusBtn = this._product.querySelector(this._productSetting.productCountMinusBtnSelector);
     this._productCountPlusBtn = this._product.querySelector(this._productSetting.productCountPlusBtnSelector);

@@ -10,7 +10,8 @@ export default class PopupWithChoosePay extends Popup {
   }
 
   setInitialCard = () => {
-    this._cardList[this._cardList.length - 1].enableInput();
+    this._activeCard = this._cardList[this._cardList.length - 1];
+    this._activeCard.enableInput();
     this._handleChangeCard(this._cardList[this._cardList.length - 1]);
   }
 
@@ -18,7 +19,10 @@ export default class PopupWithChoosePay extends Popup {
     super.setEventListener();
 
     this._cardBtn.addEventListener('click', () => {
-      this._handleChangeCard(this._changeCard());
+      this._activeCard = this._changeCard();
+      this.disabledAllInputs();
+
+      this._handleChangeCard(this._activeCard);
 
       this.close();
     })
@@ -32,5 +36,13 @@ export default class PopupWithChoosePay extends Popup {
     const activeCard = this._cardList.find(card => card.isChecked);
 
     return activeCard;
+  }
+
+  open() {
+    super.open();
+
+    this._cardList.forEach(card => card.disableInput());
+
+    this._activeCard.enableInput();
   }
 }
