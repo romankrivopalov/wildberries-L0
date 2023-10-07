@@ -5,6 +5,7 @@ import getEndLine from '../utils/getEndLine.js';
 export default class Basket {
   constructor(basketSetting, productList, { renderDeliveries }) {
     this._basketSetting = basketSetting;
+    this._initialProductList = productList;
     this._productList = productList;
     this._productListMissingContainer = document.querySelector(this._basketSetting.productListMissingContainerSelector);
     this._renderDeliveries = renderDeliveries;
@@ -317,7 +318,7 @@ export default class Basket {
   }
 
   removeProductInListArray = (idForDeleteCard) => {
-    this._productList = this._productList.filter(item => item.id !== idForDeleteCard)
+    this._productList = this._productList.filter(item => item.id !== idForDeleteCard);
 
     this._calculateDeliveryDate(this._productList);
   }
@@ -344,16 +345,17 @@ export default class Basket {
   }
 
   enableAllProducts = () => {
-    this._productList.forEach(product => {
+    this.enableInputAllProduct();
+
+    this._initialProductList.forEach(product => {
       if (!product.isChecked) {
-        this.enableInputAllProduct();
         product.enableInput();
       };
     });
   }
 
   checkInputProducts = () => {
-    return this._productList.every(product => product.isChecked);
+    return this._initialProductList.every(product => product.isChecked);
   }
 
   // total checkbox and btn submit
@@ -385,9 +387,10 @@ export default class Basket {
       if (!this.allProductCheckboxIsChecked) {
         this.enableAllProducts();
       } else {
-        this._productList.forEach(product => {
+        this.disableInputAllProduct();
+
+        this._initialProductList.forEach(product => {
           if (product.isChecked) {
-            this.disableInputAllProduct();
             product.disableInput();
           };
         });
